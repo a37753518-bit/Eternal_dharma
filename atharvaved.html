@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="hi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atharva Veda – Complete Information Database</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', 'Noto Sans Devanagari', sans-serif;
+            background: #f2e9de;
+            color: #2d3e4f;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            background: #ffffff;
+            border-radius: 28px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+            padding: 30px;
+        }
+        
+        h1 {
+            font-size: 2.8rem;
+            color: #a6402c;
+            border-bottom: 4px solid #e1cbb6;
+            padding-bottom: 15px;
+            margin-bottom: 25px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        h1 span {
+            font-size: 1.6rem;
+            background: #f0d9cc;
+            padding: 5px 18px;
+            border-radius: 60px;
+            color: #5d3a2b;
+        }
+        
+        h2 {
+            font-size: 2rem;
+            color: #8b4b3a;
+            margin: 35px 0 15px 0;
+            border-left: 8px solid #b3573c;
+            padding-left: 20px;
+        }
+        
+        h3 {
+            font-size: 1.5rem;
+            margin: 25px 0 10px;
+            color: #6d4c41;
+        }
+        
+        .fact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 20px;
+            margin: 25px 0;
+        }
+        
+        .fact-card {
+            background: #fcf5ed;
+            border-radius: 24px;
+            padding: 20px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.04);
+            border: 1px solid #eadaca;
+        }
+        
+        .fact-card strong {
+            display: block;
+            font-size: 1.3rem;
+            color: #9e543e;
+            margin-bottom: 8px;
+        }
+        
+        .fact-card .value {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #3d2b1f;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 25px 0;
+            background: #fefaf5;
+            border-radius: 18px;
+            overflow: hidden;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.05);
+        }
+        
+        th {
+            background: #a64b34;
+            color: white;
+            font-weight: 600;
+            font-size: 1.1rem;
+            padding: 12px;
+            text-align: center;
+        }
+        
+        td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #ebd9cb;
+            text-align: left;
+        }
+        
+        tr:last-child td {
+            border-bottom: none;
+        }
+        
+        .mandala-table td:first-child {
+            font-weight: 600;
+            background: #f5e6dc;
+            width: 20%;
+        }
+        
+        .highlight {
+            background: #fae1d4;
+            padding: 15px 20px;
+            border-radius: 30px;
+            margin: 25px 0;
+            font-style: italic;
+            border-left: 6px solid #b3573c;
+        }
+        
+        .sukta-list {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin: 15px 0;
+        }
+        
+        .sukta-list li {
+            background: #fff1e6;
+            padding: 10px 20px;
+            border-radius: 50px;
+            border: 1px solid #dbb99c;
+            font-weight: 500;
+        }
+        
+        .footer-note {
+            background: #eedacb;
+            padding: 20px;
+            border-radius: 30px;
+            text-align: center;
+            margin-top: 40px;
+            font-size: 1.2rem;
+            color: #362218;
+        }
+        
+        hr {
+            border: none;
+            height: 2px;
+            background: linear-gradient(90deg, #e3cbb8, #f7e3d3, #e3cbb8);
+            margin: 30px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>🌀 अथर्ववेद · Atharvaveda <span>ब्रह्मा एवं जादू-चिकित्सा</span></h1>
+
+        <!-- Key facts at a glance -->
+        <div class="fact-grid">
+            <div class="fact-card"><strong>काण्ड (Books)</strong>
+                <div class="value">20</div>
+            </div>
+            <div class="fact-card"><strong>सूक्त (Hymns)</strong>
+                <div class="value">~730</div>
+            </div>
+            <div class="fact-card"><strong>मंत्र (Mantras)</strong>
+                <div class="value">~6,000</div>
+            </div>
+            <div class="fact-card"><strong>शाखाएँ (Shākhās)</strong>
+                <div class="value">2 प्रमुख</div>
+            </div>
+            <div class="fact-card"><strong>उपनिषद्</strong>
+                <div class="value">प्रश्न, मुण्डक, माण्डूक्य</div>
+            </div>
+            <div class="fact-card"><strong>ब्राह्मण</strong>
+                <div class="value">गोपथ ब्राह्मण</div>
+            </div>
+        </div>
+
+        <!-- 1. Overview -->
+        <h2>🔍 परिचय (Introduction)</h2>
+        <p style="font-size: 1.2rem;">अथर्ववेद को <strong>"ब्रह्म वेद"</strong> भी कहा जाता है। यह वेद मुख्यतः जादू-टोना, तंत्र-मंत्र, रोग-निवारण, आयुर्वेद, एवं दार्शनिक चिन्तन से सम्बन्धित है। इसमें दैनिक जीवन की समस्याओं के समाधान हेतु मन्त्र तथा आयुर्विज्ञान के प्राचीन सूत्र मिलते
+            हैं। ऋग्वेद के समान इसकी भाषा भी वैदिक संस्कृत है, परन्तु इसमें लोक-परम्परा के अनेक तत्व शामिल हैं।</p>
+
+        <!-- 2. Detailed Structure -->
+        <h2>📖 संरचना (Structure)</h2>
+        <p>अथर्ववेद की संहिता 20 काण्डों (पुस्तकों) में विभाजित है। प्रथम 7 काण्डों में मुख्यतः लघु सूक्त (छोटे मन्त्र) हैं, जबकि 8वें से 12वें काण्ड में मध्यम आकार के सूक्त, एवं 13वें से 18वें काण्ड में लम्बे सूक्त (ब्रह्म एवं दार्शनिक) हैं। 19वाँ एवं 20वाँ
+            काण्ड परिशिष्ट के समान है, जिनमें ऋग्वैदिक मन्त्र भी सम्मिलित हैं। नीचे प्रमुख काण्डों का संक्षिप्त विवरण दिया गया है।</p>
+
+        <table class="mandala-table">
+            <thead>
+                <tr>
+                    <th>काण्ड</th>
+                    <th>सूक्तों की संख्या</th>
+                    <th>मंत्रों की संख्या (लगभग)</th>
+                    <th>विषय / प्रमुख सामग्री</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>काण्ड 1</td>
+                    <td>35</td>
+                    <td>~190</td>
+                    <td>चिकित्सा, रोगनाशक, दीर्घायु</td>
+                </tr>
+                <tr>
+                    <td>काण्ड 2</td>
+                    <td>36</td>
+                    <td>~240</td>
+                    <td>शत्रुनाश, प्रतिष्ठा, प्रेम-वशीकरण</td>
+                </tr>
+                <tr>
+                    <td>काण्ड 3</td>
+                    <td>31</td>
+                    <td>~160</td>
+                    <td>सौभाग्य, समृद्धि, ग्रह-शान्ति</td>
+                </tr>
+                <tr>
+                    <td>काण्ड 4</td>
+                    <td>40</td>
+                    <td>~300</td>
+                    <td>ब्रह्मचर्य, विवाह, गृह-रक्षा</td>
+                </tr>
+                <tr>
+                    <td>काण्ड 5</td>
+                    <td>31</td>
+                    <td>~190</td>
+                    <td>पशु-रक्षा, विष-चिकित्सा</td>
+                </tr>
+                <tr>
+                    <td>काण्ड 6</td>
+                    <td>142</td>
+                    <td>~420</td>
+                    <td>सर्वसाधारण मन्त्र (बल, कीर्ति)</td>
+                </tr>
+                <tr>
+                    <td>काण्ड 7</td>
+                    <td>118</td>
+                    <td>~400</td>
+                    <td>छोटे प्रयोग, आयुष्य वर्धन</td>
+                </tr>
+                <tr>
+                    <td>काण्ड 8</td>
+                    <td>10</td>
+                    <td>~100</td>
+                    <td>पाप-मुक्ति, प्रायश्चित्त</td>
+                </tr>
+                <tr>
+                    <td>काण्ड 9</td>
+                    <td>10</td>
+                    <td>~150</td>
+                    <td>कामदुघा (इच्छापूर्ति), यज्ञोपवीत</td>
+                </tr>
+                <tr>
+                    <td>काण्ड 10</td>
+                    <td>10</td>
+                    <td>~150</td>
+                    <td>ब्रह्म-विद्या, आत्मा का रहस्य</td>
+                </tr>
+                <tr>
+                    <td>काण्ड 11</td>
+                    <td>10</td>
+                    <td>~160</td>
+                    <td>रुद्र, प्राण, मृत्यु</td>
+                </tr>
+                <tr>
+                    <td>काण्ड 12</td>
+                    <td>5</td>
+                    <td>~130</td>
+                    <td>भूमि सूक्त (पृथ्वी की स्तुति)</td>
+                </tr>
+                <tr>
+                    <td>काण्ड 13</td>
+                    <td>4</td>
+                    <td>~90</td>
+                    <td>रोहित सूक्त (सूर्य)</td>
+                </tr>
+                <tr>
+                    <td>काण्ड 14</td>
+                    <td>3</td>
+                    <td>~120</td>
+                    <td>विवाह सूक्त (मुख्य)</td>
+                </tr>
+                <tr>
+                    <td>काण्ड 15</td>
+                    <td>18</td>
+                    <td>~160</td>
+                    <td>व्रात्य सूक्त (अध्यात्म)</td>
+                </tr>
+                <tr>
+                    <td>काण्ड 16</td>
+                    <td>9</td>
+                    <td>~100</td>
+                    <td>परमात्मा की स्तुति</td>
+                </tr>
+                <tr>
+                    <td>काण्ड 17</td>
+                    <td>1</td>
+                    <td>~30</td>
+                    <td>इन्द्र-स्तुति</td>
+                </tr>
+                <tr>
+                    <td>काण्ड 18</td>
+                    <td>4</td>
+                    <td>~280</td>
+                    <td>श्राद्ध, पितर</td>
+                </tr>
+                <tr>
+                    <td>काण्ड 19</td>
+                    <td>72</td>
+                    <td>~300</td>
+                    <td>रात्रि सूक्त, काल सूक्त, औषधि</td>
+                </tr>
+                <tr>
+                    <td>काण्ड 20</td>
+                    <td>143</td>
+                    <td>~500</td>
+                    <td>ऋग्वैदिक मन्त्रों का संकलन (उपांग)</td>
+                </tr>
+            </tbody>
+        </table>
+        <p style="text-align: right;">※ मंत्र संख्या शाखाभेद (शौनक / पैप्पलाद) से थोड़ी भिन्न हो सकती है।</p>
+
+        <!-- 3. Famous Suktas -->
+        <h2>🌟 प्रमुख सूक्त (Important Hymns)</h2>
+        <ul class="sukta-list">
+            <li><strong>भूमि सूक्त</strong> (12.1) – पृथ्वी की स्तुति</li>
+            <li><strong>काल सूक्त</strong> (19.53-54) – समय का रहस्य</li>
+            <li><strong>व्रात्य सूक्त</strong> (15.1-18) – तप एवं ब्रह्मचर्य</li>
+            <li><strong>रोहित सूक्त</strong> (13.1-4) – सूर्योपासना</li>
+            <li><strong>कोश सूक्त</strong> (3.15) – धन-समृद्धि</li>
+            <li><strong>प्राण सूक्त</strong> (11.4) – प्राण की महिमा</li>
+            <li><strong>विवाह सूक्त</strong> (14.1-2) – पाणिग्रहण मन्त्र</li>
+            <li><strong>शान्ति सूक्त</strong> (19.9)</li>
+            <li><strong>मृत्युंजय सूक्त</strong> (8.1-2)</li>
+        </ul>
+
+        <div class="highlight">
+            <p>🌍 <strong>भूमि सूक्त</strong> (अथर्ववेद 12.1) – "सत्यं बृहदृतमुग्रं दीक्षा तपो ब्रह्म यज्ञः पृथिवीं धारयन्ति।" – पृथ्वी की सुरक्षा एवं पवित्रता का अद्भुत वर्णन।</p>
+            <p>⏳ <strong>काल सूक्त</strong> (19.53) – "कालो अश्वो वहति सप्तरश्मिः..." – समय को घोड़े के रूप में चित्रित करता दार्शनिक सूक्त।</p>
+        </div>
+
+        <!-- 4. Shakhas (Recensions) -->
+        <h2>📚 शाखाएँ (Recensions)</h2>
+        <p>अथर्ववेद की दो प्रमुख शाखाएँ उपलब्ध हैं – <strong>शौनक (Śaunaka)</strong> और <strong>पैप्पलाद (Paippalāda)</strong>। शौनक शाखा का संस्करण अधिक प्रचलित है, जिस पर सायणाचार्य ने भाष्य लिखा। पैप्पलाद शाखा की संहिता कश्मीर एवं ओडिशा में मिलती है,
+            जो मंत्रों के क्रम में भिन्न है। अन्य शाखाएँ (जलद, ब्रह्मवद आदि) अब उपलब्ध नहीं हैं।</p>
+
+        <!-- 5. Associated Texts -->
+        <h2>📗 संलग्न ग्रंथ (Associated Literature)</h2>
+        <table>
+            <tr>
+                <th>ग्रंथ</th>
+                <th>नाम</th>
+                <th>विवरण</th>
+            </tr>
+            <tr>
+                <td><strong>ब्राह्मण</strong></td>
+                <td>गोपथ ब्राह्मण</td>
+                <td>अथर्ववेद का एकमात्र ब्राह्मण ग्रंथ, दो भागों में विभक्त</td>
+            </tr>
+            <tr>
+                <td><strong>उपनिषद्</strong></td>
+                <td>प्रश्न, मुण्डक, माण्डूक्य, गर्भ, महानारायण (कुछ अंश)</td>
+                <td>उच्च दर्शन एवं ब्रह्म-विद्या प्रधान</td>
+            </tr>
+            <tr>
+                <td><strong>श्रौतसूत्र / गृह्यसूत्र</strong></td>
+                <td>वैतान सूत्र (श्रौत), कौशिक सूत्र (गृह्य)</td>
+                <td>यज्ञों एवं घरेलू अनुष्ठानों में अथर्ववेदीय मन्त्रों के प्रयोग का विधान</td>
+            </tr>
+            <tr>
+                <td><strong>परिशिष्ट</strong></td>
+                <td>अथर्ववेद परिशिष्ट (अनेक ग्रंथ)</td>
+                <td>ज्योतिष, लक्षण, शान्ति आदि विषयों पर अनेक परिशिष्ट ग्रंथ</td>
+            </tr>
+        </table>
+
+        <!-- 6. Devatas (Deities) and Themes -->
+        <h2>🙏 देवता एवं विषय (Deities & Themes)</h2>
+        <div style="display: flex; flex-wrap: wrap; gap: 20px;">
+            <div style="flex: 1; min-width: 200px;">
+                <h3>मुख्य देवता</h3>
+                <ul style="list-style-type: square; padding-left: 25px;">
+                    <li><strong>अग्नि</strong> (रक्षोघ्न)</li>
+                    <li><strong>इंद्र, बृहस्पति</strong></li>
+                    <li><strong>रुद्र / भव / शर्व</strong></li>
+                    <li><strong>स्कन्द, विशाख</strong></li>
+                    <li><strong>प्रजापति, ब्रह्मा</strong></li>
+                    <li><strong>औषधि एवं वनस्पति</strong></li>
+                </ul>
+            </div>
+            <div style="flex: 2;">
+                <h3>विषयगत विविधता</h3>
+                <ul>
+                    <li>🌿 <strong>चिकित्सा एवं आयुर्वेद</strong> – रोगों के लिए औषधीय पौधों के मन्त्र (काण्ड 2, 5, 6, 19)।</li>
+                    <li>🧙 <strong>अभिचार (जादू-टोना)</strong> – शत्रु-नाश, वशीकरण, मोहन (काण्ड 2, 3, 4, 7)।</li>
+                    <li>🕊️ <strong>शान्ति एवं पुष्टि</strong> – गृह-शान्ति, समृद्धि, आयुष्य (काण्ड 3, 6, 19)।</li>
+                    <li>🧘 <strong>आध्यात्मिक दर्शन</strong> – काल, ब्रह्म, प्राण, व्रात्य (काण्ड 10, 11, 15, 19)।</li>
+                    <li>⚰️ <strong>पितृ-कर्म</strong> – श्राद्ध, मृत्यु से सम्बन्धित मन्त्र (काण्ड 18)।</li>
+                    <li>🌎 <strong>प्रकृति एवं समाज</strong> – भूमि, विवाह, राज्याभिषेक (काण्ड 12, 14, 3)।</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- 7. Language and Meter -->
+        <h2>🔤 भाषा एवं छंद (Language & Meter)</h2>
+        <p>अथर्ववेद की भाषा वैदिक संस्कृत है, लेकिन इसमें ऋग्वेद से भिन्न शब्द-भण्डार और लोक-प्रचलित प्रयोग मिलते हैं। इसमें गद्यांश भी हैं (विशेषतः 15वें काण्ड में)। छंदों में – अनुष्टुप, त्रिष्टुप, जगती, गायत्री, प्राचीन ब्राह्मी आदि का प्रयोग हुआ है।</p>
+
+        <!-- 8. Historical & Cultural Significance -->
+        <h2>🌍 ऐतिहासिक एवं सांस्कृतिक महत्व</h2>
+        <p>अथर्ववेद भारतीय लोक-परम्पराओं, आयुर्वेद एवं तंत्र-मंत्र का आदि स्रोत है। यह मनुष्य के दैनन्दिन जीवन से सीधा सम्बन्ध रखता है – रोग, शोक, भय, प्रेम, ईर्ष्या आदि के निवारण के उपाय इसमें मिलते हैं। <strong>कौशिक सूत्र</strong> में इन मन्त्रों के व्यावहारिक
+            प्रयोगों का विस्तृत वर्णन है। बाद की तान्त्रिक परम्पराओं ने अथर्ववेद से प्रेरणा ली है। आयुर्वेद के प्राचीन आचार्य (चरक, सुश्रुत) भी अथर्ववेद को 'चिकित्सा-वेद' मानते थे।</p>
+
+        <!-- 9. Manuscripts & Transmission -->
+        <h2>📜 हस्तलेख एवं परंपरा</h2>
+        <p>अथर्ववेद की शौनक शाखा की पाण्डुलिपियाँ भारत के विभिन्न भागों में मिलती हैं। पैप्पलाद शाखा की एक प्रति कश्मीर से प्राप्त हुई, जिसे अब ट्यूबिंगन विश्वविद्यालय में सुरक्षित रखा गया है। सबसे पुरानी हस्तलिखित प्रति 14वीं शताब्दी की है। सर्वप्रथम राल्फ
+            ग्रिफिथ (1895-96) ने अंग्रेजी अनुवाद किया। हिन्दी में पं. रामस्वरूप शर्मा, डॉ. श्रीपाद दामोदर सातवलेकर आदि ने अनुवाद प्रकाशित किए।</p>
+
+        <hr>
+
+        <!-- quick reference table -->
+        <h2>📋 त्वरित संदर्भ (Quick Reference)</h2>
+        <table>
+            <tr>
+                <td>कुल सूक्त (शौनक)</td>
+                <td>730 सूक्त (कुछ गणना में 731)</td>
+            </tr>
+            <tr>
+                <td>कुल मंत्र (शौनक)</td>
+                <td>~6000 (विस्तृत गणना 5987)</td>
+            </tr>
+            <tr>
+                <td>पैप्पलाद संहिता मंत्र</td>
+                <td>~5000 (भिन्न क्रम एवं अतिरिक्त सूक्त)</td>
+            </tr>
+            <tr>
+                <td>प्रमुख उपनिषद्</td>
+                <td>प्रश्न, मुण्डक, माण्डूक्य</td>
+            </tr>
+            <tr>
+                <td>ऐतिहासिक शाखाएँ</td>
+                <td>शौनक, पैप्पलाद (अन्य लुप्त)</td>
+            </tr>
+            <tr>
+                <td>सर्वाधिक लम्बा सूक्त</td>
+                <td>भूमि सूक्त (12.1 – 63 मंत्र)</td>
+            </tr>
+            <tr>
+                <td>दार्शनिक उत्कर्ष</td>
+                <td>प्रश्न और मुण्डक में ब्रह्म-विद्या</td>
+            </tr>
+            <tr>
+                <td>आधुनिक अनुवाद</td>
+                <td>हिन्दी – केशवराव कोरटकर, डॉ. रामकुमार राय, आर्यसमाजीय संस्करण</td>
+            </tr>
+        </table>
+
+        <!-- footer with mantra -->
+        <div class="footer-note">
+            ॐ भद्रं कर्णेभिः शृणुयाम देवाः । <br>
+            <span style="font-size: 1.5rem;">॥ पृथिवी शान्ता रुद्रकल्पा शिवा स्तेज्योतिष्कृतो देवा अधिसृष्टा ॥</span> (अथर्ववेद 19.9.1)
+        </div>
+    </div>
+</body>
+
+</html>

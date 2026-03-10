@@ -1,0 +1,1090 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sacred Chalisas - Divine Forty-Verse Devotional Hymns</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+         :root {
+            --maroon: #6B1A1A;
+            --deep-maroon: #3D0000;
+            --gold: #C9922A;
+            --gold-light: #E8B84B;
+            --gold-pale: #F5D98E;
+            --cream: #FDF6E3;
+            --cream-dark: #F5E9CC;
+            --text-dark: #2C1010;
+            --text-mid: #5A3030;
+            --text-light: #8B5A2B;
+        }
+        
+        body {
+            font-family: 'Lora', Georgia, serif;
+            background: var(--cream);
+            color: var(--text-dark);
+            line-height: 1.7;
+        }
+        
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(90deg, var(--deep-maroon), var(--gold), var(--maroon), var(--gold-light), var(--deep-maroon));
+            z-index: 100;
+        }
+        
+        .container {
+            max-width: 1440px;
+            margin: 0 auto;
+            padding: 20px 30px;
+        }
+        /* HEADER */
+        
+        .header {
+            background: linear-gradient(160deg, var(--deep-maroon) 0%, var(--maroon) 50%, #7A2020 100%);
+            color: var(--gold-pale);
+            padding: 70px 40px 60px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            border-bottom: 4px solid var(--gold);
+        }
+        
+        .header::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image: radial-gradient(ellipse at 20% 50%, rgba(201, 146, 42, 0.12) 0%, transparent 50%), radial-gradient(ellipse at 80% 50%, rgba(201, 146, 42, 0.12) 0%, transparent 50%);
+            pointer-events: none;
+        }
+        
+        .header-inner {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .om-symbol {
+            font-size: 3.5rem;
+            color: var(--gold);
+            display: block;
+            margin-bottom: 10px;
+            filter: drop-shadow(0 0 12px rgba(201, 146, 42, 0.6));
+            animation: glow 3s ease-in-out infinite alternate;
+        }
+        
+        @keyframes glow {
+            from {
+                filter: drop-shadow(0 0 8px rgba(201, 146, 42, 0.4))
+            }
+            to {
+                filter: drop-shadow(0 0 20px rgba(201, 146, 42, 0.8))
+            }
+        }
+        
+        .header-divider {
+            width: 200px;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--gold), transparent);
+            margin: 15px auto;
+        }
+        
+        .header h1 {
+            font-family: 'Cinzel Decorative', serif;
+            font-size: 3rem;
+            font-weight: 900;
+            letter-spacing: 2px;
+            color: var(--gold-pale);
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+            margin-bottom: 8px;
+        }
+        
+        .header-hindi {
+            font-size: 1.8rem;
+            color: var(--gold-light);
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+        
+        .header-sub {
+            font-size: 1.05rem;
+            color: rgba(245, 217, 142, 0.85);
+            font-style: italic;
+            margin-bottom: 30px;
+        }
+        
+        .header-stats {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 10px;
+        }
+        
+        .stat-pill {
+            background: rgba(201, 146, 42, 0.18);
+            border: 1px solid rgba(201, 146, 42, 0.45);
+            color: var(--gold-pale);
+            padding: 10px 28px;
+            border-radius: 50px;
+            font-size: 0.95rem;
+            font-weight: 600;
+        }
+        /* FILTERS */
+        
+        .filters {
+            background: white;
+            border: 1px solid #E8D5B0;
+            border-radius: 16px;
+            padding: 20px 25px;
+            margin-bottom: 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            box-shadow: 0 4px 20px rgba(107, 26, 26, 0.08);
+        }
+        
+        .search-wrap {
+            flex: 1;
+            max-width: 380px;
+            position: relative;
+        }
+        
+        .search-wrap input {
+            width: 100%;
+            padding: 13px 45px 13px 20px;
+            border: 2px solid #D4A843;
+            border-radius: 30px;
+            font-size: 15px;
+            font-family: 'Lora', serif;
+            outline: none;
+            background: var(--cream);
+            color: var(--text-dark);
+            transition: 0.3s;
+        }
+        
+        .search-wrap input:focus {
+            border-color: var(--maroon);
+            box-shadow: 0 0 0 3px rgba(107, 26, 26, 0.12);
+        }
+        
+        .search-wrap input::placeholder {
+            color: #B08040;
+            font-style: italic;
+        }
+        
+        .search-icon {
+            position: absolute;
+            right: 16px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--gold);
+            font-size: 1.1rem;
+        }
+        
+        .filter-btns {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+        
+        .filter-btn {
+            padding: 10px 22px;
+            border: 2px solid var(--maroon);
+            background: white;
+            color: var(--maroon);
+            border-radius: 30px;
+            cursor: pointer;
+            font-family: 'Lora', serif;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: 0.25s;
+        }
+        
+        .filter-btn.active,
+        .filter-btn:hover {
+            background: var(--maroon);
+            color: var(--gold-pale);
+        }
+        /* BACK */
+        
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--maroon);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            margin: 20px 0 30px;
+            padding: 10px 22px;
+            border: 2px solid var(--maroon);
+            border-radius: 30px;
+            transition: all 0.25s;
+        }
+        
+        .back-link:hover {
+            background: var(--maroon);
+            color: var(--gold-pale);
+        }
+        /* GRID */
+        
+        .chalisa-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(460px, 1fr));
+            gap: 32px;
+            margin-bottom: 60px;
+        }
+        /* CARD */
+        
+        .chalisa-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            border: 1px solid #E8D5B0;
+            box-shadow: 0 8px 30px rgba(107, 26, 26, 0.08);
+            transition: transform 0.3s, box-shadow 0.3s;
+            animation: fadeUp 0.5s ease-out both;
+        }
+        
+        .chalisa-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 45px rgba(107, 26, 26, 0.18);
+        }
+        
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(22px)
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0)
+            }
+        }
+        
+        .chalisa-card:nth-child(1) {
+            animation-delay: .05s
+        }
+        
+        .chalisa-card:nth-child(2) {
+            animation-delay: .10s
+        }
+        
+        .chalisa-card:nth-child(3) {
+            animation-delay: .15s
+        }
+        
+        .chalisa-card:nth-child(4) {
+            animation-delay: .20s
+        }
+        
+        .chalisa-card:nth-child(5) {
+            animation-delay: .25s
+        }
+        
+        .chalisa-card:nth-child(6) {
+            animation-delay: .30s
+        }
+        
+        .chalisa-card:nth-child(7) {
+            animation-delay: .35s
+        }
+        
+        .chalisa-card:nth-child(8) {
+            animation-delay: .40s
+        }
+        
+        .chalisa-card:nth-child(9) {
+            animation-delay: .45s
+        }
+        
+        .chalisa-card:nth-child(10) {
+            animation-delay: .50s
+        }
+        
+        .card-header {
+            background: linear-gradient(135deg, var(--maroon), var(--deep-maroon));
+            color: var(--gold-pale);
+            padding: 22px 22px 18px;
+            position: relative;
+            border-bottom: 3px solid var(--gold);
+        }
+        
+        .card-header::after {
+            content: '';
+            position: absolute;
+            bottom: -1px;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--gold-light), transparent);
+        }
+        
+        .card-num {
+            position: absolute;
+            top: 14px;
+            right: 18px;
+            background: rgba(201, 146, 42, 0.25);
+            border: 1px solid rgba(201, 146, 42, 0.5);
+            color: var(--gold-light);
+            padding: 4px 14px;
+            border-radius: 20px;
+            font-size: 0.82rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            font-family: 'Cinzel Decorative', serif;
+        }
+        
+        .card-header h2 {
+            font-family: 'Lora', serif;
+            font-size: 1.65rem;
+            font-weight: 700;
+            margin-bottom: 4px;
+            padding-right: 70px;
+            line-height: 1.3;
+        }
+        
+        .card-header h3 {
+            font-family: 'Cinzel Decorative', serif;
+            font-size: 0.85rem;
+            letter-spacing: 1.5px;
+            color: var(--gold-light);
+            font-weight: 400;
+            opacity: 0.9;
+        }
+        
+        .card-body {
+            padding: 22px;
+        }
+        
+        .deity-row {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            padding-bottom: 16px;
+            margin-bottom: 16px;
+            border-bottom: 2px dashed #E8C87A;
+        }
+        
+        .deity-icon {
+            width: 50px;
+            height: 50px;
+            flex-shrink: 0;
+            background: linear-gradient(135deg, var(--maroon), var(--deep-maroon));
+            border: 2px solid var(--gold);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.7rem;
+            box-shadow: 0 3px 12px rgba(107, 26, 26, 0.3);
+        }
+        
+        .deity-info h4 {
+            color: var(--maroon);
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 3px;
+        }
+        
+        .deity-info p {
+            color: var(--text-light);
+            font-size: 0.88rem;
+            font-style: italic;
+        }
+        /* LYRICS */
+        
+        .lyrics-box {
+            background: linear-gradient(to bottom, #FDF8EE, #FAF0D8);
+            border: 1px solid #E8C87A;
+            border-left: 5px solid var(--maroon);
+            border-radius: 12px;
+            padding: 0 20px;
+            margin: 16px 0;
+            font-family: 'Lora', serif;
+            line-height: 1.85;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease, padding 0.3s ease;
+        }
+        
+        .lyrics-box.expanded {
+            max-height: 900px;
+            overflow-y: auto;
+            padding: 18px 20px;
+        }
+        
+        .lyrics-box::-webkit-scrollbar {
+            width: 5px;
+        }
+        
+        .lyrics-box::-webkit-scrollbar-track {
+            background: #F5E8CC;
+            border-radius: 3px;
+        }
+        
+        .lyrics-box::-webkit-scrollbar-thumb {
+            background: var(--gold);
+            border-radius: 3px;
+        }
+        
+        .stanza {
+            margin-bottom: 14px;
+        }
+        
+        .stanza:last-child {
+            margin-bottom: 0;
+        }
+        
+        .verse-title {
+            font-family: 'Cinzel Decorative', serif;
+            font-size: 0.78rem;
+            color: var(--maroon);
+            letter-spacing: 1.5px;
+            margin-bottom: 6px;
+            opacity: 0.8;
+        }
+        
+        .hindi-text {
+            font-size: 1.05rem;
+            color: var(--text-dark);
+            font-weight: 500;
+            line-height: 1.9;
+        }
+        /* EXPAND BTN */
+        
+        .expand-btn {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid var(--maroon);
+            background: transparent;
+            color: var(--maroon);
+            border-radius: 10px;
+            cursor: pointer;
+            font-family: 'Lora', serif;
+            font-size: 0.92rem;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            transition: 0.25s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            margin: 14px 0;
+        }
+        
+        .expand-btn:hover {
+            background: var(--maroon);
+            color: var(--gold-pale);
+        }
+        
+        .expand-btn .arrow {
+            transition: transform 0.3s;
+        }
+        /* MEANING */
+        
+        .meaning-box {
+            background: linear-gradient(135deg, #FFF0D5, #FAE8C0);
+            border: 1px solid #DDBB80;
+            border-radius: 10px;
+            padding: 14px 16px;
+            font-size: 0.92rem;
+            color: var(--text-mid);
+            margin: 12px 0;
+            line-height: 1.7;
+        }
+        
+        .meaning-box strong {
+            color: var(--maroon);
+        }
+        /* META */
+        
+        .card-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 14px;
+            margin-top: 14px;
+            border-top: 1px solid #EDD99A;
+            font-size: 0.88rem;
+            color: var(--text-light);
+        }
+        
+        .stars {
+            color: #D4A010;
+            font-weight: 700;
+        }
+        /* FOOTER */
+        
+        .footer {
+            background: linear-gradient(160deg, var(--deep-maroon), var(--maroon));
+            color: var(--gold-pale);
+            text-align: center;
+            padding: 50px 30px 40px;
+            border-top: 4px solid var(--gold);
+            border-radius: 50px 50px 0 0;
+        }
+        
+        .footer-om {
+            font-size: 3rem;
+            color: var(--gold);
+            margin-bottom: 15px;
+            display: block;
+        }
+        
+        .footer h3 {
+            font-family: 'Cinzel Decorative', serif;
+            font-size: 1.3rem;
+            color: var(--gold-light);
+            margin-bottom: 10px;
+        }
+        
+        .footer p {
+            font-size: 0.95rem;
+            opacity: 0.8;
+            font-style: italic;
+        }
+        /* SCROLL TOP */
+        
+        .scroll-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, var(--maroon), var(--deep-maroon));
+            border: 2px solid var(--gold);
+            color: var(--gold-pale);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            font-size: 1.2rem;
+            box-shadow: 0 5px 20px rgba(107, 26, 26, 0.4);
+            transition: 0.3s;
+            z-index: 50;
+        }
+        
+        .scroll-top:hover {
+            transform: scale(1.12);
+        }
+        
+        .hidden {
+            display: none !important;
+        }
+        
+        @media(max-width:768px) {
+            .header h1 {
+                font-size: 2rem;
+            }
+            .chalisa-grid {
+                grid-template-columns: 1fr;
+            }
+            .filters {
+                flex-direction: column;
+            }
+            .search-wrap {
+                max-width: 100%;
+            }
+            .container {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div style="height:5px"></div>
+
+    <div class="header">
+        <div class="container">
+            <div class="header-inner">
+                <span class="om-symbol">🕉️</span>
+                <div class="header-divider"></div>
+                <div class="header-hindi">चालीसा संग्रह</div>
+
+                <p class="header-sub">चालीस दोहों की दिव्य स्तुति — Forty-verse devotional hymns of eternal wisdom</p>
+                <div class="header-divider"></div>
+                <div class="header-stats">
+                    <span class="stat-pill">🕉️ पूर्ण चालीसा</span>
+                    <span class="stat-pill">🕉️ सभी देवी-देवता</span>
+                    <span class="stat-pill">🕉️ हिन्दी पाठ सहित</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <a href="/index" class="back-link">&#8592; Back to Home</a>
+
+        <div class="filters">
+            <div class="search-wrap">
+                <input type="text" id="searchInput" placeholder="चालीसा खोजें... Search chalisa..." oninput="applyFilters()">
+                <span class="search-icon">🔍</span>
+            </div>
+            <div class="filter-btns">
+                <button class="filter-btn active" onclick="filterDeity('all',this)">All</button>
+                <button class="filter-btn" onclick="filterDeity('vishnu',this)">Vishnu</button>
+                <button class="filter-btn" onclick="filterDeity('shiva',this)">Shiva</button>
+                <button class="filter-btn" onclick="filterDeity('devi',this)">Devi</button>
+                <button class="filter-btn" onclick="filterDeity('ganesh',this)">Ganesh</button>
+                <button class="filter-btn" onclick="filterDeity('hanuman',this)">Hanuman</button>
+            </div>
+        </div>
+
+        <div class="chalisa-grid" id="chalisaGrid">
+
+            <!-- 1 HANUMAN -->
+            <div class="chalisa-card" data-deity="hanuman" data-name="hanuman chalisa हनुमान चालीसा">
+                <div class="card-header">
+                    <span class="card-num">#01</span>
+                    <h2>श्री हनुमान चालीसा</h2>
+                    <h3>SHRI HANUMAN CHALISA</h3>
+                </div>
+                <div class="card-body">
+                    <div class="deity-row">
+                        <div class="deity-icon">🙏</div>
+                        <div class="deity-info">
+                            <h4>हनुमान जी</h4>
+                            <p>संकटमोचन, राम-भक्त शिरोमणि</p>
+                        </div>
+                    </div>
+                    <button class="expand-btn" onclick="toggleLyrics(this)">पाठ देखें / View Chalisa <span class="arrow">▼</span></button>
+                    <div class="lyrics-box">
+                        <div class="stanza">
+                            <div class="verse-title">॥ दोहा ॥</div>
+                            <div class="hindi-text">श्री गुरु चरण सरोज रज, निज मन मुकुर सुधारि।<br>बरनउं रघुबर बिमल जसु, जो दायकु फल चारि॥<br><br>बुद्धिहीन तनु जानिके, सुमिरों पवन-कुमार।<br>बल बुधि विद्या देहु मोहि, हरहु कलेस बिकार॥</div>
+                        </div>
+                        <div class="stanza">
+                            <div class="verse-title">॥ चालीसा ॥</div>
+                            <div class="hindi-text">जय हनुमान ज्ञान गुन सागर, जय कपीस तिहुं लोक उजागर॥<br><br>राम दूत अतुलित बल धामा, अंजनि-पुत्र पवन-सुत नामा॥<br><br>महावीर विक्रम बजरंगी, कुमति निवार सुमति के संगी॥<br><br>कंचन बरन बिराज सुवेसा, कानन कुण्डल कुंचित केसा॥<br><br>हाथ
+                                बज्र औ ध्वजा बिराजै, कांधे मूंज जनेऊ साजै॥<br><br>संकर सुवन केसरीनन्दन, तेज प्रताप महा जग बन्दन॥<br><br>विद्यावान गुनी अति चातुर, राम काज करिबे को आतुर॥<br><br>प्रभु चरित्र सुनिबे को रसिया, राम लखन सीता मन बसिया॥<br><br>सूक्ष्म
+                                रूप धरि सियहिं दिखावा, विकट रूप धरि लंक जरावा॥<br><br>भीम रूप धरि असुर संहारे, रामचन्द्र के काज संवारे॥</div>
+                        </div>
+                        <div class="stanza">
+                            <div class="hindi-text">लाय सजीवन लखन जियाये, श्री रघुबीर हरषि उर लाये॥<br><br>रघुपति कीन्ही बहुत बड़ाई, तुम मम प्रिय भरत-हि सम भाई॥<br><br>सहस बदन तुम्हरो जस गावें, अस कहि श्रीपति कण्ठ लगावें॥<br><br>जम कुबेर दिगपाल जहां ते, कबि कोबिद कहि सके कहां
+                                ते॥
+                                <br><br>तुम उपकार सुग्रीवहिं कीन्हा, राम मिलाय राजपद दीन्हा॥<br><br>तुम्हरो मंत्र विभीषण माना, लंकेश्वर भये सब जग जाना॥<br><br>जुग सहस्र जोजन पर भानू, लील्यो ताहि मधुर फल जानू॥<br><br>प्रभु मुद्रिका मेलि मुख माहीं, जलधि
+                                लांघि गये अचरज नाहीं॥<br><br>दुर्गम काज जगत के जेते, सुगम अनुग्रह तुम्हरे तेते॥<br><br>राम दुआरे तुम रखवारे, होत न आज्ञा बिनु पैसारे॥</div>
+                        </div>
+                        <div class="stanza">
+                            <div class="hindi-text">सब सुख लहै तुम्हारी सरना, तुम रक्षक काहू को डर ना॥<br><br>भूत पिशाच निकट नहिं आवै, महावीर जब नाम सुनावै॥<br><br>नासै रोग हरै सब पीरा, जपत निरन्तर हनुमत बीरा॥<br><br>संकट से हनुमान छुड़ावै, मन क्रम वचन ध्यान जो लावै॥<br><br>चारों
+                                जुग परताप तुम्हारा, है परसिद्ध जगत उजियारा॥<br><br>साधु-संत के तुम रखवारे, असुर निकन्दन राम दुलारे॥</div>
+                        </div>
+                        <div class="stanza">
+                            <div class="verse-title">॥ दोहा ॥</div>
+                            <div class="hindi-text">पवनतनय संकट हरन, मंगल मूरति रूप।<br>राम लखन सीता सहित, हृदय बसहु सुर भूप॥</div>
+                        </div>
+                    </div>
+                    <div class="meaning-box"><strong>महत्व / Significance:</strong> गोस्वामी तुलसीदास द्वारा रचित यह चालीसा सर्वाधिक पठित स्तोत्र है। भय, रोग, संकट और बाधा नाश के लिए अत्यंत प्रभावशाली।</div>
+                    <div class="card-meta">
+                        <span>⏱️ 7 मिनट</span>
+                        <span class="stars">⭐ 5.0</span>
+                        <span>🎵 4.5M श्रोता</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2 GANESH -->
+            <div class="chalisa-card" data-deity="ganesh" data-name="ganesh chalisa गणेश चालीसा">
+                <div class="card-header">
+                    <span class="card-num">#02</span>
+                    <h2>श्री गणेश चालीसा</h2>
+                    <h3>SHRI GANESH CHALISA</h3>
+                </div>
+                <div class="card-body">
+                    <div class="deity-row">
+                        <div class="deity-icon">🐘</div>
+                        <div class="deity-info">
+                            <h4>भगवान गणेश</h4>
+                            <p>विघ्नहर्ता, प्रथम पूज्य</p>
+                        </div>
+                    </div>
+                    <button class="expand-btn" onclick="toggleLyrics(this)">पाठ देखें / View Chalisa <span class="arrow">▼</span></button>
+                    <div class="lyrics-box">
+                        <div class="stanza">
+                            <div class="verse-title">॥ दोहा ॥</div>
+                            <div class="hindi-text">जय गणपति सद्गुण सदन, कविवर बदन कृपाल।<br>विघ्न हरण मंगल करण, जय जय गिरिजालाल॥</div>
+                        </div>
+                        <div class="stanza">
+                            <div class="verse-title">॥ चालीसा ॥</div>
+                            <div class="hindi-text">जय जय जय गणपति गणराजू, मंगल भरण करण शुभ काजू॥<br><br>जय गजबदन सदन सुखदाता, विश्व विनायक बुद्धि विधाता॥<br><br>वक्र तुण्ड शुचि शुण्ड सुहावन, तिलक त्रिपुण्ड भाल मन भावन॥<br><br>राजत मणि मुक्तन उर माला, स्वर्ण मुकुट शिर नयन विशाला॥<br><br>पुस्तक
+                                पाणि कुठार त्रिशूलं, मोदक भोग सुगन्धित फूलं॥<br><br>सुन्दर पीताम्बर तन साजित, चरण पादुका मुनि मन राजित॥<br><br>धनि शिवसुवन षडानन भ्राता, गौरी ललन विश्वविख्याता॥<br><br>ऋद्धि-सिद्धि तव चंवर सुढारें, मूषक वाहन सोहत द्वारें॥<br><br>एक
+                                समय गिरिराज कुमारी, पुत्र हेतु तप कीन्हो भारी॥<br><br>भयो यज्ञ जब पूर्ण अनुपा, तब पहुंच्यो तुम धरि द्विज रूपा॥</div>
+                        </div>
+                        <div class="stanza">
+                            <div class="hindi-text">अतिथि जानि कै गौरि सुखारी, बहुविधि सेवा करी तुम्हारी॥<br><br>अति प्रसन्न हैं तुम वर दीन्हा, मातु पुत्र हित जो तप कीन्हा॥<br><br>गणनायक गुण ज्ञान निधाना, पूजित प्रथम रूप भगवाना॥<br><br>बनि शिशु रुदन जबहिं तुम ठाना, लखि मुख सुख
+                                नहिं गौरि समाना॥<br><br>सकल मगन सुखमंगल गावहिं, नभ ते सुरन सुमन वर्षावहिं॥<br><br>शम्भु उमा बहु दान लुटावहिं, सुर मुनिजन सुत देखन आवहिं॥</div>
+                        </div>
+                        <div class="stanza">
+                            <div class="verse-title">॥ दोहा ॥</div>
+                            <div class="hindi-text">श्री गणेश यह चालीसा, पाठ करे धर ध्यान।<br>नित नव मंगल गृह बसे, लहे जगत सन्मान॥</div>
+                        </div>
+                    </div>
+                    <div class="meaning-box"><strong>महत्व / Significance:</strong> किसी भी शुभ कार्य के आरम्भ में श्री गणेश चालीसा का पाठ विघ्नों का नाश करता है और सफलता प्रदान करता है।</div>
+                    <div class="card-meta">
+                        <span>⏱️ 6 मिनट</span><span class="stars">⭐ 4.9</span><span>🎵 3.2M श्रोता</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3 DURGA -->
+            <div class="chalisa-card" data-deity="devi" data-name="durga chalisa दुर्गा चालीसा">
+                <div class="card-header">
+                    <span class="card-num">#03</span>
+                    <h2>श्री दुर्गा चालीसा</h2>
+                    <h3>SHRI DURGA CHALISA</h3>
+                </div>
+                <div class="card-body">
+                    <div class="deity-row">
+                        <div class="deity-icon">🦁</div>
+                        <div class="deity-info">
+                            <h4>माता दुर्गा</h4>
+                            <p>महाशक्ति, असुर-संहारिणी</p>
+                        </div>
+                    </div>
+                    <button class="expand-btn" onclick="toggleLyrics(this)">पाठ देखें / View Chalisa <span class="arrow">▼</span></button>
+                    <div class="lyrics-box">
+                        <div class="stanza">
+                            <div class="verse-title">॥ दोहा ॥</div>
+                            <div class="hindi-text">नमो नमो दुर्गे सुख करनी, नमो नमो अम्बे दुःख हरनी।<br>निरंकार है ज्योति तुम्हारी, तिहूं लोक फैली उजियारी॥</div>
+                        </div>
+                        <div class="stanza">
+                            <div class="verse-title">॥ चालीसा ॥</div>
+                            <div class="hindi-text">शुम्भ निशुम्भ विदारे महिषा, धूम्र विलोचन नयन निमेषा॥<br><br>चण्ड मुण्ड संहारिणी माता, जगत की तुम ही पालनहाता॥<br><br>ब्रह्मा विष्णु महेश उमा, त्रिभुवनेश्वरी तुम परमा॥<br><br>देवी शरण जो आवे तेरी, उसको भव से करो किनारी॥<br><br>दस
+                                भुजा तुम दसगुण राखो, भक्तन के भय दुख को भाखो॥<br><br>सिंह पे सवार चले रानी, महिषासुर संहारी वाणी॥<br><br>नवरात्रि में पूजो माता, नव दुर्गा का भेद बताता॥<br><br>शैलपुत्री से सिद्धिदात्री, नव रूपों में शक्ति की छात्री॥<br><br>जगदम्बा
+                                जग की जननी, तुम हो अम्बे चिरसनातनी॥<br><br>कालरात्रि और चन्द्रघण्टा, कात्यायनी कुष्माण्डा घण्टा॥</div>
+                        </div>
+                        <div class="stanza">
+                            <div class="hindi-text">स्कन्दमाता और महागौरी, भक्तन की अभिलाषा पूरी॥<br><br>ब्रह्मचारिणी तप की मूरति, दुर्गा तुम हो दैवी सूरति॥<br><br>दुष्ट संहारो शिष्ट उबारो, दुर्गे तुम बिन कौन संवारो॥<br><br>विन्ध्याचल पर कीन्हो वासा, सकल जगत की पूर्ण आसा॥<br><br>जो
+                                यह पाठ करे मन लाई, ताको होय सदा सुखदाई॥<br><br>ध्यान धरे चालीसा गावे, सुख सम्पति घर आवे जावे॥</div>
+                        </div>
+                        <div class="stanza">
+                            <div class="verse-title">॥ दोहा ॥</div>
+                            <div class="hindi-text">माता दुर्गे अब रखो, भक्तन की लाज।<br>चालीसा पढ़त नित, पूरण होय काज॥</div>
+                        </div>
+                    </div>
+                    <div class="meaning-box"><strong>महत्व / Significance:</strong> नवरात्रि में तथा प्रतिदिन इस चालीसा के पाठ से माता दुर्गा की कृपा प्राप्त होती है और सभी विघ्न-बाधाएं दूर होती हैं।</div>
+                    <div class="card-meta"><span>⏱️ 8 मिनट</span><span class="stars">⭐ 4.9</span><span>🎵 2.8M श्रोता</span></div>
+                </div>
+            </div>
+
+            <!-- 4 SHIV -->
+            <div class="chalisa-card" data-deity="shiva" data-name="shiv chalisa शिव चालीसा">
+                <div class="card-header">
+                    <span class="card-num">#04</span>
+                    <h2>श्री शिव चालीसा</h2>
+                    <h3>SHRI SHIV CHALISA</h3>
+                </div>
+                <div class="card-body">
+                    <div class="deity-row">
+                        <div class="deity-icon">🔱</div>
+                        <div class="deity-info">
+                            <h4>भगवान शिव</h4>
+                            <p>महादेव, त्रिलोकेश्वर</p>
+                        </div>
+                    </div>
+                    <button class="expand-btn" onclick="toggleLyrics(this)">पाठ देखें / View Chalisa <span class="arrow">▼</span></button>
+                    <div class="lyrics-box">
+                        <div class="stanza">
+                            <div class="verse-title">॥ दोहा ॥</div>
+                            <div class="hindi-text">जय गणेश गिरिजा सुवन, मंगल मूल सुजान।<br>कहत अयोध्यादास तुम, देहु अभय वरदान॥</div>
+                        </div>
+                        <div class="stanza">
+                            <div class="verse-title">॥ चालीसा ॥</div>
+                            <div class="hindi-text">जय शिव ओंकारा प्रभु जय शिव ओंकारा।<br>ब्रह्मा विष्णु सदाशिव अर्धांगी धारा॥<br><br>एकानन चतुरानन पंचानन राजे।<br>हंसानन गरुडासन वृषवाहन साजे॥<br><br>दो भुज चार चतुर्भुज दसभुज अति सोहे।<br>त्रिगुन रूप निरखतां त्रिभुवन जन मोहे॥<br><br>अक्षमाला
+                                वनमाला मुण्डमाला धारी।<br>चन्दन मृगमद सोहे भाले शशिधारी॥<br><br>श्वेताम्बर पीताम्बर बाघम्बर अंगे।<br>सनकादिक गरुणादिक भूतादिक संगे॥<br><br>ब्रह्मा विष्णु सदाशिव जानत अविवेका।<br>प्रणवाक्षर में शोभित ये तीनों एका॥<br><br>पर्वत
+                                सोहे पार्वती शंकर कैलासा।<br>भांग धतूर का भोजन भस्मी में वासा॥<br><br>जटा में गंगा धारण जटाजूट भारी।<br>नागनाथ विभूषण सोहत त्रिपुरारी॥<br><br>काशी में विराजे विश्वनाथ बाबा।<br>देख कृपा कर निज भक्तन कर दाबा॥<br><br>रावण
+                                चढ़ाय चढ़ाय फूल बेला।<br>शिव शंकर देव मिला जग मेला॥</div>
+                        </div>
+                        <div class="stanza">
+                            <div class="verse-title">॥ दोहा ॥</div>
+                            <div class="hindi-text">पूजन रामचन्द्र जी, ध्यावत शिव गोसाईं।<br>चालीसा शिव जी का, पढ़ मुक्ति पाई॥</div>
+                        </div>
+                    </div>
+                    <div class="meaning-box"><strong>महत्व / Significance:</strong> श्रावण मास, सोमवार और महाशिवरात्रि पर शिव चालीसा के पाठ से भगवान शिव की कृपा से मनोकामनाएं पूर्ण होती हैं।</div>
+                    <div class="card-meta"><span>⏱️ 7 मिनट</span><span class="stars">⭐ 4.9</span><span>🎵 3.0M श्रोता</span></div>
+                </div>
+            </div>
+
+            <!-- 5 LAKSHMI -->
+            <div class="chalisa-card" data-deity="devi" data-name="lakshmi chalisa लक्ष्मी चालीसा">
+                <div class="card-header">
+                    <span class="card-num">#05</span>
+                    <h2>श्री लक्ष्मी चालीसा</h2>
+                    <h3>SHRI LAKSHMI CHALISA</h3>
+                </div>
+                <div class="card-body">
+                    <div class="deity-row">
+                        <div class="deity-icon">💰</div>
+                        <div class="deity-info">
+                            <h4>माता लक्ष्मी</h4>
+                            <p>धन-ऐश्वर्य की अधिष्ठात्री</p>
+                        </div>
+                    </div>
+                    <button class="expand-btn" onclick="toggleLyrics(this)">पाठ देखें / View Chalisa <span class="arrow">▼</span></button>
+                    <div class="lyrics-box">
+                        <div class="stanza">
+                            <div class="verse-title">॥ दोहा ॥</div>
+                            <div class="hindi-text">मातु लक्ष्मी करि कृपा, करो हृदय में वास।<br>मनोकामना सिद्ध कर, पुरवहु मेरी आस॥</div>
+                        </div>
+                        <div class="stanza">
+                            <div class="verse-title">॥ चालीसा ॥</div>
+                            <div class="hindi-text">सिन्धु सुता मैं सुमिरौं तोही, ज्ञान बुद्धि विद्या दो मोही॥<br><br>जय जय जय लक्ष्मी भवानी, जगत की तुम हो कल्याणी॥<br><br>विष्णु भार्या जगत पालनी, हरि के संग सोहत मालिनी॥<br><br>शंख चक्र गदा पद्म धारी, पद्मासन पर बैठी प्यारी॥<br><br>उल्लू
+                                वाहन देवी सुहाना, लक्ष्मी माता का रूप पहचाना॥<br><br>दीपावली पर विशेष पूजा, और न दूजा तुमसा दूजा॥<br><br>महालक्ष्मी तुम जग की माता, दरिद्र नाशक सुख की दाता॥<br><br>ऋद्धि सिद्धि अष्ट लक्ष्मी रूपा, धनधान्य समृद्धि अनूपा॥<br><br>गजलक्ष्मी
+                                धनलक्ष्मी सुहाई, विजयलक्ष्मी वीरता लाई॥<br><br>चालीसा जो नित यह गावे, धन सम्पत्ति घर भर पावे॥</div>
+                        </div>
+                        <div class="stanza">
+                            <div class="verse-title">॥ दोहा ॥</div>
+                            <div class="hindi-text">लक्ष्मी जी की कृपा से, घर में हो समृद्धि।<br>चालीसा जो नित पढ़े, पावे नित नव सिद्धि॥</div>
+                        </div>
+                    </div>
+                    <div class="meaning-box"><strong>महत्व / Significance:</strong> दीपावली, शुक्रवार और प्रतिदिन श्री लक्ष्मी चालीसा का पाठ धन, समृद्धि और सुख-शांति प्रदान करता है।</div>
+                    <div class="card-meta"><span>⏱️ 6 मिनट</span><span class="stars">⭐ 4.8</span><span>🎵 2.6M श्रोता</span></div>
+                </div>
+            </div>
+
+            <!-- 6 RAM -->
+            <div class="chalisa-card" data-deity="vishnu" data-name="ram chalisa राम चालीसा">
+                <div class="card-header">
+                    <span class="card-num">#06</span>
+                    <h2>श्री राम चालीसा</h2>
+                    <h3>SHRI RAM CHALISA</h3>
+                </div>
+                <div class="card-body">
+                    <div class="deity-row">
+                        <div class="deity-icon">🏹</div>
+                        <div class="deity-info">
+                            <h4>भगवान श्रीराम</h4>
+                            <p>मर्यादा पुरुषोत्तम, धर्म के प्रतीक</p>
+                        </div>
+                    </div>
+                    <button class="expand-btn" onclick="toggleLyrics(this)">पाठ देखें / View Chalisa <span class="arrow">▼</span></button>
+                    <div class="lyrics-box">
+                        <div class="stanza">
+                            <div class="verse-title">॥ दोहा ॥</div>
+                            <div class="hindi-text">श्री रामचन्द्र कृपालु भजु मन, हरन भवभय दारुणम्।<br>नव कंज लोचन कंज मुख, कर कंज पद कंजारुणम्॥</div>
+                        </div>
+                        <div class="stanza">
+                            <div class="verse-title">॥ चालीसा ॥</div>
+                            <div class="hindi-text">रघुकुल श्रेष्ठ दशरथ नन्दन, सीतापति जानकी वन्दन॥<br><br>अवधपति रघुकुल कुल भूषण, राम नाम अखिल जग पावन॥<br><br>लक्ष्मण शत्रुघ्न भरत भाई, चारों भाई मिल छवि छाई॥<br><br>विश्वामित्र संग वन में गए, ताड़का मारिच को हाय दिए॥<br><br>अहल्या
+                                का उद्धार किया रे, राम नाम का महिमा पाया रे॥<br><br>धनुष यज्ञ में धनु तोड़ा, सीता संग वर माला जोड़ा॥<br><br>वनवास भी हंस के स्वीकारा, राम का जीवन है सब से न्यारा॥<br><br>सीता हरण लंका का संग्राम, रावण वध किया श्री भगवान॥<br><br>मर्यादा
+                                पुरुषोत्तम कहाते, धर्म की राह पर सदा चलाते॥<br><br>राम नाम की महिमा न्यारी, पापन काटे सबकी भारी॥</div>
+                        </div>
+                        <div class="stanza">
+                            <div class="verse-title">॥ दोहा ॥</div>
+                            <div class="hindi-text">राम नाम मणिदीप धरु, जिह देहरी द्वार।<br>तुलसी भीतर बाहेरहु, जौं चाहसि उजिआर॥</div>
+                        </div>
+                    </div>
+                    <div class="meaning-box"><strong>महत्व / Significance:</strong> भगवान राम की चालीसा का पाठ पापों को नष्ट करता है और मर्यादा, धर्म तथा मोक्ष का मार्ग प्रशस्त करता है।</div>
+                    <div class="card-meta"><span>⏱️ 7 मिनट</span><span class="stars">⭐ 4.8</span><span>🎵 2.4M श्रोता</span></div>
+                </div>
+            </div>
+
+            <!-- 7 SARASWATI -->
+            <div class="chalisa-card" data-deity="devi" data-name="saraswati chalisa सरस्वती चालीसा">
+                <div class="card-header">
+                    <span class="card-num">#07</span>
+                    <h2>श्री सरस्वती चालीसा</h2>
+                    <h3>SHRI SARASWATI CHALISA</h3>
+                </div>
+                <div class="card-body">
+                    <div class="deity-row">
+                        <div class="deity-icon">📚</div>
+                        <div class="deity-info">
+                            <h4>माता सरस्वती</h4>
+                            <p>विद्या, कला और ज्ञान की देवी</p>
+                        </div>
+                    </div>
+                    <button class="expand-btn" onclick="toggleLyrics(this)">पाठ देखें / View Chalisa <span class="arrow">▼</span></button>
+                    <div class="lyrics-box">
+                        <div class="stanza">
+                            <div class="verse-title">॥ दोहा ॥</div>
+                            <div class="hindi-text">जनक जननी पाद पंकज, प्रणमत रघुवर वीर।<br>विद्या बुद्धि सुजस समुझि, सब मिलि देहु मतिधीर॥</div>
+                        </div>
+                        <div class="stanza">
+                            <div class="verse-title">॥ चालीसा ॥</div>
+                            <div class="hindi-text">जय श्री सरस्वती माता दाती, विद्या बुद्धि ज्ञान की पाती॥<br><br>श्वेत वर्ण शुचि वाहन हंसा, आसन कमल मधुर है वंसा॥<br><br>हाथ पुस्तक अक्षमाला धारी, वीणा ध्वनि मन हरती प्यारी॥<br><br>वाग्देवी तुम शारदा माता, ब्रह्मा की विद्या की
+                                दाता॥
+                                <br><br>चारों वेदों की तुम जननी, अष्ट सिद्धि की हो रखवाली॥<br><br>बसंत पंचमी पर पूजन होई, ज्ञान दान करो तुम कोई॥<br><br>विद्यार्थी जो ध्यान लगाये, परीक्षा में वो सफल हो जाए॥<br><br>बुद्धिहीन को बुद्धि देती हो, मूर्ख को
+                                भी ज्ञान देती हो॥<br><br>नाद ब्रह्म की तुम हो शक्ति, संगीत में बसती है भक्ति॥<br><br>जो नित पाठ करे यह चालीसा, उसको मिले ज्ञान का हीसा॥</div>
+                        </div>
+                        <div class="stanza">
+                            <div class="verse-title">॥ दोहा ॥</div>
+                            <div class="hindi-text">सरस्वती माँ ज्ञान दो, मन की हरो अज्ञान।<br>चालीसा पढ़ते रहें, पावें सकल वरदान॥</div>
+                        </div>
+                    </div>
+                    <div class="meaning-box"><strong>महत्व / Significance:</strong> बसंत पंचमी, विद्यारम्भ और प्रतिदिन सरस्वती चालीसा के पाठ से विद्या, बुद्धि और वाक् शक्ति की प्राप्ति होती है।</div>
+                    <div class="card-meta"><span>⏱️ 5 मिनट</span><span class="stars">⭐ 4.7</span><span>🎵 1.9M श्रोता</span></div>
+                </div>
+            </div>
+
+            <!-- 8 KRISHNA -->
+            <div class="chalisa-card" data-deity="vishnu" data-name="krishna chalisa कृष्ण चालीसा">
+                <div class="card-header">
+                    <span class="card-num">#08</span>
+                    <h2>श्री कृष्ण चालीसा</h2>
+                    <h3>SHRI KRISHNA CHALISA</h3>
+                </div>
+                <div class="card-body">
+                    <div class="deity-row">
+                        <div class="deity-icon">🦚</div>
+                        <div class="deity-info">
+                            <h4>भगवान श्रीकृष्ण</h4>
+                            <p>योगेश्वर, गीता के उपदेशक</p>
+                        </div>
+                    </div>
+                    <button class="expand-btn" onclick="toggleLyrics(this)">पाठ देखें / View Chalisa <span class="arrow">▼</span></button>
+                    <div class="lyrics-box">
+                        <div class="stanza">
+                            <div class="verse-title">॥ दोहा ॥</div>
+                            <div class="hindi-text">बंशी बजत मुरलीधर श्याम, सुनि सुनि मोहत ग्वाल ग्राम।<br>यशोदा नन्दन नन्दलाल, राधा वल्लभ गोपाल॥</div>
+                        </div>
+                        <div class="stanza">
+                            <div class="verse-title">॥ चालीसा ॥</div>
+                            <div class="hindi-text">जय जय श्री कृष्ण कन्हाई, देवकी नन्दन गोकुल राई॥<br><br>वसुदेव देवकी सुत प्यारे, मधुरा नगरी के उजियारे॥<br><br>बाल रूप में लीला रचाई, माखन मिसरी खूब उड़ाई॥<br><br>गोपियों संग रास रचाया, पूतना को मुक्ति दिलाया॥<br><br>गोवर्धन
+                                पर्वत उठाया, इन्द्र का घमण्ड मिटाया॥<br><br>सुदामा से मित्रता निभाई, तीन मुट्ठी चावल से छाई॥<br><br>गीता का उपदेश दिया है, भक्ति ज्ञान का मार्ग किया है॥<br><br>कर्म करो फल की मत चाहो, यही ज्ञान गीता में पाओ॥<br><br>राधा
+                                कृष्ण की जोड़ी प्यारी, वृन्दावन में छवि न्यारी॥<br><br>कृष्ण चालीसा जो नित गावे, सुख धन सम्पत्ति घर भर पावे॥</div>
+                        </div>
+                        <div class="stanza">
+                            <div class="verse-title">॥ दोहा ॥</div>
+                            <div class="hindi-text">कृष्ण नाम की महिमा, कहत न बने अनन्त।<br>चालीसा पढ़ नित करे, होय मुदित मन शान्त॥</div>
+                        </div>
+                    </div>
+                    <div class="meaning-box"><strong>महत्व / Significance:</strong> जन्माष्टमी और प्रतिदिन कृष्ण चालीसा के पाठ से जीवन में आनंद, ज्ञान और मोक्ष की प्राप्ति होती है।</div>
+                    <div class="card-meta"><span>⏱️ 7 मिनट</span><span class="stars">⭐ 4.9</span><span>🎵 2.7M श्रोता</span></div>
+                </div>
+            </div>
+
+            <!-- 9 VISHNU -->
+            <div class="chalisa-card" data-deity="vishnu" data-name="vishnu chalisa विष्णु चालीसा">
+                <div class="card-header">
+                    <span class="card-num">#09</span>
+                    <h2>श्री विष्णु चालीसा</h2>
+                    <h3>SHRI VISHNU CHALISA</h3>
+                </div>
+                <div class="card-body">
+                    <div class="deity-row">
+                        <div class="deity-icon">🌀</div>
+                        <div class="deity-info">
+                            <h4>भगवान विष्णु</h4>
+                            <p>जगत के पालनकर्ता, त्रिदेव</p>
+                        </div>
+                    </div>
+                    <button class="expand-btn" onclick="toggleLyrics(this)">पाठ देखें / View Chalisa <span class="arrow">▼</span></button>
+                    <div class="lyrics-box">
+                        <div class="stanza">
+                            <div class="verse-title">॥ दोहा ॥</div>
+                            <div class="hindi-text">नारायण नाम सुमिरि, करि मन शुद्ध विचार।<br>चालीसा विष्णु जी का, पढ़ भव से उबार॥</div>
+                        </div>
+                        <div class="stanza">
+                            <div class="verse-title">॥ चालीसा ॥</div>
+                            <div class="hindi-text">जय विष्णु भगवान जगत के पालन, हरण भार धरती का धारण॥<br><br>क्षीर सागर में शेष पे सोये, लक्ष्मी पाद सेवा में होये॥<br><br>चार भुज शंख चक्र गदा धारे, पीताम्बर वैजयन्ती हारे॥<br><br>दशावतार धर धरती आए, असुरन का नाश सदा कराए॥<br><br>मत्स्य
+                                कूर्म वाराह नरसिंह, वामन परशुराम रघुवंशी॥<br><br>राम कृष्ण बुद्ध कल्की आएं, धर्म की स्थापना करवाएं॥<br><br>जब जब धर्म की हानि होती है, तब तब विष्णु अवतार लेते हैं॥<br><br>प्रह्लाद भक्त को बचाया था, हिरण्यकश्यप को मिटाया
+                                था॥
+                                <br><br>गजेन्द्र की पुकार पर आए, मगरमच्छ से उन्हें छुड़ाए॥<br><br>विष्णु चालीसा जो नित पढ़ावे, सब संकट दूर हो जावे॥</div>
+                        </div>
+                        <div class="stanza">
+                            <div class="verse-title">॥ दोहा ॥</div>
+                            <div class="hindi-text">नारायण नारायण जपे, पापन का हो नाश।<br>विष्णु चालीसा पढ़त नित, पूर्ण होय अभिलाष॥</div>
+                        </div>
+                    </div>
+                    <div class="meaning-box"><strong>महत्व / Significance:</strong> एकादशी और प्रतिदिन विष्णु चालीसा के पाठ से पाप क्षय होते हैं और वैकुण्ठ लोक की प्राप्ति होती है।</div>
+                    <div class="card-meta"><span>⏱️ 6 मिनट</span><span class="stars">⭐ 4.8</span><span>🎵 2.1M श्रोता</span></div>
+                </div>
+            </div>
+
+            <!-- 10 SHANI -->
+            <div class="chalisa-card" data-deity="other" data-name="shani chalisa शनि चालीसा">
+                <div class="card-header">
+                    <span class="card-num">#10</span>
+                    <h2>श्री शनि चालीसा</h2>
+                    <h3>SHRI SHANI CHALISA</h3>
+                </div>
+                <div class="card-body">
+                    <div class="deity-row">
+                        <div class="deity-icon">🪐</div>
+                        <div class="deity-info">
+                            <h4>शनि देव</h4>
+                            <p>न्यायप्रिय, कर्मफलदाता</p>
+                        </div>
+                    </div>
+                    <button class="expand-btn" onclick="toggleLyrics(this)">पाठ देखें / View Chalisa <span class="arrow">▼</span></button>
+                    <div class="lyrics-box">
+                        <div class="stanza">
+                            <div class="verse-title">॥ दोहा ॥</div>
+                            <div class="hindi-text">जय गणेश गिरिजा सुवन, करत हूं शनि वंदन।<br>सूर्य पुत्र शनि देव को, नमत सकल जन मन॥</div>
+                        </div>
+                        <div class="stanza">
+                            <div class="verse-title">॥ चालीसा ॥</div>
+                            <div class="hindi-text">जय जय श्री शनिदेव प्रभु, सुनहु विनय महाराज।<br>करहु कृपा हे रवि तनय, राखहु जन की लाज॥<br><br>जयति जयति शनिदेव दयाला, करत सदा भक्तन प्रतिपाला॥<br><br>चार भुजा तनु श्याम विराजे, माथे रत्न मुकुट छवि छाजे॥<br><br>नीलाम्बर धारण
+                                किये हो, खड्ग त्रिशूल कमंडलु लिये हो॥<br><br>ऊंट वाहन को तुम्हीं सवारा, लोहे से तुमको अति प्यारा॥<br><br>साढ़े साती का दुःख, तुमसे ही मिट जावे।<br>ढैया का भय हरो, सुख सम्पति आवे॥<br><br>शनिवार को व्रत जो करते, काले तिल
+                                का दान जो देते॥<br><br>पीपल के नीचे दीप जलाते, शनि देव की कृपा वो पाते॥<br><br>न्याय के देवता शनि राजा, कर्म प्रधान उनका है काजा॥<br><br>जो चालीसा नित यह गाएं, शनि कोप से वो बच जाएं॥</div>
+                        </div>
+                        <div class="stanza">
+                            <div class="verse-title">॥ दोहा ॥</div>
+                            <div class="hindi-text">शनि देव की दया बिना, जीवन व्यर्थ समान।<br>चालीसा पढ़त नित, पावे शुभ वरदान॥</div>
+                        </div>
+                    </div>
+                    <div class="meaning-box"><strong>महत्व / Significance:</strong> शनिवार को शनि चालीसा पाठ, तेल दान और पीपल पूजा से शनि की महादशा और साढ़े साती का प्रभाव कम होता है।</div>
+                    <div class="card-meta"><span>⏱️ 6 मिनट</span><span class="stars">⭐ 4.7</span><span>🎵 2.0M श्रोता</span></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="footer">
+        <span class="footer-om">🕉️</span>
+        <h3>सर्वे भवन्तु सुखिनः</h3>
+        <p>May all beings be happy · May all be free from suffering</p>
+        <p style="margin-top:10px;font-size:0.85rem;opacity:0.6;">श्री हरि ॐ तत्सत् ॐ</p>
+    </div>
+
+    <button class="scroll-top" onclick="window.scrollTo({top:0,behavior:'smooth'})">▲</button>
+
+    <script>
+        let activeDeity = 'all';
+
+        function toggleLyrics(btn) {
+            const box = btn.nextElementSibling;
+            const isOpen = box.classList.contains('expanded');
+            box.classList.toggle('expanded', !isOpen);
+            btn.innerHTML = isOpen ?
+                'पाठ देखें / View Chalisa <span class="arrow">▼</span>' :
+                'पाठ छुपाएं / Hide Chalisa <span class="arrow">▲</span>';
+        }
+
+        function filterDeity(deity, el) {
+            activeDeity = deity;
+            document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+            el.classList.add('active');
+            applyFilters();
+        }
+
+        function applyFilters() {
+            const q = document.getElementById('searchInput').value.toLowerCase();
+            document.querySelectorAll('.chalisa-card').forEach(card => {
+                const dm = activeDeity === 'all' || card.dataset.deity === activeDeity;
+                const nm = card.dataset.name.includes(q);
+                card.classList.toggle('hidden', !(dm && nm));
+            });
+        }
+    </script>
+</body>
+
+</html>

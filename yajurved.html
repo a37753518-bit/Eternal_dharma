@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="hi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yajur Veda – Complete Information Database</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', 'Noto Sans Devanagari', sans-serif;
+            background: #f2e9de;
+            color: #2d3e4f;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            background: #ffffff;
+            border-radius: 28px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+            padding: 30px;
+        }
+        
+        h1 {
+            font-size: 2.8rem;
+            color: #a6402c;
+            border-bottom: 4px solid #e1cbb6;
+            padding-bottom: 15px;
+            margin-bottom: 25px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        h1 span {
+            font-size: 1.6rem;
+            background: #f0d9cc;
+            padding: 5px 18px;
+            border-radius: 60px;
+            color: #5d3a2b;
+        }
+        
+        h2 {
+            font-size: 2rem;
+            color: #8b4b3a;
+            margin: 35px 0 15px 0;
+            border-left: 8px solid #b3573c;
+            padding-left: 20px;
+        }
+        
+        h3 {
+            font-size: 1.5rem;
+            margin: 25px 0 10px;
+            color: #6d4c41;
+        }
+        
+        .fact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 20px;
+            margin: 25px 0;
+        }
+        
+        .fact-card {
+            background: #fcf5ed;
+            border-radius: 24px;
+            padding: 20px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.04);
+            border: 1px solid #eadaca;
+        }
+        
+        .fact-card strong {
+            display: block;
+            font-size: 1.3rem;
+            color: #9e543e;
+            margin-bottom: 8px;
+        }
+        
+        .fact-card .value {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #3d2b1f;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 25px 0;
+            background: #fefaf5;
+            border-radius: 18px;
+            overflow: hidden;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.05);
+        }
+        
+        th {
+            background: #a64b34;
+            color: white;
+            font-weight: 600;
+            font-size: 1.1rem;
+            padding: 12px;
+            text-align: center;
+        }
+        
+        td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #ebd9cb;
+            text-align: left;
+        }
+        
+        tr:last-child td {
+            border-bottom: none;
+        }
+        
+        .mandala-table td:first-child {
+            font-weight: 600;
+            background: #f5e6dc;
+            width: 20%;
+        }
+        
+        .highlight {
+            background: #fae1d4;
+            padding: 15px 20px;
+            border-radius: 30px;
+            margin: 25px 0;
+            font-style: italic;
+            border-left: 6px solid #b3573c;
+        }
+        
+        .sukta-list {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin: 15px 0;
+        }
+        
+        .sukta-list li {
+            background: #fff1e6;
+            padding: 10px 20px;
+            border-radius: 50px;
+            border: 1px solid #dbb99c;
+            font-weight: 500;
+        }
+        
+        .footer-note {
+            background: #eedacb;
+            padding: 20px;
+            border-radius: 30px;
+            text-align: center;
+            margin-top: 40px;
+            font-size: 1.2rem;
+            color: #362218;
+        }
+        
+        hr {
+            border: none;
+            height: 2px;
+            background: linear-gradient(90deg, #e3cbb8, #f7e3d3, #e3cbb8);
+            margin: 30px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>🔥 यजुर्वेद · Yajurveda <span>कर्म-काण्ड प्रधान</span></h1>
+
+        <!-- Key facts at a glance -->
+        <div class="fact-grid">
+            <div class="fact-card"><strong>संहिताएँ (Samhitās)</strong>
+                <div class="value">2 प्रमुख</div>
+            </div>
+            <div class="fact-card"><strong>मंत्र (Mantras)</strong>
+                <div class="value">~1975 + 1660</div>
+            </div>
+            <div class="fact-card"><strong>शाखाएँ (Shākhās)</strong>
+                <div class="value">6+ (कृष्ण/शुक्ल)</div>
+            </div>
+            <div class="fact-card"><strong>ब्राह्मण</strong>
+                <div class="value">शतपथ, तैत्तिरीय</div>
+            </div>
+            <div class="fact-card"><strong>उपनिषद्</strong>
+                <div class="value">ईश, बृहदारण्यक, तैत्तिरीय, कठ, श्वेताश्वतर</div>
+            </div>
+            <div class="fact-card"><strong>आरण्यक</strong>
+                <div class="value">तैत्तिरीय, बृहद्</div>
+            </div>
+        </div>
+
+        <!-- 1. Overview -->
+        <h2>🔍 परिचय (Introduction)</h2>
+        <p style="font-size: 1.2rem;">यजुर्वेद को <strong>"यज्ञ का वेद"</strong> कहा जाता है। इसमें यज्ञों (कर्मकाण्ड) की विधियों एवं मन्त्रों का संग्रह है। यह वेद मुख्यतः गद्य (prose) में रचित है, जो इसे ऋग्वेद (पद्य) से अलग बनाता है। यजुर्वेद की दो प्रमुख शाखाएँ हैं – <strong>कृष्ण यजुर्वेद</strong>            (काली/अस्पष्ट) और <strong>शुक्ल यजुर्वेद</strong> (श्वेत/स्पष्ट)।</p>
+
+        <!-- 2. Detailed Structure: Krishna and Shukla -->
+        <h2>📖 संरचना (Structure)</h2>
+        <p>यजुर्वेद दो धाराओं में विभाजित है – <strong>कृष्ण यजुर्वेद</strong> (संहिता एवं ब्राह्मण मिश्रित) तथा <strong>शुक्ल यजुर्वेद</strong> (संहिता एवं ब्राह्मण अलग-अलग)। प्रमुख संहिताएँ निम्नलिखित हैं।</p>
+
+        <table class="mandala-table">
+            <thead>
+                <tr>
+                    <th>शाखा / संहिता</th>
+                    <th>प्रकार</th>
+                    <th>मंत्र / काण्ड</th>
+                    <th>प्रमुख विशेषता</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>तैत्तिरीय संहिता</td>
+                    <td>कृष्ण यजुर्वेद</td>
+                    <td>7 काण्ड, 44 प्रपाठक, ~2200 मंत्र</td>
+                    <td>संहिता व ब्राह्मण मिश्रित; यज्ञ विधान एवं रहस्य</td>
+                </tr>
+                <tr>
+                    <td>मैत्रायणी संहिता</td>
+                    <td>कृष्ण यजुर्वेद</td>
+                    <td>4 काण्ड, 54 प्रपाठक</td>
+                    <td>यजुर्वेद की प्राचीन शाखा, पूर्वी लिपि</td>
+                </tr>
+                <tr>
+                    <td>काठक संहिता</td>
+                    <td>कृष्ण यजुर्वेद</td>
+                    <td>40 अध्याय</td>
+                    <td>कठ शाखा, उपनिषद् (कठ) इसी से जुड़ी</td>
+                </tr>
+                <tr>
+                    <td>कपिष्ठल-कठ संहिता</td>
+                    <td>कृष्ण यजुर्वेद</td>
+                    <td>अपूर्ण</td>
+                    <td>अल्प प्रचलित</td>
+                </tr>
+                <tr>
+                    <td>वाजसनेयी संहिता (माध्यन्दिन)</td>
+                    <td>शुक्ल यजुर्वेद</td>
+                    <td>40 अध्याय, 1660 मंत्र</td>
+                    <td>शतपथ ब्राह्मण इसी से सम्बद्ध; ईशावास्योपनिषद् अंतिम अध्याय</td>
+                </tr>
+                <tr>
+                    <td>वाजसनेयी संहिता (काण्व)</td>
+                    <td>शुक्ल यजुर्वेद</td>
+                    <td>40 अध्याय (पाठभेद)</td>
+                    <td>काण्व शाखा, थोड़ा भिन्न पाठ</td>
+                </tr>
+            </tbody>
+        </table>
+        <p style="text-align: right;">※ मंत्र संख्या विभिन्न शाखाओं में थोड़ी भिन्न हो सकती है।</p>
+
+        <!-- 3. Famous Mantras / Hymns -->
+        <h2>🌟 प्रमुख मंत्र (Important Mantras)</h2>
+        <ul class="sukta-list">
+            <li><strong>ॐ श्री रुद्राय नमः</strong> (रुद्राध्याय – तैत्तिरीय 4.5)</li>
+            <li><strong>शिव संकल्प सूक्त</strong> (शुक्ल 34.1-6)</li>
+            <li><strong>ईशावास्योपनिषद्</strong> (शुक्ल अ. 40)</li>
+            <li><strong>मेधा सूक्त</strong> (तैत्तिरीय 2.3.1)</li>
+            <li><strong>हिरण्यगर्भ सूक्त</strong> (तैत्तिरीय 4.1.1)</li>
+            <li><strong>त्र्यम्बकं यजामहे</strong> (महामृत्युंजय मंत्र – तैत्तिरीय 1.8.6)</li>
+            <li><strong>पुरुष सूक्त</strong> (वाजसनेयी 31.1-16)</li>
+            <li><strong>शान्ति पाठ</strong> (ॐ सह नाववतु…)</li>
+        </ul>
+
+        <div class="highlight">
+            <p>🔱 <strong>रुद्राध्याय (श्री रुद्रम्)</strong> – यजुर्वेद (तैत्तिरीय संहिता 4.5, 4.7) का अत्यन्त पवित्र भाग, जो भगवान रुद्र की स्तुति में है। इसमें "नमः शिवाय च शिवतराय च" जैसे मंत्र हैं।</p>
+            <p>🕉️ <strong>ईशावास्योपनिषद्</strong> – शुक्ल यजुर्वेद के अन्तिम (40वें) अध्याय में 18 मंत्रों का यह उपनिषद् ब्रह्मविद्या का सार है।</p>
+        </div>
+
+        <!-- 4. Shakhas (Recensions) -->
+        <h2>📚 शाखाएँ (Recensions)</h2>
+        <p>यजुर्वेद की अनेक शाखाएँ थीं – कृष्ण यजुर्वेद की <strong>तैत्तिरीय, मैत्रायणी, काठक, कपिष्ठल</strong> तथा शुक्ल यजुर्वेद की <strong>माध्यन्दिन एवं काण्व</strong>। वर्तमान में कृष्ण यजुर्वेद की <strong>तैत्तिरीय शाखा</strong> और शुक्ल यजुर्वेद की
+            <strong>माध्यन्दिन शाखा</strong> सर्वाधिक प्रचलित हैं। कठ शाखा से 'कठोपनिषद्' प्रसिद्ध है।</p>
+
+        <!-- 5. Associated Texts -->
+        <h2>📗 संलग्न ग्रंथ (Associated Literature)</h2>
+        <table>
+            <tr>
+                <th>ग्रंथ</th>
+                <th>नाम</th>
+                <th>विवरण</th>
+            </tr>
+            <tr>
+                <td><strong>ब्राह्मण</strong></td>
+                <td>शतपथ ब्राह्मण (शुक्ल), तैत्तिरीय ब्राह्मण (कृष्ण)</td>
+                <td>यज्ञों की विस्तृत व्याख्या एवं निर्देश; शतपथ सबसे बृहत् ब्राह्मण है।</td>
+            </tr>
+            <tr>
+                <td><strong>आरण्यक</strong></td>
+                <td>तैत्तिरीय आरण्यक, शतपथ आरण्यक (बृहदारण्यक का भाग)</td>
+                <td>रहस्यमय यज्ञीय अध्याय, प्राणोपासना आदि</td>
+            </tr>
+            <tr>
+                <td><strong>उपनिषद्</strong></td>
+                <td>ईश, बृहदारण्यक, कठ, तैत्तिरीय, श्वेताश्वतर, महानारायण</td>
+                <td>यजुर्वेद की विभिन्न शाखाओं से जुड़े ये उपनिषद् दर्शन के प्रमुख स्रोत हैं।</td>
+            </tr>
+            <tr>
+                <td><strong>श्रौतसूत्र / गृह्यसूत्र</strong></td>
+                <td>बौधायन, आपस्तम्ब, हिरण्यकेशि, मानव, कात्यायन (शुक्ल) आदि</td>
+                <td>यज्ञों एवं संस्कारों के नियमों का सूत्रबद्ध विवेचन</td>
+            </tr>
+        </table>
+
+        <!-- 6. Deities and Themes -->
+        <h2>🙏 देवता एवं विषय (Deities & Themes)</h2>
+        <div style="display: flex; flex-wrap: wrap; gap: 20px;">
+            <div style="flex: 1; min-width: 200px;">
+                <h3>मुख्य देवता</h3>
+                <ul style="list-style-type: square; padding-left: 25px;">
+                    <li><strong>रुद्र / शिव</strong> (रुद्राध्याय)</li>
+                    <li><strong>प्रजापति</strong></li>
+                    <li><strong>अग्नि, इंद्र, सूर्य</strong></li>
+                    <li><strong>विष्णु</strong> (यज्ञ-पुरुष)</li>
+                    <li><strong>यज्ञ के अधिदेव</strong></li>
+                    <li><strong>पूषन, वायु, ब्रह्मा</strong></li>
+                </ul>
+            </div>
+            <div style="flex: 2;">
+                <h3>विषयगत विशेषताएँ</h3>
+                <ul>
+                    <li>🔥 <strong>यज्ञ एवं कर्मकाण्ड</strong> – दर्शपूर्णमास, अग्निहोत्र, सोमयाग, राजसूय, अश्वमेध।</li>
+                    <li>🌀 <strong>आध्यात्मिकता</strong> – यज्ञ के माध्यम से ब्रह्म की उपासना; उपनिषदों में ज्ञान-काण्ड।</li>
+                    <li>🌿 <strong>यज्ञीय पशु एवं हवि</strong> – पशुओं एवं हविष्य पदार्थों का रहस्यमय अर्थ।</li>
+                    <li>🧘 <strong>उपासना एवं ध्यान</strong> – प्राणोपासना, अग्नि-उपासना।</li>
+                    <li>📜 <strong>गृह्य एवं सामाजिक जीवन</strong> – विवाह, श्राद्ध, संस्कारों के मंत्र।</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- 7. Language and Style -->
+        <h2>🔤 भाषा एवं शैली (Language & Style)</h2>
+        <p>यजुर्वेद की भाषा वैदिक संस्कृत है, लेकिन यह ऋग्वेद की तुलना में अधिक गद्यात्मक है। इसमें तीन स्वर (उदात्त, अनुदात्त, स्वरित) तो हैं ही, साथ ही मंत्रों के बीच में ब्राह्मण-शैली की व्याख्याएँ भी मिलती हैं (विशेषतः कृष्ण यजुर्वेद में)। शुक्ल यजुर्वेद
+            में मंत्रों का क्रम स्पष्ट एवं सुव्यवस्थित है।</p>
+
+        <!-- 8. Historical & Cultural Significance -->
+        <h2>🌍 ऐतिहासिक एवं सांस्कृतिक महत्व</h2>
+        <p>यजुर्वेद भारतीय यज्ञ-परम्परा का आधार है। आज भी अग्निहोत्र, अग्न्याधान, सोमयाग आदि क्रियाएँ यजुर्वेद के मंत्रों से सम्पन्न की जाती हैं। <strong>शतपथ ब्राह्मण</strong> में प्राचीन भारत के भूगोल, राजनीति एवं संस्कृति का बहुमूल्य विवरण मिलता है। 'रुद्राध्याय'
+            शैव परम्परा का मूल स्रोत है। वैदिक काल के बाद की सभी यज्ञीय पद्धतियाँ यजुर्वेद पर ही आधारित हैं।</p>
+
+        <!-- 9. Manuscripts & Transmission -->
+        <h2>📜 हस्तलेख एवं परंपरा</h2>
+        <p>यजुर्वेद की परंपरा अत्यन्त समृद्ध रही है। तैत्तिरीय संहिता के अनेक हस्तलेख दक्षिण भारत में सुरक्षित हैं। शुक्ल यजुर्वेद की माध्यन्दिन शाखा उत्तर भारत में अधिक प्रचलित है। सबसे प्राचीन हस्तलिखित प्रतियाँ 14वीं शताब्दी की हैं। प्रथम मुद्रित संस्करण
+            <strong>अल्ब्रेक्ट वेबर</strong> (1852) ने शुक्ल यजुर्वेद का और <strong>रुडोल्फ वॉन रोथ</strong> ने तैत्तिरीय संहिता का किया। आज भी कई पाठशालाओं में यजुर्वेदीय स्वर एवं कर्मकाण्ड पढ़ाए जाते हैं।</p>
+
+        <hr>
+
+        <!-- quick reference table -->
+        <h2>📋 त्वरित संदर्भ (Quick Reference)</h2>
+        <table>
+            <tr>
+                <td>कुल मंत्र (शुक्ल माध्यन्दिन)</td>
+                <td>1660 (40 अध्याय)</td>
+            </tr>
+            <tr>
+                <td>तैत्तिरीय संहिता मंत्र</td>
+                <td>~2200 (7 काण्ड, 44 प्रपाठक)</td>
+            </tr>
+            <tr>
+                <td>प्रमुख ब्राह्मण ग्रंथ</td>
+                <td>शतपथ (शुक्ल), तैत्तिरीय (कृष्ण)</td>
+            </tr>
+            <tr>
+                <td>मुख्य उपनिषद्</td>
+                <td>ईश, बृहदारण्यक, तैत्तिरीय, कठ, श्वेताश्वतर</td>
+            </tr>
+            <tr>
+                <td>प्रसिद्ध अनुष्ठान</td>
+                <td>अग्निहोत्र, दर्शपूर्णमास, राजसूय, अश्वमेध</td>
+            </tr>
+            <tr>
+                <td>सर्वाधिक पवित्र मंत्र</td>
+                <td>रुद्राध्याय, शिवसंकल्प, महामृत्युंजय</td>
+            </tr>
+            <tr>
+                <td>प्रचलित शाखाएँ (वर्तमान)</td>
+                <td>तैत्तिरीय (कृष्ण), माध्यन्दिन (शुक्ल), काण्व (शुक्ल)</td>
+            </tr>
+            <tr>
+                <td>आधुनिक अनुवाद</td>
+                <td>हिन्दी – पं. देवीचरण, आर्यसमाज, डॉ. सुरेन्द्रनाथ शास्त्री आदि।</td>
+            </tr>
+        </table>
+
+        <!-- footer with mantra -->
+        <div class="footer-note">
+            ॐ यज्ञेन यज्ञमयजन्त देवाः । <br>
+            <span style="font-size: 1.5rem;">॥ शिवेन मनसा यज्ञं यजामहे ॥</span> (शुक्ल यजुर्वेद 34.1)
+        </div>
+    </div>
+</body>
+
+</html>

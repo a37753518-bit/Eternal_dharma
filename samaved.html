@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="hi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sāma Veda – Complete Information Database</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', 'Noto Sans Devanagari', sans-serif;
+            background: #f2e9de;
+            color: #2d3e4f;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            background: #ffffff;
+            border-radius: 28px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+            padding: 30px;
+        }
+        
+        h1 {
+            font-size: 2.8rem;
+            color: #a6402c;
+            border-bottom: 4px solid #e1cbb6;
+            padding-bottom: 15px;
+            margin-bottom: 25px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        h1 span {
+            font-size: 1.6rem;
+            background: #f0d9cc;
+            padding: 5px 18px;
+            border-radius: 60px;
+            color: #5d3a2b;
+        }
+        
+        h2 {
+            font-size: 2rem;
+            color: #8b4b3a;
+            margin: 35px 0 15px 0;
+            border-left: 8px solid #b3573c;
+            padding-left: 20px;
+        }
+        
+        h3 {
+            font-size: 1.5rem;
+            margin: 25px 0 10px;
+            color: #6d4c41;
+        }
+        
+        .fact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 20px;
+            margin: 25px 0;
+        }
+        
+        .fact-card {
+            background: #fcf5ed;
+            border-radius: 24px;
+            padding: 20px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.04);
+            border: 1px solid #eadaca;
+        }
+        
+        .fact-card strong {
+            display: block;
+            font-size: 1.3rem;
+            color: #9e543e;
+            margin-bottom: 8px;
+        }
+        
+        .fact-card .value {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #3d2b1f;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 25px 0;
+            background: #fefaf5;
+            border-radius: 18px;
+            overflow: hidden;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.05);
+        }
+        
+        th {
+            background: #a64b34;
+            color: white;
+            font-weight: 600;
+            font-size: 1.1rem;
+            padding: 12px;
+            text-align: center;
+        }
+        
+        td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #ebd9cb;
+            text-align: left;
+        }
+        
+        tr:last-child td {
+            border-bottom: none;
+        }
+        
+        .mandala-table td:first-child {
+            font-weight: 600;
+            background: #f5e6dc;
+            width: 20%;
+        }
+        
+        .highlight {
+            background: #fae1d4;
+            padding: 15px 20px;
+            border-radius: 30px;
+            margin: 25px 0;
+            font-style: italic;
+            border-left: 6px solid #b3573c;
+        }
+        
+        .sukta-list {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin: 15px 0;
+        }
+        
+        .sukta-list li {
+            background: #fff1e6;
+            padding: 10px 20px;
+            border-radius: 50px;
+            border: 1px solid #dbb99c;
+            font-weight: 500;
+        }
+        
+        .footer-note {
+            background: #eedacb;
+            padding: 20px;
+            border-radius: 30px;
+            text-align: center;
+            margin-top: 40px;
+            font-size: 1.2rem;
+            color: #362218;
+        }
+        
+        hr {
+            border: none;
+            height: 2px;
+            background: linear-gradient(90deg, #e3cbb8, #f7e3d3, #e3cbb8);
+            margin: 30px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>🎵 सामवेद · Sāmaveda <span>स्वरों का वेद</span></h1>
+
+        <!-- Key facts at a glance -->
+        <div class="fact-grid">
+            <div class="fact-card"><strong>मंत्र (Mantras)</strong>
+                <div class="value">~1875</div>
+            </div>
+            <div class="fact-card"><strong>ग्रंथ (Khandas)</strong>
+                <div class="value">2 भाग</div>
+            </div>
+            <div class="fact-card"><strong>प्रपाठक (Prapāṭhakas)</strong>
+                <div class="value">12</div>
+            </div>
+            <div class="fact-card"><strong>शाखाएँ (Shākhās)</strong>
+                <div class="value">3 प्रमुख</div>
+            </div>
+            <div class="fact-card"><strong>गान (Sāman)</strong>
+                <div class="value">~3000</div>
+            </div>
+            <div class="fact-card"><strong>उपनिषद्</strong>
+                <div class="value">छान्दोग्य, केन</div>
+            </div>
+        </div>
+
+        <!-- 1. Overview -->
+        <h2>🔍 परिचय (Introduction)</h2>
+        <p style="font-size: 1.2rem;">सामवेद को <strong>"गान वेद"</strong> भी कहा जाता है। यह मुख्यतः मंत्रों के गायन से संबंधित है। इसके अधिकांश मंत्र (95% तक) ऋग्वेद से लिए गए हैं, किन्तु इन्हें विशिष्ट स्वरों एवं धुनों (साम) में निबद्ध किया गया है। यह भारतीय शास्त्रीय संगीत का
+            आदि स्रोत माना जाता है।</p>
+
+        <!-- 2. Detailed Structure -->
+        <h2>📖 संरचना (Structure)</h2>
+        <p>सामवेद की दो मुख्य संहिताएँ हैं – <strong>पूर्वार्चिक (प्रथम भाग)</strong> और <strong>उत्तरार्चिक (द्वितीय भाग)</strong>। गेय भेद से इसे <strong>ग्रामगेय</strong> एवं <strong>आरण्यगेय</strong> में भी विभाजित किया जाता है। नीचे प्रमुख विभाग दिए
+            गए हैं।</p>
+
+        <table class="mandala-table">
+            <thead>
+                <tr>
+                    <th>भाग</th>
+                    <th>उपविभाग</th>
+                    <th>मंत्र संख्या (लगभग)</th>
+                    <th>विषय</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>पूर्वार्चिक</td>
+                    <td>आग्नेय काण्ड, ऐन्द्र काण्ड, पवमान काण्ड, आरण्यक काण्ड</td>
+                    <td>~650</td>
+                    <td>अग्नि, इंद्र, सोम (पवमान) से संबंधित ऋचाएँ; ग्रामगेय गान</td>
+                </tr>
+                <tr>
+                    <td>उत्तरार्चिक</td>
+                    <td>– (एक संग्रह)</td>
+                    <td>~1225</td>
+                    <td>विभिन्न देवताओं के लिए साम; अधिकांश ऋग्वैदिक मंत्रों पर आधारित</td>
+                </tr>
+                <tr>
+                    <td>ग्रामगेय-गान</td>
+                    <td>6 प्रपाठक</td>
+                    <td>–</td>
+                    <td>गाँवों में गाए जाने वाले साम (स्वर संकेत सहित)</td>
+                </tr>
+                <tr>
+                    <td>आरण्यगेय-गान</td>
+                    <td>6 प्रपाठक</td>
+                    <td>–</td>
+                    <td>वन (शांत) में गाए जाने वाले साम; रहस्यमय स्वर</td>
+                </tr>
+                <tr>
+                    <td>ऊहगान / ऊह्यगान</td>
+                    <td>–</td>
+                    <td>–</td>
+                    <td>यज्ञ में प्रयुक्त गानों के विकल्प एवं परिवर्तन</td>
+                </tr>
+            </tbody>
+        </table>
+        <p style="text-align: right;">※ विभिन्न शाखाओं में मंत्र संख्या में थोड़ा अंतर हो सकता है।</p>
+
+        <!-- 3. Famous Samans -->
+        <h2>🌟 प्रसिद्ध साम (Famous Samans)</h2>
+        <ul class="sukta-list">
+            <li><strong>रथंतर साम</strong> (सूर्योपासक)</li>
+            <li><strong>बृहत् साम</strong> (इन्द्र शक्ति)</li>
+            <li><strong>वामदेव्य साम</strong> (प्रेम और एकता)</li>
+            <li><strong>उपनिषद् साम</strong> (आध्यात्मिक)</li>
+            <li><strong>पवमान साम</strong> (सोम शोधन)</li>
+            <li><strong>यज्ञायज्ञीय साम</strong></li>
+            <li><strong>साकमेध साम</strong></li>
+            <li><strong>रौरव साम</strong></li>
+        </ul>
+
+        <div class="highlight">
+            <p>🎶 <strong>प्रसिद्ध मंत्र</strong> (सामवेद 1.1.1): "अग्न आ याहि वीतये गृणानो हव्यदातये । नि होता सत्सि बर्हिषि ॥" – यह ऋग्वेद (6.16.10) का भी मंत्र है, किन्तु सामवेद में इसे विशिष्ट स्वरों के साथ गाया जाता है।</p>
+            <p>🌀 <strong>छान्दोग्य उपनिषद्</strong> (सामवेदीय) में "तत्त्वमसि" जैसे महावाक्यों का उद्भव।</p>
+        </div>
+
+        <!-- 4. Shakhas (Recensions) -->
+        <h2>📚 शाखाएँ (Recensions)</h2>
+        <p>सामवेद की तीन प्रमुख शाखाएँ उपलब्ध हैं – <strong>कौथुमी (Kauthuma), राणायनीय (Rāṇāyanīya), जैमिनीय (Jaiminīya)</strong>। इनमें कौथुमी शाखा सबसे प्रचलित है। जैमिनीय शाखा के गान एवं ब्राह्मण विशेष रूप से महत्वपूर्ण हैं। प्रत्येक शाखा के स्वर चिह्नों
+            (उदात्त-अनुदात्त-स्वरित) में थोड़ा अंतर मिलता है।</p>
+
+        <!-- 5. Associated Texts -->
+        <h2>📗 संलग्न ग्रंथ (Associated Literature)</h2>
+        <table>
+            <tr>
+                <th>ग्रंथ</th>
+                <th>नाम</th>
+                <th>विवरण</th>
+            </tr>
+            <tr>
+                <td><strong>ब्राह्मण</strong></td>
+                <td>पञ्चविंश ब्राह्माण (तांड्य), षड्विंश ब्राह्मण, सामविधान ब्राह्मण, आर्षेय ब्राह्मण, देवताध्याय ब्राह्मण, जैमिनीय ब्राह्मण, छान्दोग्य ब्राह्मण</td>
+                <td>सामगान की विधियाँ, यज्ञों में प्रयोग, आख्यान एवं दर्शन</td>
+            </tr>
+            <tr>
+                <td><strong>आरण्यक</strong></td>
+                <td>ताण्ड्य आरण्यक, जैमिनीय आरण्यक</td>
+                <td>गानों के रहस्यमय अर्थ एवं उपासना</td>
+            </tr>
+            <tr>
+                <td><strong>उपनिषद्</strong></td>
+                <td>छान्दोग्य उपनिषद्, केन (तलवकार) उपनिषद्, जैमिनीय उपनिषद्</td>
+                <td>आत्म-ब्रह्म विद्या, प्रणव एवं साम का रहस्य</td>
+            </tr>
+            <tr>
+                <td><strong>श्रौतसूत्र / गृह्यसूत्र</strong></td>
+                <td>लाट्यायन, द्राह्यायण, जैमिनीय, गोभिल, खादिर</td>
+                <td>यज्ञों एवं संस्कारों में सामगान के नियम</td>
+            </tr>
+        </table>
+
+        <!-- 6. Devatas (Deities) and Themes -->
+        <h2>🙏 देवता एवं विषय (Deities & Themes)</h2>
+        <div style="display: flex; flex-wrap: wrap; gap: 20px;">
+            <div style="flex: 1; min-width: 200px;">
+                <h3>मुख्य देवता</h3>
+                <ul style="list-style-type: square; padding-left: 25px;">
+                    <li><strong>अग्नि</strong> (प्रथम गान)</li>
+                    <li><strong>इंद्र</strong> (सर्वाधिक मंत्र)</li>
+                    <li><strong>पवमान सोम</strong> (शुद्ध सोम)</li>
+                    <li><strong>वायु / प्राण</strong></li>
+                    <li><strong>उषा, अश्विनी, मित्रावरुण</strong></li>
+                    <li><strong>विश्वेदेवाः</strong></li>
+                </ul>
+            </div>
+            <div style="flex: 2;">
+                <h3>विषयगत विशेषताएँ</h3>
+                <ul>
+                    <li>🎼 <strong>स्वर एवं गान</strong> – सात स्वर (षड्ज, ऋषभ, गांधार, मध्यम, पंचम, धैवत, निषाद) सर्वप्रथम यहीं मिलते हैं।</li>
+                    <li>🌀 <strong>उपासना एवं यज्ञ</strong> – सोमयाग में सामों का विशिष्ट स्थान।</li>
+                    <li>🧘 <strong>आध्यात्मिकता</strong> – छान्दोग्य में "उपासना" (सगुण एवं निर्गुण ब्रह्म) के विविध रूप।</li>
+                    <li>🎵 <strong>गंधर्ववेद</strong> – संगीत कला का उपवेद सामवेद से ही जुड़ा है।</li>
+                    <li>🌿 <strong>प्रकृति एवं लय</strong> – ऋतुओं एवं प्राकृतिक घटनाओं से साम का साम्य।</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- 7. Language and Musical Notations -->
+        <h2>🔤 भाषा एवं स्वर-विज्ञान (Language & Musical Notes)</h2>
+        <p>सामवेद की भाषा वैदिक संस्कृत है, लेकिन इसका महत्व मुख्यतः स्वरों में है। सामगान में तीन मुख्य स्वर होते हैं – <strong>उदात्त, अनुदात्त, स्वरित</strong>। बाद में इनसे सप्तक का विकास हुआ। सामवेदीय स्वरांकन दुनिया की सबसे प्राचीन संगीत-लिपि का उदाहरण
+            है। गान के प्रकार: <strong>ग्रामगेय</strong> (ग्राम में गेय), <strong>आरण्यगेय</strong> (वन में गेय), <strong>ऊह</strong> (विकृति), <strong>ऊह्य</strong> (रहस्य)।</p>
+
+        <!-- 8. Historical & Cultural Significance -->
+        <h2>🌍 ऐतिहासिक एवं सांस्कृतिक महत्व</h2>
+        <p>सामवेद से भारतीय संगीत की अखिल विश्व में पहचान बनी। यहाँ से <strong>गंधर्ववेद</strong> की उत्पत्ति हुई, जो नाट्य एवं संगीत का शास्त्र है। सामवेद में वर्णित गान-पद्धति आज भी दक्षिण भारतीय संगीत (कर्नाटक संगीत) और हिन्दुस्तानी शास्त्रीय संगीत की
+            नींव मानी जाती है। ऐतिहासिक दृष्टि से, सामवेद के ब्राह्मण ग्रंथ (जैसे तांड्य) प्राचीन भारत के भूगोल एवं राजनीतिक स्थितियों पर प्रकाश डालते हैं।</p>
+
+        <!-- 9. Manuscripts & Transmission -->
+        <h2>📜 हस्तलेख एवं परंपरा</h2>
+        <p>सामवेद की परंपरा मौखिक रूप से अत्यंत सावधानी से संरक्षित की गई। स्वरों के उच्चारण और गान की शुद्धता के लिए <strong>रहस्यमय पद्धतियाँ</strong> (विकृतियाँ) भी विकसित हुईं। सबसे प्राचीन हस्तलिखित प्रति 14वीं शताब्दी की मिलती है। सर्वप्रथम थियोडोर
+            औफ्रेख्ट तथा मैक्स मूलर ने सामवेद संहिता का संपादन एवं अनुवाद किया। कौथुमी शाखा का प्रामाणिक संस्करण <strong>बी.आर. शर्मा</strong> द्वारा प्रकाशित है।</p>
+
+        <hr>
+
+        <!-- quick reference table -->
+        <h2>📋 त्वरित संदर्भ (Quick Reference)</h2>
+        <table>
+            <tr>
+                <td>कुल मंत्र (शाकल/कौथुम)</td>
+                <td>1875 (कुछ गणना में 1810) – अधिकांश ऋग्वैदिक</td>
+            </tr>
+            <tr>
+                <td>मूल ऋचाएँ (अद्वितीय)</td>
+                <td>~1549 (शेष पुनरावृत्त)</td>
+            </tr>
+            <tr>
+                <td>गान (धुनों) की संख्या</td>
+                <td>लगभग 3000 से अधिक (प्रत्येक मंत्र पर अनेक गान)</td>
+            </tr>
+            <tr>
+                <td>प्रपाठक (Prapāṭhaka)</td>
+                <td>12 (पूर्वार्चिक में 6, उत्तरार्चिक में 6)</td>
+            </tr>
+            <tr>
+                <td>प्रमुख ऋषि परिवार</td>
+                <td>विश्वामित्र, जमदग्नि, भरद्वाज, वसिष्ठ आदि (ऋग्वैदिक)</td>
+            </tr>
+            <tr>
+                <td>सबसे प्रसिद्ध साम</td>
+                <td>बृहत् साम, रथंतर साम, वामदेव्य साम</td>
+            </tr>
+            <tr>
+                <td>प्रमुख देवता (मंत्र संख्या)</td>
+                <td>अग्नि (~300), इंद्र (~280), पवमान सोम (~120)</td>
+            </tr>
+            <tr>
+                <td>आधुनिक अनुवाद</td>
+                <td>हिन्दी में – पं. भगवद्दत्त, आर्यसमाज, सत्यव्रत सामश्रमी, एवं कई विद्वान</td>
+            </tr>
+        </table>
+
+        <!-- footer with mantra -->
+        <div class="footer-note">
+            ॐ साम्नां साम सामवत् । <br>
+            <span style="font-size: 1.5rem;">॥ साम्नो धेनुः प्रधिः प्रोर्णुते महः ॥</span> (सामवेद 1.1.1.1)
+        </div>
+    </div>
+</body>
+
+</html>

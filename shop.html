@@ -1,0 +1,1143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dharma Shop | Spiritual Essentials</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+         :root {
+            --primary-color: #c2410c;
+            --primary-dark: #9a3412;
+            --accent-gold: #d4af37;
+            --secondary-color: #1e293b;
+            --bg-color: #fdfaf5;
+            --card-bg: #ffffff;
+            --text-color: #2d3748;
+            --light-text: #6b7280;
+            --hover-color: #ea580c;
+            --cart-width: 380px;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+        
+        .navbar {
+            background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+            padding: 1rem 5%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .navbar-left {
+            display: flex;
+            align-items: center;
+            gap: 1.2rem;
+        }
+        
+        .navbar h1 {
+            color: white;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.9rem;
+            letter-spacing: 0.5px;
+        }
+        
+        .navbar-right {
+            display: flex;
+            align-items: center;
+            gap: 1.2rem;
+        }
+        
+        .btn-link {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 0.6rem 1.2rem;
+            border: 1.5px solid rgba(255, 255, 255, 0.7);
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            background: transparent;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+        
+        .btn-link:hover {
+            background: white;
+            color: var(--primary-color);
+            border-color: white;
+            transform: translateY(-2px);
+        }
+        
+        .cart-container {
+            position: relative;
+            cursor: pointer;
+        }
+        
+        .cart-badge {
+            background: #ef4444;
+            color: white;
+            font-size: 0.75rem;
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            top: -8px;
+            right: -10px;
+            font-weight: bold;
+            display: none;
+        }
+        
+        .dots-container {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            font-size: 2rem;
+            color: var(--secondary-color);
+            cursor: pointer;
+            z-index: 1100;
+            background: rgba(255, 255, 255, 0.9);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .dropdown-menu {
+            position: fixed;
+            top: 80px;
+            right: 20px;
+            background: var(--secondary-color);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            display: none;
+            flex-direction: column;
+            min-width: 220px;
+            z-index: 1100;
+        }
+        
+        .dropdown-menu.show {
+            display: flex;
+        }
+        
+        .dropdown-menu a {
+            padding: 14px 20px;
+            color: white;
+            text-decoration: none;
+            transition: background 0.2s;
+            cursor: pointer;
+        }
+        
+        .dropdown-menu a:hover {
+            background: rgba(255, 255, 255, 0.15);
+        }
+        
+        .shop-container {
+            max-width: 1280px;
+            margin: 60px auto;
+            padding: 0 20px;
+        }
+        /* Sections */
+        
+        .section {
+            display: none;
+        }
+        
+        .section.active {
+            display: block;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            color: var(--secondary-color);
+            margin-bottom: 0.8rem;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background: linear-gradient(90deg, transparent, var(--accent-gold), transparent);
+            border-radius: 2px;
+        }
+        
+        .search-bar {
+            max-width: 500px;
+            margin: 30px auto;
+            display: flex;
+        }
+        
+        .search-input {
+            flex: 1;
+            padding: 14px 20px;
+            border: 2px solid #e5e7eb;
+            border-right: none;
+            border-radius: 50px 0 0 50px;
+            font-size: 1rem;
+            outline: none;
+            transition: border-color 0.3s;
+        }
+        
+        .search-input:focus {
+            border-color: var(--primary-color);
+        }
+        
+        .search-button {
+            padding: 0 28px;
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 0 50px 50px 0;
+            cursor: pointer;
+            font-weight: 600;
+            transition: background 0.3s;
+        }
+        
+        .search-button:hover {
+            background: var(--hover-color);
+        }
+        
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 35px;
+        }
+        
+        .product-card {
+            background: var(--card-bg);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.06);
+            transition: all 0.4s ease;
+            border: 1px solid #f3f4f6;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+            border-color: var(--primary-color);
+        }
+        
+        .product-img {
+            width: 100%;
+            height: 240px;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .product-card:hover .product-img {
+            transform: scale(1.08);
+        }
+        
+        .product-info {
+            padding: 24px;
+            text-align: center;
+        }
+        
+        .product-info h3 {
+            font-size: 1.35rem;
+            margin-bottom: 10px;
+            color: var(--secondary-color);
+            font-weight: 600;
+        }
+        
+        .price {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+        
+        .buy-now-btn {
+            width: 100%;
+            padding: 14px;
+            background: var(--secondary-color);
+            color: white;
+            border: none;
+            border-radius: 50px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .buy-now-btn:hover {
+            background: var(--primary-color);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(194, 65, 12, 0.3);
+        }
+        
+        #cart-drawer {
+            position: fixed;
+            top: 0;
+            right: calc(-1 * var(--cart-width));
+            width: var(--cart-width);
+            height: 100%;
+            background: white;
+            box-shadow: -8px 0 25px rgba(0, 0, 0, 0.25);
+            z-index: 1200;
+            transition: right 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+            display: flex;
+            flex-direction: column;
+        }
+        
+        #cart-drawer.open {
+            right: 0;
+        }
+        
+        .cart-header {
+            padding: 1.2rem 1.5rem;
+            background: var(--secondary-color);
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .cart-header h2 {
+            font-size: 1.4rem;
+            margin: 0;
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .cart-close-btn {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.8rem;
+            cursor: pointer;
+            line-height: 1;
+        }
+        
+        .cart-body {
+            flex: 1;
+            padding: 1.5rem;
+            overflow-y: auto;
+        }
+        
+        .cart-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1.2rem;
+            padding-bottom: 1.2rem;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .cart-item:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+            margin-bottom: 0;
+        }
+        
+        .cart-item-img {
+            width: 70px;
+            height: 70px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-right: 1rem;
+        }
+        
+        .cart-item-info {
+            flex: 1;
+        }
+        
+        .cart-item-name {
+            font-weight: 600;
+            margin-bottom: 0.3rem;
+            display: block;
+        }
+        
+        .cart-item-price {
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+        
+        .cart-item-qty {
+            display: flex;
+            align-items: center;
+            margin: 0.5rem 0;
+        }
+        
+        .qty-btn {
+            width: 28px;
+            height: 28px;
+            background: #f3f4f6;
+            border: none;
+            border-radius: 50%;
+            font-size: 1.1rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .qty-btn:hover {
+            background: #e5e7eb;
+        }
+        
+        .qty-display {
+            margin: 0 12px;
+            font-weight: 500;
+            min-width: 20px;
+            text-align: center;
+        }
+        
+        .cart-item-remove {
+            background: none;
+            border: none;
+            color: #ef4444;
+            font-size: 1.1rem;
+            cursor: pointer;
+            margin-left: 0.8rem;
+        }
+        
+        .cart-footer {
+            padding: 1.5rem;
+            border-top: 1px solid #eee;
+            background: #fafafa;
+        }
+        
+        .cart-total {
+            display: flex;
+            justify-content: space-between;
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 1.2rem;
+            color: var(--secondary-color);
+        }
+        
+        .cart-checkout-btn {
+            width: 100%;
+            padding: 14px;
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.05rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .cart-checkout-btn:hover {
+            background: var(--hover-color);
+            transform: translateY(-2px);
+        }
+        
+        .cart-empty {
+            text-align: center;
+            padding: 3rem 1rem;
+            color: var(--light-text);
+            font-size: 1.1rem;
+        }
+        /* Login Modal */
+        
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1300;
+        }
+        
+        .modal {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: white;
+            padding: 2rem;
+            border-radius: 20px;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+            z-index: 1400;
+            width: 90%;
+            max-width: 400px;
+        }
+        
+        .modal.active,
+        .modal-overlay.active {
+            display: block;
+        }
+        
+        .modal h2 {
+            font-family: 'Playfair Display', serif;
+            margin-bottom: 1.5rem;
+            color: var(--secondary-color);
+            text-align: center;
+        }
+        
+        .modal .form-group {
+            margin-bottom: 1.2rem;
+        }
+        
+        .modal label {
+            display: block;
+            margin-bottom: 0.3rem;
+            font-weight: 500;
+        }
+        
+        .modal input {
+            width: 100%;
+            padding: 0.8rem 1rem;
+            border: 2px solid #e5e7eb;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: border-color 0.3s;
+        }
+        
+        .modal input:focus {
+            outline: none;
+            border-color: var(--primary-color);
+        }
+        
+        .modal .btn-submit {
+            width: 100%;
+            padding: 0.9rem;
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            cursor: pointer;
+            margin-top: 1rem;
+            transition: background 0.3s;
+        }
+        
+        .modal .btn-submit:hover {
+            background: var(--hover-color);
+        }
+        
+        .modal .close-modal {
+            position: absolute;
+            top: 1rem;
+            right: 1.5rem;
+            font-size: 2rem;
+            cursor: pointer;
+            color: var(--light-text);
+        }
+        
+        .modal .close-modal:hover {
+            color: var(--primary-color);
+        }
+        
+        .greeting-text {
+            color: white;
+            font-weight: 500;
+            margin-right: 0.5rem;
+        }
+        
+        footer {
+            background: linear-gradient(135deg, var(--secondary-color), #111827);
+            color: white;
+            text-align: center;
+            padding: 2.5rem;
+            margin-top: 80px;
+            font-size: 0.95rem;
+        }
+        
+        #cart-overlay {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.4);
+            z-index: 1150;
+        }
+        /* Placeholder content for sections */
+        
+        .info-content {
+            background: var(--card-bg);
+            border-radius: 20px;
+            padding: 3rem;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.06);
+            border: 1px solid #f3f4f6;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .info-content h3 {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+        }
+        
+        .info-content p {
+            font-size: 1.2rem;
+            color: var(--text-color);
+            margin-bottom: 1rem;
+        }
+        
+        @media (max-width: 768px) {
+             :root {
+                --cart-width: 90%;
+            }
+            .section-title {
+                font-size: 2rem;
+            }
+            .navbar {
+                flex-direction: column;
+                gap: 1rem;
+                padding: 1.2rem 5%;
+            }
+            .search-bar {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Dots menu -->
+    <div class="dots-container" id="dotsIcon">⋯</div>
+    <div class="dropdown-menu" id="dropdownMenu">
+
+        <a data-section="orders">Orders</a>
+        <a data-section="track-order">Track your order</a>
+        <a data-section="products">Products</a>
+        <a data-section="return-policy">Return Policy</a>
+        <a data-section="about-us">About us</a>
+        <a data-section="contact-us">Contact us</a>
+        <a data-section="shipping-policy">Shipping Policy</a>
+        <a data-section="terms-of-service">Terms of Service</a>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="navbar-left">
+            <a href="index.html" class="btn-link" style="font-size:0.95rem;">← Home</a>
+            <h1>Dharma Portal Shop</h1>
+        </div>
+        <div class="navbar-right" id="navbar-right"></div>
+        <!-- Dynamic login/logout will be injected via JS -->
+        </div>
+    </nav>
+
+    <!-- Login Modal -->
+    <div class="modal-overlay" id="modal-overlay"></div>
+    <div class="modal" id="login-modal">
+        <span class="close-modal" id="close-modal">&times;</span>
+        <h2>Login to Dharma Shop</h2>
+        <form id="login-form">
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="your@email.com" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="••••••••" required>
+            </div>
+            <button type="submit" class="btn-submit">Sign In</button>
+        </form>
+        <p style="text-align:center; margin-top:1rem; font-size:0.9rem; color:var(--light-text);">(Demo: any non‑empty credentials work)</p>
+    </div>
+
+    <!-- Side Cart Drawer -->
+    <div id="cart-drawer">
+        <div class="cart-header">
+            <h2>Your Sacred Cart 🕉️</h2>
+            <button class="cart-close-btn" id="cart-close">×</button>
+        </div>
+        <div class="cart-body" id="cart-items-list">
+            <!-- Cart items injected here -->
+        </div>
+        <div class="cart-footer" id="cart-footer">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span id="cart-total">₹0</span>
+            </div>
+            <button class="cart-checkout-btn">Proceed to Checkout</button>
+        </div>
+    </div>
+
+    <!-- Overlay when cart open -->
+    <div id="cart-overlay"></div>
+
+    <!-- Main Content with Sections -->
+    <div class="shop-container">
+        <!-- Products Section (default active) -->
+        <section id="products-section" class="section active">
+            <div class="section-header">
+                <h2 class="section-title">Sacred Spiritual Items</h2>
+                <div class="search-bar">
+                    <input type="text" class="search-input" placeholder="Search sacred items... e.g. Rudraksha, Diya" />
+                    <button class="search-button">Search</button>
+                </div>
+            </div>
+            <div class="product-grid" id="product-grid">
+                <!-- Product 1: Rudraksha Mala -->
+                <div class="product-card" data-id="1" data-name="5 Mukhi Rudraksha Mala" data-price="499" data-img="https://images.unsplash.com/photo-1545117484-eb07446b2b03?auto=format&fit=crop&w=800&q=80">
+                    <img src="https://images.unsplash.com/photo-1545117484-eb07446b2b03?auto=format&fit=crop&w=800&q=80" class="product-img" alt="Rudraksha Mala" />
+                    <div class="product-info">
+                        <h3>5 Mukhi Rudraksha Mala</h3>
+                        <p class="price">₹499</p>
+                        <button class="buy-now-btn add-to-cart-btn">Add to Cart</button>
+                    </div>
+                </div>
+                <!-- Product 2: Tulsi Mala -->
+                <div class="product-card" data-id="2" data-name="Tulsi Kanthi Mala" data-price="349" data-img="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80">
+                    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80" class="product-img" alt="Tulsi Mala" />
+                    <div class="product-info">
+                        <h3>Tulsi Kanthi Mala (108 Beads)</h3>
+                        <p class="price">₹349</p>
+                        <button class="buy-now-btn add-to-cart-btn">Add to Cart</button>
+                    </div>
+                </div>
+                <!-- Product 3: Brass Diya -->
+                <div class="product-card" data-id="3" data-name="Brass Designer Diya" data-price="599" data-img="https://images.unsplash.com/photo-1606813907291-d86f1e6b0d7e?auto=format&fit=crop&w=800&q=80">
+                    <img src="https://images.unsplash.com/photo-1606813907291-d86f1e6b0d7e?auto=format&fit=crop&w=800&q=80" class="product-img" alt="Brass Diya" />
+                    <div class="product-info">
+                        <h3>Brass Designer Diya</h3>
+                        <p class="price">₹599</p>
+                        <button class="buy-now-btn add-to-cart-btn">Add to Cart</button>
+                    </div>
+                </div>
+                <!-- Product 4: Copper Vessel -->
+                <div class="product-card" data-id="4" data-name="Copper Water Vessel" data-price="799" data-img="https://images.unsplash.com/photo-1631547383905-6ec5d3fbf7fb?auto=format&fit=crop&w=800&q=80">
+                    <img src="https://images.unsplash.com/photo-1631547383905-6ec5d3fbf7fb?auto=format&fit=crop&w=800&q=80" class="product-img" alt="Copper Vessel" />
+                    <div class="product-info">
+                        <h3>Copper Water Vessel</h3>
+                        <p class="price">₹799</p>
+                        <button class="buy-now-btn add-to-cart-btn">Add to Cart</button>
+                    </div>
+                </div>
+                <!-- Product 5: Sandalwood Incense -->
+                <div class="product-card" data-id="5" data-name="Sandalwood Incense Sticks" data-price="199" data-img="https://images.unsplash.com/photo-1606914469677-7be92eaa3d37?auto=format&fit=crop&w=800&q=80">
+                    <img src="https://images.unsplash.com/photo-1606914469677-7be92eaa3d37?auto=format&fit=crop&w=800&q=80" class="product-img" alt="Incense Sticks" />
+                    <div class="product-info">
+                        <h3>Sandalwood Incense Sticks</h3>
+                        <p class="price">₹199</p>
+                        <button class="buy-now-btn add-to-cart-btn">Add to Cart</button>
+                    </div>
+                </div>
+                <!-- Product 6: Meditation Cushion -->
+                <div class="product-card" data-id="6" data-name="Meditation Cushion (Zafu)" data-price="1299" data-img="https://images.unsplash.com/photo-1593164842097-94b1f6c9fe9b?auto=format&fit=crop&w=800&q=80">
+                    <img src="https://images.unsplash.com/photo-1593164842097-94b1f6c9fe9b?auto=format&fit=crop&w=800&q=80" class="product-img" alt="Meditation Cushion" />
+                    <div class="product-info">
+                        <h3>Meditation Cushion (Zafu)</h3>
+                        <p class="price">₹1299</p>
+                        <button class="buy-now-btn add-to-cart-btn">Add to Cart</button>
+                    </div>
+                </div>
+                <!-- Product 7: Brass Bell -->
+                <div class="product-card" data-id="7" data-name="Brass Ghanti (Bell)" data-price="899" data-img="https://images.unsplash.com/photo-1616045135633-619440e8b65b?auto=format&fit=crop&w=800&q=80">
+                    <img src="https://images.unsplash.com/photo-1616045135633-619440e8b65b?auto=format&fit=crop&w=800&q=80" class="product-img" alt="Brass Bell" />
+                    <div class="product-info">
+                        <h3>Brass Ghanti (Bell)</h3>
+                        <p class="price">₹899</p>
+                        <button class="buy-now-btn add-to-cart-btn">Add to Cart</button>
+                    </div>
+                </div>
+                <!-- Product 8: Ganga Jal -->
+                <div class="product-card" data-id="8" data-name="Sacred Ganga Jal" data-price="149" data-img="https://images.unsplash.com/photo-1604754742629-3e572b9f8d1b?auto=format&fit=crop&w=800&q=80">
+                    <img src="https://images.unsplash.com/photo-1604754742629-3e572b9f8d1b?auto=format&fit=crop&w=800&q=80" class="product-img" alt="Ganga Jal" />
+                    <div class="product-info">
+                        <h3>Sacred Ganga Jal (Copper Bottle)</h3>
+                        <p class="price">₹149</p>
+                        <button class="buy-now-btn add-to-cart-btn">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Orders Section -->
+        <section id="orders-section" class="section">
+            <div class="section-header">
+                <h2 class="section-title">Your Orders</h2>
+            </div>
+            <div class="info-content">
+                <h3>📦 Order History</h3>
+                <p>You have no past orders yet.</p>
+                <p>Browse our <a href="#" data-section="products" style="color: var(--primary-color);">spiritual items</a> and place your first order.</p>
+            </div>
+        </section>
+
+        <!-- Track Order Section -->
+        <section id="track-order-section" class="section">
+            <div class="section-header">
+                <h2 class="section-title">Track Your Order</h2>
+            </div>
+            <div class="info-content">
+                <h3>🚚 Track Order</h3>
+                <p>Enter your order ID to track status.</p>
+                <input type="text" placeholder="Order ID" style="padding:10px; width:80%; max-width:300px; margin:20px auto; display:block; border:2px solid #e5e7eb; border-radius:8px;">
+                <button class="buy-now-btn" style="width:auto; padding:10px 30px;">Track</button>
+            </div>
+        </section>
+
+        <!-- Return Policy Section -->
+        <section id="return-policy-section" class="section">
+            <div class="section-header">
+                <h2 class="section-title">Return Policy</h2>
+            </div>
+            <div class="info-content">
+                <h3>🔄 30-Day Returns</h3>
+                <p>We accept returns within 30 days of delivery. Items must be unused and in original packaging.</p>
+                <p>Contact us at support@dharmashop.com to initiate a return.</p>
+            </div>
+        </section>
+
+        <!-- About Us Section -->
+        <section id="about-us-section" class="section">
+            <div class="section-header">
+                <h2 class="section-title">About Us</h2>
+            </div>
+            <div class="info-content">
+                <h3>🕉️ Dharma Shop</h3>
+                <p>We are dedicated to providing authentic spiritual items to support your sadhana and daily rituals.</p>
+                <p>Founded in 2020, we work directly with artisans and trusted suppliers to bring you sacred products.</p>
+            </div>
+        </section>
+
+        <!-- Contact Us Section -->
+        <section id="contact-us-section" class="section">
+            <div class="section-header">
+                <h2 class="section-title">Contact Us</h2>
+            </div>
+            <div class="info-content">
+                <h3>📞 Get in Touch</h3>
+                <p>Email: support@dharmashop.com</p>
+                <p>Phone: +91 98765 43210</p>
+                <p>Address: Varanasi, Uttar Pradesh, India</p>
+            </div>
+        </section>
+
+        <!-- Shipping Policy Section -->
+        <section id="shipping-policy-section" class="section">
+            <div class="section-header">
+                <h2 class="section-title">Shipping Policy</h2>
+            </div>
+            <div class="info-content">
+                <h3>🚚 Shipping Information</h3>
+                <p>Free shipping on orders above ₹500.</p>
+                <p>Standard delivery: 5-7 business days. Express delivery available at checkout.</p>
+            </div>
+        </section>
+
+        <!-- Terms of Service Section -->
+        <section id="terms-of-service-section" class="section">
+            <div class="section-header">
+                <h2 class="section-title">Terms of Service</h2>
+            </div>
+            <div class="info-content">
+                <h3>📜 Terms & Conditions</h3>
+                <p>By using this website, you agree to our terms. All products are sold as described.</p>
+                <p>We reserve the right to update terms at any time.</p>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        © 2024–2026 Dharma Shop. All rights reserved. | Crafted with devotion.
+    </footer>
+
+    <script>
+        // Dropdown menu toggle
+        const dotsIcon = document.getElementById('dotsIcon');
+        const dropdownMenu = document.getElementById('dropdownMenu');
+        dotsIcon.addEventListener('click', () => dropdownMenu.classList.toggle('show'));
+        document.addEventListener('click', e => {
+            if (!e.target.closest('#dotsIcon') && !e.target.closest('#dropdownMenu')) {
+                dropdownMenu.classList.remove('show');
+            }
+        });
+
+        // Section switching
+        const sections = document.querySelectorAll('.section');
+
+        function showSection(sectionId) {
+            sections.forEach(s => s.classList.remove('active'));
+            document.getElementById(sectionId).classList.add('active');
+            dropdownMenu.classList.remove('show'); // close dropdown after selection
+        }
+
+        // Add click handlers to dropdown links
+        document.querySelectorAll('.dropdown-menu a').forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const section = link.dataset.section;
+                if (section === 'home' || section === 'products') {
+                    showSection('products-section');
+                } else {
+                    showSection(section + '-section');
+                }
+            });
+        });
+
+        // Also handle any inline links that may point to sections (like in Orders placeholder)
+        document.addEventListener('click', e => {
+            if (e.target.matches('[data-section]')) {
+                e.preventDefault();
+                const section = e.target.dataset.section;
+                if (section === 'home' || section === 'products') {
+                    showSection('products-section');
+                } else {
+                    showSection(section + '-section');
+                }
+            }
+        });
+
+        // ---------- Cart Logic (unchanged but integrated) ----------
+        let cart = JSON.parse(localStorage.getItem('dharmaCart')) || [];
+
+        const cartDrawer = document.getElementById('cart-drawer');
+        const cartOverlay = document.getElementById('cart-overlay');
+        const cartItemsList = document.getElementById('cart-items-list');
+        const cartTotalEl = document.getElementById('cart-total');
+        const cartClose = document.getElementById('cart-close');
+
+        function saveCart() {
+            localStorage.setItem('dharmaCart', JSON.stringify(cart));
+        }
+
+        function updateCartDisplay() {
+            cartItemsList.innerHTML = '';
+            let total = 0;
+
+            if (cart.length === 0) {
+                cartItemsList.innerHTML = '<div class="cart-empty">Your cart is empty.<br>Start adding sacred items 🕉️</div>';
+                cartTotalEl.textContent = '₹0';
+            } else {
+                cart.forEach((item, index) => {
+                    const itemTotal = item.price * item.quantity;
+                    total += itemTotal;
+
+                    const div = document.createElement('div');
+                    div.className = 'cart-item';
+                    div.innerHTML = `
+                        <img src="${item.img}" class="cart-item-img" alt="${item.name}">
+                        <div class="cart-item-info">
+                            <span class="cart-item-name">${item.name}</span>
+                            <span class="cart-item-price">₹${item.price.toLocaleString()}</span>
+                            <div class="cart-item-qty">
+                                <button class="qty-btn" data-index="${index}" data-action="minus">–</button>
+                                <span class="qty-display">${item.quantity}</span>
+                                <button class="qty-btn" data-index="${index}" data-action="plus">+</button>
+                            </div>
+                        </div>
+                        <button class="cart-item-remove" data-index="${index}">×</button>
+                    `;
+                    cartItemsList.appendChild(div);
+                });
+
+                cartTotalEl.textContent = `₹${total.toLocaleString()}`;
+            }
+
+            // Update cart badge if exists
+            const badge = document.getElementById('cart-count');
+            if (badge) {
+                const count = cart.reduce((sum, i) => sum + i.quantity, 0);
+                badge.textContent = count;
+                badge.style.display = count > 0 ? 'flex' : 'none';
+            }
+        }
+
+        function openCart() {
+            cartDrawer.classList.add('open');
+            cartOverlay.style.display = 'block';
+        }
+
+        function closeCart() {
+            cartDrawer.classList.remove('open');
+            cartOverlay.style.display = 'none';
+        }
+
+        // Cart open/close events (delegation)
+        document.addEventListener('click', e => {
+            if (e.target.closest('#cart-toggle')) {
+                e.preventDefault();
+                openCart();
+            }
+        });
+
+        cartClose.addEventListener('click', closeCart);
+        cartOverlay.addEventListener('click', closeCart);
+
+        // Add to cart buttons
+        document.querySelectorAll('.add-to-cart-btn').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                const card = e.target.closest('.product-card');
+                const id = card.dataset.id;
+                const name = card.dataset.name;
+                const price = Number(card.dataset.price);
+                const img = card.dataset.img;
+
+                const existing = cart.find(item => item.id === id);
+                if (existing) {
+                    existing.quantity++;
+                } else {
+                    cart.push({
+                        id,
+                        name,
+                        price,
+                        img,
+                        quantity: 1
+                    });
+                }
+
+                saveCart();
+                updateCartDisplay();
+                openCart(); // open drawer on add
+            });
+        });
+
+        // Quantity buttons & remove (delegation)
+        cartItemsList.addEventListener('click', e => {
+            const btn = e.target.closest('button');
+            if (!btn) return;
+
+            const index = Number(btn.dataset.index);
+            const action = btn.dataset.action;
+
+            if (btn.classList.contains('cart-item-remove') || (action === 'minus' && cart[index].quantity === 1)) {
+                cart.splice(index, 1);
+            } else if (action === 'plus') {
+                cart[index].quantity++;
+            } else if (action === 'minus') {
+                cart[index].quantity--;
+            }
+
+            saveCart();
+            updateCartDisplay();
+        });
+
+        // ---------- Login / Logout Logic ----------
+        const modalOverlay = document.getElementById('modal-overlay');
+        const loginModal = document.getElementById('login-modal');
+        const closeModalBtn = document.getElementById('close-modal');
+        const loginForm = document.getElementById('login-form');
+        const navbarRight = document.getElementById('navbar-right');
+
+        let loggedInUser = JSON.parse(localStorage.getItem('user')) || null;
+
+        function renderNavbar() {
+            if (loggedInUser) {
+                navbarRight.innerHTML = `
+                    <span class="greeting-text">Hi, ${loggedInUser.email}</span>
+                    <button class="btn-link" id="logout-btn">Logout</button>
+                    <div class="cart-container" id="cart-toggle">
+                        <a class="btn-link">Cart</a>
+                        <div id="cart-count" class="cart-badge">${cart.reduce((sum,i)=>sum+i.quantity,0)}</div>
+                    </div>
+                    <a href="/more" class="btn-link">More</a>
+                `;
+                document.getElementById('logout-btn').addEventListener('click', logout);
+            } else {
+                navbarRight.innerHTML = `
+                    <button class="btn-link" id="login-btn">Login</button>
+                    <div class="cart-container" id="cart-toggle">
+                        <a class="btn-link">Cart</a>
+                        <div id="cart-count" class="cart-badge">${cart.reduce((sum,i)=>sum+i.quantity,0)}</div>
+                    </div>
+                    <a href="/more" class="btn-link">More</a>
+                `;
+                document.getElementById('login-btn').addEventListener('click', openLoginModal);
+            }
+            // Update cart badge visibility
+            const badge = document.getElementById('cart-count');
+            if (badge) {
+                const count = cart.reduce((sum, i) => sum + i.quantity, 0);
+                badge.textContent = count;
+                badge.style.display = count > 0 ? 'flex' : 'none';
+            }
+        }
+
+        function openLoginModal() {
+            loginModal.classList.add('active');
+            modalOverlay.classList.add('active');
+        }
+
+        function closeLoginModal() {
+            loginModal.classList.remove('active');
+            modalOverlay.classList.remove('active');
+        }
+
+        function login(email) {
+            loggedInUser = {
+                email: email
+            };
+            localStorage.setItem('user', JSON.stringify(loggedInUser));
+            renderNavbar();
+            closeLoginModal();
+        }
+
+        function logout() {
+            loggedInUser = null;
+            localStorage.removeItem('user');
+            renderNavbar();
+        }
+
+        loginForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const email = document.getElementById('email').value.trim();
+            const password = document.getElementById('password').value.trim();
+            if (email && password) {
+                login(email);
+            } else {
+                alert('Please enter both email and password.');
+            }
+        });
+
+        closeModalBtn.addEventListener('click', closeLoginModal);
+        modalOverlay.addEventListener('click', closeLoginModal);
+
+        // Initial render
+        renderNavbar();
+        updateCartDisplay();
+
+        // Patch updateCartDisplay to also update badge
+        const originalUpdate = updateCartDisplay;
+        updateCartDisplay = function() {
+            originalUpdate();
+            const badge = document.getElementById('cart-count');
+            if (badge) {
+                const count = cart.reduce((sum, i) => sum + i.quantity, 0);
+                badge.textContent = count;
+                badge.style.display = count > 0 ? 'flex' : 'none';
+            }
+        };
+        updateCartDisplay();
+    </script>
+</body>
+
+</html>

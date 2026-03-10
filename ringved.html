@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="hi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rig Veda – Complete Information Database</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', 'Noto Sans Devanagari', sans-serif;
+            background: #f2e9de;
+            color: #2d3e4f;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            background: #ffffff;
+            border-radius: 28px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+            padding: 30px;
+        }
+        
+        h1 {
+            font-size: 2.8rem;
+            color: #a6402c;
+            border-bottom: 4px solid #e1cbb6;
+            padding-bottom: 15px;
+            margin-bottom: 25px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        h1 span {
+            font-size: 1.6rem;
+            background: #f0d9cc;
+            padding: 5px 18px;
+            border-radius: 60px;
+            color: #5d3a2b;
+        }
+        
+        h2 {
+            font-size: 2rem;
+            color: #8b4b3a;
+            margin: 35px 0 15px 0;
+            border-left: 8px solid #b3573c;
+            padding-left: 20px;
+        }
+        
+        h3 {
+            font-size: 1.5rem;
+            margin: 25px 0 10px;
+            color: #6d4c41;
+        }
+        
+        .fact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 20px;
+            margin: 25px 0;
+        }
+        
+        .fact-card {
+            background: #fcf5ed;
+            border-radius: 24px;
+            padding: 20px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.04);
+            border: 1px solid #eadaca;
+        }
+        
+        .fact-card strong {
+            display: block;
+            font-size: 1.3rem;
+            color: #9e543e;
+            margin-bottom: 8px;
+        }
+        
+        .fact-card .value {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #3d2b1f;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 25px 0;
+            background: #fefaf5;
+            border-radius: 18px;
+            overflow: hidden;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.05);
+        }
+        
+        th {
+            background: #a64b34;
+            color: white;
+            font-weight: 600;
+            font-size: 1.1rem;
+            padding: 12px;
+            text-align: center;
+        }
+        
+        td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #ebd9cb;
+            text-align: left;
+        }
+        
+        tr:last-child td {
+            border-bottom: none;
+        }
+        
+        .mandala-table td:first-child {
+            font-weight: 600;
+            background: #f5e6dc;
+            width: 20%;
+        }
+        
+        .highlight {
+            background: #fae1d4;
+            padding: 15px 20px;
+            border-radius: 30px;
+            margin: 25px 0;
+            font-style: italic;
+            border-left: 6px solid #b3573c;
+        }
+        
+        .sukta-list {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin: 15px 0;
+        }
+        
+        .sukta-list li {
+            background: #fff1e6;
+            padding: 10px 20px;
+            border-radius: 50px;
+            border: 1px solid #dbb99c;
+            font-weight: 500;
+        }
+        
+        .footer-note {
+            background: #eedacb;
+            padding: 20px;
+            border-radius: 30px;
+            text-align: center;
+            margin-top: 40px;
+            font-size: 1.2rem;
+            color: #362218;
+        }
+        
+        hr {
+            border: none;
+            height: 2px;
+            background: linear-gradient(90deg, #e3cbb8, #f7e3d3, #e3cbb8);
+            margin: 30px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>📜 ऋग्वेद · Rigveda <span></span></h1>
+
+        <!-- Key facts at a glance -->
+        <div class="fact-grid">
+            <div class="fact-card"><strong>मंडल (Mandalas)</strong>
+                <div class="value">10</div>
+            </div>
+            <div class="fact-card"><strong>सूक्त (Suktas)</strong>
+                <div class="value">1028</div>
+            </div>
+            <div class="fact-card"><strong>मंत्र (Mantras)</strong>
+                <div class="value">~10,552</div>
+            </div>
+            <div class="fact-card"><strong>पद (Words)</strong>
+                <div class="value">~1,53,000</div>
+            </div>
+            <div class="fact-card"><strong>शाखाएँ (Shakhas)</strong>
+                <div class="value">5 प्रमुख</div>
+            </div>
+            <div class="fact-card"><strong>उपनिषद्</strong>
+                <div class="value">ऐतरेय, कौषीतकी</div>
+            </div>
+        </div>
+
+        <!-- 1. Overview -->
+        <h2>🔍 परिचय (Introduction)</h2>
+        <p style="font-size: 1.2rem;">ऋग्वेद विश्व का सबसे प्राचीन धार्मिक ग्रंथ है। यह वैदिक संस्कृत में रचित है और इसे <strong>आदि वेद</strong> भी कहा जाता है। ऋग्वेद के मंत्र देवताओं की स्तुति, प्रकृति के रहस्यों, आध्यात्मिक चिंतन और यज्ञों में प्रयुक्त होते हैं। इसे यूनेस्को द्वारा
+            <strong>"मानव की मौखिक और अभौतिक विरासत"</strong> की सूची में शामिल किया गया है।</p>
+
+        <!-- 2. Detailed Structure -->
+        <h2>📖 संरचना (Structure)</h2>
+        <p>ऋग्वेद 10 मंडलों में विभाजित है। प्रत्येक मंडल में कई सूक्त (स्तुतियाँ) हैं, और प्रत्येक सूक्त अनेक मंत्रों (ऋचाओं) से बना है। नीचे प्रत्येक मंडल का विवरण दिया गया है।</p>
+
+        <table class="mandala-table">
+            <thead>
+                <tr>
+                    <th>मंडल</th>
+                    <th>सूक्तों की संख्या</th>
+                    <th>मंत्रों की संख्या</th>
+                    <th>प्रमुख ऋषि</th>
+                    <th>प्रमुख देवता</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>मंडल 1</td>
+                    <td>191</td>
+                    <td>2006</td>
+                    <td>मधुच्छंदा, शुनःशेप, कण्व, गृत्समद</td>
+                    <td>अग्नि, इंद्र, मित्रावरुण, अश्विनी</td>
+                </tr>
+                <tr>
+                    <td>मंडल 2</td>
+                    <td>43</td>
+                    <td>429</td>
+                    <td>गृत्समद (शौनक)</td>
+                    <td>अग्नि, इंद्र, वायु, बृहस्पति</td>
+                </tr>
+                <tr>
+                    <td>मंडल 3</td>
+                    <td>62</td>
+                    <td>617</td>
+                    <td>विश्वामित्र</td>
+                    <td>इंद्र, अग्नि, विश्वेदेवा, सूर्य</td>
+                </tr>
+                <tr>
+                    <td>मंडल 4</td>
+                    <td>58</td>
+                    <td>589</td>
+                    <td>वामदेव</td>
+                    <td>इंद्र, अग्नि, रुद्र, वरुण, वायु</td>
+                </tr>
+                <tr>
+                    <td>मंडल 5</td>
+                    <td>87</td>
+                    <td>727</td>
+                    <td>अत्रि एवं अत्रिवंशी</td>
+                    <td>अग्नि, इंद्र, विश्वेदेवा, मित्रावरुण</td>
+                </tr>
+                <tr>
+                    <td>मंडल 6</td>
+                    <td>75</td>
+                    <td>765</td>
+                    <td>भारद्वाज (आंगिरस)</td>
+                    <td>अग्नि, इंद्र, पूषन, सूर्य, मरुत्</td>
+                </tr>
+                <tr>
+                    <td>मंडल 7</td>
+                    <td>104</td>
+                    <td>1042</td>
+                    <td>वशिष्ठ</td>
+                    <td>अग्नि, इंद्र, वरुण, सरस्वती, विश्वेदेवा</td>
+                </tr>
+                <tr>
+                    <td>मंडल 8</td>
+                    <td>103</td>
+                    <td>1716</td>
+                    <td>कण्व एवं अंगिरा वंश</td>
+                    <td>इंद्र, अग्नि, अश्विनी, सोम, आदित्य</td>
+                </tr>
+                <tr>
+                    <td>मंडल 9</td>
+                    <td>114</td>
+                    <td>1108</td>
+                    <td>विभिन्न (सोम को समर्पित)</td>
+                    <td>सोम (पवमान), इंद्र, अग्नि, विश्वेदेवा</td>
+                </tr>
+                <tr>
+                    <td>मंडल 10</td>
+                    <td>191</td>
+                    <td>1754</td>
+                    <td>विम्ब, विविध ऋषि (बहुविध)</td>
+                    <td>अग्नि, इंद्र, प्रजापति, विश्वकर्मा, यम आदि</td>
+                </tr>
+            </tbody>
+        </table>
+        <p style="text-align: right;">※ मंत्र संख्या विभिन्न संहिता पाठों में थोड़ी भिन्न हो सकती है।</p>
+
+        <!-- 3. Famous Suktas -->
+        <h2>🌟 प्रमुख सूक्त (Important Hymns)</h2>
+        <ul class="sukta-list">
+            <li><strong>गायत्री सूक्त</strong> (3.62.10)</li>
+            <li><strong>पुरुष सूक्त</strong> (10.90)</li>
+            <li><strong>नासदीय सूक्त</strong> (10.129)</li>
+            <li><strong>हिरण्यगर्भ सूक्त</strong> (10.121)</li>
+            <li><strong>दानस्तुति सूक्त</strong> (10.117)</li>
+            <li><strong>अक्ष सूक्त (द्यूत)</strong> (10.34)</li>
+            <li><strong>वाक् सूक्त (देवी)</strong> (10.125)</li>
+            <li><strong>संज्ञान सूक्त</strong> (10.191)</li>
+        </ul>
+
+        <div class="highlight">
+            <p>🌿 <strong>गायत्री मंत्र</strong> (ऋग्वेद 3.62.10) – "ॐ भूर्भुवः स्वः तत्सवितुर्वरेण्यं भर्गो देवस्य धीमहि धियो यो नः प्रचोदयात्।" यह सविता देव (सूर्य) को समर्पित है।</p>
+            <p>🌀 <strong>नासदीय सूक्त</strong> (10.129) – सृष्टि से पहले के अस्तित्व पर दार्शनिक चिंतन।</p>
+        </div>
+
+        <!-- 4. Shakhas (Recensions) -->
+        <h2>📚 शाखाएँ (Recensions)</h2>
+        <p>ऋग्वेद की पाँच प्रमुख शाखाएँ बताई जाती हैं – <strong>शाकल, वाष्कल, आश्वलायन, शांखायन, माण्डूकायन</strong>। वर्तमान में केवल <strong>शाकल शाखा</strong> ही पूर्ण रूप से उपलब्ध है। इसी के आधार पर सायणाचार्य ने भाष्य लिखा। शांखायन और आश्वलायन शाखाओं
+            के ब्राह्मण और श्रौतसूत्र मिलते हैं।</p>
+
+        <!-- 5. Associated Texts -->
+        <h2>📗 संलग्न ग्रंथ (Associated Literature)</h2>
+        <table>
+            <tr>
+                <th>ग्रंथ</th>
+                <th>नाम</th>
+                <th>विवरण</th>
+            </tr>
+            <tr>
+                <td><strong>ब्राह्मण</strong></td>
+                <td>ऐतरेय ब्राह्मण, कौषीतकि ब्राह्मण</td>
+                <td>यज्ञ की विधियों और उनके अर्थ की व्याख्या</td>
+            </tr>
+            <tr>
+                <td><strong>आरण्यक</strong></td>
+                <td>ऐतरेय आरण्यक, कौषीतकि आरण्यक</td>
+                <td>वानप्रस्थों के लिए रहस्यमय अध्याय</td>
+            </tr>
+            <tr>
+                <td><strong>उपनिषद्</strong></td>
+                <td>ऐतरेय उपनिषद्, कौषीतकि उपनिषद्</td>
+                <td>आत्मा और ब्रह्म के दार्शनिक विवेचन</td>
+            </tr>
+            <tr>
+                <td><strong>वेदांग</strong></td>
+                <td>शिक्षा, कल्प, व्याकरण, निरुक्त, छंद, ज्योतिष</td>
+                <td>वेद को समझने के लिए छह सहायक विषय</td>
+            </tr>
+        </table>
+
+        <!-- 6. Devatas (Deities) and Themes -->
+        <h2>🙏 देवता एवं विषय (Deities & Themes)</h2>
+        <div style="display: flex; flex-wrap: wrap; gap: 20px;">
+            <div style="flex: 1; min-width: 200px;">
+                <h3>मुख्य देवता</h3>
+                <ul style="list-style-type: square; padding-left: 25px;">
+                    <li><strong>अग्नि</strong> – सबसे अधिक (लगभग 200 सूक्त)</li>
+                    <li><strong>इंद्र</strong> – लगभग 250 सूक्त (सर्वाधिक)</li>
+                    <li><strong>सोम</strong> – पूरा नवां मंडल</li>
+                    <li><strong>वरुण</strong> – ऋत एवं नैतिक नियंता</li>
+                    <li><strong>उषा</strong> – प्रातः काल की देवी (20 सूक्त)</li>
+                    <li><strong>सूर्य/सविता, पूषन, मित्र, अश्विनी, मरुत्, विष्णु, रुद्र</strong></li>
+                </ul>
+            </div>
+            <div style="flex: 2;">
+                <h3>विषयगत विविधता</h3>
+                <ul>
+                    <li>⛰️ <strong>प्राकृतिक शक्तियों की स्तुति</strong> – अग्नि, वायु, सूर्य, नदियाँ (सरस्वती, सिन्धु)।</li>
+                    <li>🌌 <strong>ब्रह्मांड संबंधी प्रश्न</strong> – सृष्टि कैसे हुई? (10.129) – विश्वकर्मा, हिरण्यगर्भ।</li>
+                    <li>🧘 <strong>आध्यात्मिक दर्शन</strong> – ऋत (सत्य), यज्ञ, मन, वाक् (वाणी) की महिमा।</li>
+                    <li>🏹 <strong>सामाजिक जीवन</strong> – विवाह (10.85), श्राद्ध, दान, राजा का चुनाव, रथों का निर्माण।</li>
+                    <li>📜 <strong>ऐतिहासिक लड़ाइयाँ</strong> – दस राजाओं का युद्ध (7.18, 7.83) – सुदास एवं भारत युद्ध का उल्लेख।</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- 7. Language and Meter -->
+        <h2>🔤 भाषा एवं छंद (Language & Meter)</h2>
+        <p>ऋग्वेद की भाषा <strong>वैदिक संस्कृत</strong> है, जो पाणिनीय संस्कृत से पुरातन है। इसमें सात प्रमुख छंद प्रयुक्त हुए हैं – <strong>गायत्री, अनुष्टुप, त्रिष्टुप, जगती, पंक्ति, बृहती, उष्णिक</strong>। सबसे अधिक मंत्र <strong>त्रिष्टुप</strong> और
+            <strong>गायत्री</strong> छंदों में हैं। स्वराघात (उदात्त, अनुदात्त, स्वरित) का विशेष महत्व है।</p>
+
+        <!-- 8. Historical & Cultural Significance -->
+        <h2>🌍 ऐतिहासिक एवं सांस्कृतिक महत्व</h2>
+        <p>ऋग्वेद से ही <strong>आर्य संस्कृति, भारतीय दर्शन, आयुर्वेद, ज्योतिष, संगीत</strong> की नींव मिलती है। इसमें वर्णित नदियाँ (सप्त सिन्धु) एवं स्थान उत्तर-पश्चिम भारत एवं पाकिस्तान के भूगोल को दर्शाते हैं। ऋग्वेद के कई मंत्र आज भी हवन, उपनयन, विवाह
+            आदि संस्कारों में गाए जाते हैं।</p>
+
+        <!-- 9. Manuscripts & Transmission -->
+        <h2>📜 हस्तलेख एवं परंपरा</h2>
+        <p>ऋग्वेद को मौखिक परंपरा (श्रुति) से सुरक्षित रखा गया। उच्चारण की शुद्धता के लिए <strong>पाठ के 11 तरीके</strong> (विकृतियाँ) विकसित किए गए – संहिता, पद, क्रम, जटा, माला, शिखा, रेखा, ध्वज, दंड, रथ, घन। सबसे पुरानी हस्तलिखित प्रति <strong>14वीं शताब्दी</strong>            की है (नेपाल से प्राप्त)। सर्वप्रथम मैक्स मूलर ने 1849-74 में संस्कृत एवं अंग्रेजी अनुवाद के साथ मुद्रित कराया।</p>
+
+        <hr>
+
+        <!-- quick reference table -->
+        <h2>📋 त्वरित संदर्भ (Quick Reference)</h2>
+        <table>
+            <tr>
+                <td>कुल सूक्त</td>
+                <td>1028 (बालखिल्य सहित 1028; कभी 1017 भी गिने जाते हैं)</td>
+            </tr>
+            <tr>
+                <td>कुल मंत्र (शाकल)</td>
+                <td>10,552 (ऋक्)</td>
+            </tr>
+            <tr>
+                <td>अध्याय (अष्टक)</td>
+                <td>8 अष्टक, 64 अध्याय, 2006 वर्ग</td>
+            </tr>
+            <tr>
+                <td>प्रमुख ऋषि कुल</td>
+                <td>कण्व, अंगिरा, वसिष्ठ, विश्वामित्र, अत्रि, भारद्वाज, गृत्समद</td>
+            </tr>
+            <tr>
+                <td>प्रतिनिधि मंत्र</td>
+                <td>ॐ (1.1.1 अग्निमीळे पुरोहितम् …)</td>
+            </tr>
+            <tr>
+                <td>सबसे लंबा सूक्त</td>
+                <td>1.126 – 16 मंत्र, 9.97 – 58 मंत्र (सोम सूक्त)</td>
+            </tr>
+            <tr>
+                <td>मुख्य देवता (सूक्त संख्या)</td>
+                <td>इंद्र (~250), अग्नि (~200), सोम (~120), वरुण (~46)</td>
+            </tr>
+            <tr>
+                <td>आधुनिक अनुवाद</td>
+                <td>हिन्दी में – पं. रामगोविन्द त्रिवेदी, गंगासहाय शर्मा, आर्यसमाज, इत्यादि।</td>
+            </tr>
+        </table>
+
+        <!-- footer with mantra -->
+        <div class="footer-note">
+            ॐ श्री परमात्मने नमः । <br>
+            <span style="font-size: 1.5rem;">॥ ऋचो अक्षरे परमे व्योमन् ॥</span> (ऋग्वेद 1.164.39)
+        </div>
+    </div>
+</body>
+
+</html>

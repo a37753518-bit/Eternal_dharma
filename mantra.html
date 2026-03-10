@@ -1,0 +1,1068 @@
+<!DOCTYPE html>
+<html lang="hi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>मंत्र कोश · सनातन धर्म</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tiro+Devanagari+Hindi:ital@0;1&family=Cinzel:wght@400;600;700&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+         :root {
+            --maroon-deep: #2a0a0a;
+            --maroon-mid: #4a1010;
+            --maroon-warm: #6b1e1e;
+            --maroon-light: #8b3030;
+            --gold-deep: #7a5a00;
+            --gold-mid: #c8960a;
+            --gold-bright: #f0c040;
+            --gold-pale: #fde98a;
+            --gold-cream: #fdf5d0;
+            --cream: #fef9ee;
+            --parchment: #f7edd8;
+            --ink: #1a0505;
+            --text-warm: #2e1010;
+            --text-mid: #4a2020;
+            --border-gold: rgba(200, 150, 10, 0.35);
+            --shadow-maroon: rgba(42, 10, 10, 0.5);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background: var(--maroon-deep);
+            background-image: radial-gradient(ellipse 80% 60% at 50% -10%, #4a1010 0%, transparent 70%), url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23c8960a' fill-opacity='0.04'%3E%3Cpath d='M30 0 L36 24 L60 30 L36 36 L30 60 L24 36 L0 30 L24 24 Z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            color: var(--gold-pale);
+            font-family: 'Crimson Pro', Georgia, serif;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            line-height: 1.7;
+        }
+        /* ===== HEADER ===== */
+        
+        header {
+            background: linear-gradient(180deg, #1a0505 0%, #2a0a0a 60%, #3a1010 100%);
+            border-bottom: 1px solid var(--border-gold);
+            box-shadow: 0 4px 40px var(--shadow-maroon);
+            padding: 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, var(--gold-mid), var(--gold-bright), var(--gold-mid), transparent);
+        }
+        
+        header::after {
+            content: '᳔ ᳔ ᳔ ᳔ ᳔ ᳔ ᳔ ᳔ ᳔ ᳔ ᳔ ᳔ ᳔ ᳔ ᳔ ᳔ ᳔ ᳔ ᳔ ᳔ ᳔ ᳔';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            color: rgba(200, 150, 10, 0.2);
+            font-size: 0.7rem;
+            letter-spacing: 6px;
+            text-align: center;
+            padding: 4px 0;
+        }
+        
+        .header-inner {
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 1.6rem 2.4rem 1.4rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 14px;
+        }
+        
+        .brand {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+        
+        .brand-title {
+            font-family: 'Tiro Devanagari Hindi', serif;
+            font-size: 2.4rem;
+            color: var(--gold-bright);
+            text-shadow: 0 0 30px rgba(240, 192, 64, 0.4), 2px 2px 0 #1a0505;
+            letter-spacing: 3px;
+            line-height: 1.1;
+        }
+        
+        .brand-title .om-sym {
+            color: #ffdb6a;
+            margin-right: 8px;
+            filter: drop-shadow(0 0 8px rgba(255, 200, 64, 0.6));
+        }
+        
+        .brand-sub {
+            font-family: 'Cinzel', serif;
+            font-size: 0.82rem;
+            color: rgba(240, 192, 64, 0.65);
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            padding-left: 2px;
+        }
+        /* Search */
+        
+        .header-controls {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        
+        .search-box {
+            display: flex;
+            align-items: center;
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(200, 150, 10, 0.4);
+            border-radius: 60px;
+            padding: 0 0.5rem 0 1.2rem;
+            gap: 6px;
+            backdrop-filter: blur(6px);
+            transition: border-color 0.2s;
+        }
+        
+        .search-box:focus-within {
+            border-color: var(--gold-mid);
+            box-shadow: 0 0 0 2px rgba(200, 150, 10, 0.2);
+        }
+        
+        .search-box i {
+            color: rgba(240, 192, 64, 0.6);
+            font-size: 0.95rem;
+        }
+        
+        #searchInput {
+            background: transparent;
+            border: none;
+            outline: none;
+            padding: 0.65rem 0.3rem;
+            font-size: 1rem;
+            font-family: 'Tiro Devanagari Hindi', serif;
+            color: var(--gold-pale);
+            width: 220px;
+        }
+        
+        #searchInput::placeholder {
+            color: rgba(240, 192, 64, 0.4);
+            font-style: italic;
+        }
+        
+        .btn-search,
+        .btn-home {
+            font-family: 'Cinzel', serif;
+            font-size: 0.82rem;
+            letter-spacing: 1.5px;
+            border: 1px solid var(--gold-mid);
+            border-radius: 40px;
+            padding: 0.6rem 1.5rem;
+            cursor: pointer;
+            transition: all 0.2s;
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+        }
+        
+        .btn-search {
+            background: linear-gradient(135deg, #b8820a, #c8960a);
+            color: #1a0505;
+            font-weight: 700;
+        }
+        
+        .btn-search:hover {
+            background: linear-gradient(135deg, #c8960a, #f0c040);
+            box-shadow: 0 0 20px rgba(200, 150, 10, 0.4);
+            transform: translateY(-1px);
+        }
+        
+        .btn-home {
+            background: rgba(200, 150, 10, 0.12);
+            color: var(--gold-pale);
+            text-decoration: none;
+        }
+        
+        .btn-home:hover {
+            background: rgba(200, 150, 10, 0.25);
+            border-color: var(--gold-bright);
+            color: var(--gold-bright);
+        }
+        /* ===== MAIN ===== */
+        
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 2.5rem 2rem 4rem;
+            flex: 1;
+        }
+        /* Page heading */
+        
+        .page-top {
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 16px;
+            margin-bottom: 2rem;
+            padding-bottom: 1.4rem;
+            border-bottom: 1px solid rgba(200, 150, 10, 0.2);
+        }
+        
+        .page-title-wrap {
+            display: flex;
+            align-items: center;
+            gap: 18px;
+            flex-wrap: wrap;
+        }
+        
+        .page-title {
+            font-family: 'Tiro Devanagari Hindi', serif;
+            font-size: 2.6rem;
+            color: var(--gold-bright);
+            text-shadow: 0 0 40px rgba(240, 192, 64, 0.25);
+            line-height: 1.1;
+            position: relative;
+        }
+        
+        .page-title::before {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(90deg, var(--gold-mid), transparent);
+        }
+        
+        .count-badge {
+            font-family: 'Cinzel', serif;
+            font-size: 0.78rem;
+            letter-spacing: 2px;
+            background: linear-gradient(135deg, #6b1e1e, #4a1010);
+            border: 1px solid rgba(200, 150, 10, 0.4);
+            color: var(--gold-pale);
+            padding: 0.35rem 1.2rem;
+            border-radius: 30px;
+            white-space: nowrap;
+        }
+        
+        .meta-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 1.6rem;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        
+        .result-msg {
+            font-family: 'Tiro Devanagari Hindi', serif;
+            font-size: 1rem;
+            color: rgba(240, 192, 64, 0.75);
+            background: rgba(200, 150, 10, 0.08);
+            border: 1px solid rgba(200, 150, 10, 0.2);
+            padding: 0.4rem 1.4rem;
+            border-radius: 40px;
+        }
+        
+        .btn-reset {
+            background: transparent;
+            border: 1px dashed rgba(200, 150, 10, 0.4);
+            color: rgba(240, 192, 64, 0.7);
+            padding: 0.38rem 1.1rem;
+            border-radius: 30px;
+            cursor: pointer;
+            font-size: 0.88rem;
+            font-family: 'Cinzel', serif;
+            letter-spacing: 1px;
+            transition: all 0.2s;
+        }
+        
+        .btn-reset:hover {
+            background: rgba(200, 150, 10, 0.15);
+            color: var(--gold-bright);
+            border-color: var(--gold-mid);
+        }
+        /* ===== MANTRA GRID ===== */
+        
+        .mantra-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 24px;
+        }
+        /* ===== MANTRA CARD ===== */
+        
+        .card {
+            background: linear-gradient(145deg, #2e0c0c 0%, #230808 100%);
+            border: 1px solid rgba(200, 150, 10, 0.25);
+            border-radius: 4px;
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+            cursor: pointer;
+        }
+        
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--gold-mid), transparent);
+            opacity: 0.6;
+        }
+        /* Corner ornaments */
+        
+        .card::after {
+            content: '✦';
+            position: absolute;
+            top: 10px;
+            right: 14px;
+            font-size: 0.8rem;
+            color: rgba(200, 150, 10, 0.35);
+            transition: color 0.2s;
+        }
+        
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 16px 40px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(200, 150, 10, 0.4);
+            border-color: rgba(200, 150, 10, 0.5);
+        }
+        
+        .card:hover::after {
+            color: var(--gold-mid);
+        }
+        
+        .card-header {
+            padding: 1.5rem 1.5rem 1rem;
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+        }
+        
+        .card-icon {
+            font-size: 2.2rem;
+            line-height: 1;
+            flex-shrink: 0;
+            margin-top: 2px;
+            filter: drop-shadow(0 0 8px rgba(240, 192, 64, 0.3));
+        }
+        
+        .card-title-wrap {
+            flex: 1;
+            min-width: 0;
+        }
+        
+        .card-title {
+            font-family: 'Tiro Devanagari Hindi', serif;
+            font-size: 1.45rem;
+            color: var(--gold-bright);
+            line-height: 1.2;
+            margin-bottom: 6px;
+        }
+        
+        .deity-pill {
+            font-family: 'Cinzel', serif;
+            font-size: 0.72rem;
+            letter-spacing: 1.5px;
+            color: rgba(200, 150, 10, 0.9);
+            background: rgba(200, 150, 10, 0.1);
+            border: 1px solid rgba(200, 150, 10, 0.25);
+            padding: 0.2rem 0.8rem;
+            border-radius: 20px;
+            display: inline-block;
+            text-transform: uppercase;
+        }
+        /* Mantra phrase (always visible) */
+        
+        .card-mantra {
+            margin: 0 1.5rem 1rem;
+            background: rgba(200, 150, 10, 0.07);
+            border: 1px dashed rgba(200, 150, 10, 0.3);
+            border-radius: 3px;
+            padding: 0.7rem 1rem;
+        }
+        
+        .card-mantra-text {
+            font-family: 'Tiro Devanagari Hindi', serif;
+            font-size: 1.05rem;
+            color: var(--gold-pale);
+            line-height: 1.6;
+        }
+        /* Expand toggle */
+        
+        .card-expand-btn {
+            margin: 0 1.5rem 1.2rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            background: transparent;
+            border: none;
+            color: rgba(200, 150, 10, 0.7);
+            font-family: 'Cinzel', serif;
+            font-size: 0.76rem;
+            letter-spacing: 1.5px;
+            cursor: pointer;
+            padding: 0;
+            transition: color 0.2s;
+            text-transform: uppercase;
+        }
+        
+        .card-expand-btn:hover {
+            color: var(--gold-bright);
+        }
+        
+        .card-expand-btn .chevron {
+            transition: transform 0.3s ease;
+            font-size: 0.7rem;
+        }
+        
+        .card.expanded .chevron {
+            transform: rotate(180deg);
+        }
+        /* Expanded content */
+        
+        .card-body {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .card.expanded .card-body {
+            max-height: 600px;
+        }
+        
+        .card-body-inner {
+            padding: 0 1.5rem 1.5rem;
+            border-top: 1px solid rgba(200, 150, 10, 0.12);
+            margin-top: 0;
+        }
+        
+        .divider-om {
+            text-align: center;
+            color: rgba(200, 150, 10, 0.3);
+            font-size: 1.1rem;
+            letter-spacing: 12px;
+            padding: 1rem 0 0.8rem;
+        }
+        
+        .full-mantra-label {
+            font-family: 'Cinzel', serif;
+            font-size: 0.72rem;
+            letter-spacing: 2px;
+            color: rgba(200, 150, 10, 0.55);
+            text-transform: uppercase;
+            margin-bottom: 8px;
+        }
+        
+        .full-mantra-text {
+            font-family: 'Tiro Devanagari Hindi', serif;
+            font-size: 1.15rem;
+            color: var(--gold-pale);
+            line-height: 1.9;
+            margin-bottom: 14px;
+            background: rgba(0, 0, 0, 0.2);
+            padding: 0.8rem 1rem;
+            border-radius: 3px;
+            border-left: 3px solid rgba(200, 150, 10, 0.4);
+        }
+        
+        .meaning-label {
+            font-family: 'Cinzel', serif;
+            font-size: 0.72rem;
+            letter-spacing: 2px;
+            color: rgba(200, 150, 10, 0.55);
+            text-transform: uppercase;
+            margin-bottom: 6px;
+        }
+        
+        .meaning-text {
+            font-family: 'Crimson Pro', serif;
+            font-size: 1rem;
+            font-style: italic;
+            color: rgba(253, 233, 138, 0.7);
+            line-height: 1.7;
+            margin-bottom: 12px;
+        }
+        
+        .benefit-text {
+            font-family: 'Crimson Pro', serif;
+            font-size: 0.95rem;
+            color: rgba(253, 233, 138, 0.6);
+            line-height: 1.6;
+        }
+        
+        .tags-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-top: 12px;
+        }
+        
+        .tag {
+            font-family: 'Cinzel', serif;
+            font-size: 0.66rem;
+            letter-spacing: 1px;
+            color: rgba(200, 150, 10, 0.6);
+            background: rgba(200, 150, 10, 0.07);
+            border: 1px solid rgba(200, 150, 10, 0.18);
+            padding: 0.18rem 0.65rem;
+            border-radius: 20px;
+            text-transform: uppercase;
+        }
+        /* No result */
+        
+        .no-result {
+            grid-column: 1/-1;
+            text-align: center;
+            padding: 4rem 2rem;
+            color: rgba(240, 192, 64, 0.5);
+        }
+        
+        .no-result i {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+        
+        .no-result p {
+            font-family: 'Tiro Devanagari Hindi', serif;
+            font-size: 1.3rem;
+        }
+        /* ===== FOOTER ===== */
+        
+        footer {
+            background: #1a0505;
+            border-top: 1px solid rgba(200, 150, 10, 0.2);
+            padding: 1.8rem;
+            text-align: center;
+        }
+        
+        .footer-text {
+            font-family: 'Tiro Devanagari Hindi', serif;
+            font-size: 1rem;
+            color: rgba(240, 192, 64, 0.5);
+            line-height: 2;
+        }
+        
+        .footer-om {
+            color: var(--gold-mid);
+            font-size: 1.3rem;
+        }
+        /* Responsive */
+        
+        @media (max-width: 680px) {
+            .header-inner {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .header-controls {
+                width: 100%;
+                flex-direction: column;
+                align-items: stretch;
+            }
+            .search-box {
+                width: 100%;
+            }
+            #searchInput {
+                width: 100%;
+            }
+            .btn-home {
+                text-align: center;
+                justify-content: center;
+            }
+            .brand-title {
+                font-size: 1.9rem;
+            }
+            .page-title {
+                font-size: 2rem;
+            }
+            .mantra-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        /* Card entrance animation */
+        
+        @keyframes cardIn {
+            from {
+                opacity: 0;
+                transform: translateY(16px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .card {
+            animation: cardIn 0.4s ease both;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="header-inner">
+            <div class="brand">
+                <div class="brand-title">
+                    <span class="om-sym">ॐ</span> सनातन धर्म
+                </div>
+                <div class="brand-sub">Mantra Kosha · Sacred Vibrations</div>
+            </div>
+            <div class="header-controls">
+                <div class="search-box">
+                    <i class="fas fa-magnifying-glass"></i>
+                    <input type="text" id="searchInput" placeholder="मंत्र खोजें... शिव, गायत्री...">
+                    <button class="btn-search" id="searchBtn">
+                    <i class="fas fa-search"></i> खोजें
+                </button>
+                </div>
+                <a href="/index" class="btn-home">
+                    <i class="fas fa-home"></i> होम
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="page-top">
+            <div class="page-title-wrap">
+                <h1 class="page-title">मंत्र कोश</h1>
+                <span class="count-badge" id="countBadge">३०+ पवित्र मंत्र</span>
+            </div>
+        </div>
+
+        <div class="meta-row">
+            <span class="result-msg" id="resultMsg">🕉 सभी मंत्र दिखाए जा रहे हैं</span>
+            <button class="btn-reset" id="resetBtn"><i class="fas fa-rotate-left"></i> रीसेट</button>
+        </div>
+
+        <div class="mantra-grid" id="mantraGrid"></div>
+    </main>
+
+    <footer>
+        <div class="footer-text">
+            <span class="footer-om">ॐ</span> मंत्र · जप · ध्यान · मोक्ष <span class="footer-om">ॐ</span><br> सनातन धर्म — मंत्र विभाग। जपो, गुंजाओ, मुक्त हो जाओ। 🙏
+        </div>
+    </footer>
+
+    <script>
+        (function() {
+                'use strict';
+
+                const mantras = [{
+                    id: 1,
+                    icon: '☀️',
+                    title: 'गायत्री मंत्र',
+                    deity: 'सवितृ देव',
+                    shortMantra: 'ॐ भूर्भुवः स्वः',
+                    fullMantra: 'ॐ भूर्भुवः स्वः\nतत्सवितुर्वरेण्यं\nभर्गो देवस्य धीमहि\nधियो यो नः प्रचोदयात् ॥',
+                    meaning: 'उस प्राणस्वरूप, दुःखनाशक, सुखस्वरूप, श्रेष्ठ, तेजस्वी, पापनाशक, देवस्वरूप परमात्मा को हम अपनी अन्तरात्मा में धारण करें। वह परमात्मा हमारी बुद्धि को सन्मार्ग पर चलाए।',
+                    benefit: 'यह मंत्र बुद्धि, ज्ञान, आत्मज्योति और सन्मार्ग के लिए जपा जाता है। सभी वैदिक मंत्रों में सर्वश्रेष्ठ।',
+                    tags: ['गायत्री', 'सूर्य', 'वैदिक', 'बुद्धि', 'ज्ञान']
+                }, {
+                    id: 2,
+                    icon: '🔱',
+                    title: 'महामृत्युञ्जय मंत्र',
+                    deity: 'भगवान शिव',
+                    shortMantra: 'ॐ त्र्यम्बकं यजामहे',
+                    fullMantra: 'ॐ त्र्यम्बकं यजामहे\nसुगन्धिं पुष्टिवर्धनम्।\nउर्वारुकमिव बन्धनान्\nमृत्योर्मुक्षीय माऽमृतात् ॥',
+                    meaning: 'हम त्रिनेत्र शिव की पूजा करते हैं जो सुगन्धित हैं और जो हमारा पालन-पोषण करते हैं। जैसे ककड़ी बेल से अलग हो जाती है, वैसे ही हम मृत्यु के बन्धन से मुक्त हों, न कि अमरत्व से।',
+                    benefit: 'रोग निवारण, दीर्घायु, मृत्युभय का नाश, स्वास्थ्य लाभ और आध्यात्मिक उन्नति के लिए।',
+                    tags: ['शिव', 'मृत्युञ्जय', 'रुद्र', 'स्वास्थ्य', 'अमरत्व']
+                }, {
+                    id: 3,
+                    icon: '🕉️',
+                    title: 'ॐ नमः शिवाय',
+                    deity: 'भगवान शिव',
+                    shortMantra: 'ॐ नमः शिवाय',
+                    fullMantra: 'ॐ नमः शिवाय\nनमः शिवाय\nशिवाय नमः ॥',
+                    meaning: 'ॐ — परब्रह्म। नमः — नमस्कार / समर्पण। शिवाय — कल्याणकारी शिव को। अर्थात् मैं भगवान शिव को नमन करता हूँ जो परम कल्याण के स्वरूप हैं।',
+                    benefit: 'पञ्चाक्षर मंत्र — पाँच तत्त्वों (पृथ्वी, जल, अग्नि, वायु, आकाश) को शुद्ध करता है। मन की शान्ति और नकारात्मकता दूर होती है।',
+                    tags: ['शिव', 'पञ्चाक्षर', 'शैव', 'शान्ति']
+                }, {
+                    id: 4,
+                    icon: '🌀',
+                    title: 'ॐ नमो नारायणाय',
+                    deity: 'भगवान विष्णु',
+                    shortMantra: 'ॐ नमो नारायणाय',
+                    fullMantra: 'ॐ नमो नारायणाय\nनमो नारायणाय\nनारायणाय नमः ॥',
+                    meaning: 'ॐ — परब्रह्म। नमो — नमन। नारायणाय — नारायण को जो समस्त जगत के आधार, पालनकर्ता और उपास्य देव हैं।',
+                    benefit: 'अष्टाक्षर मंत्र — भक्ति, शान्ति, संसार के बन्धनों से मुक्ति और मोक्ष प्राप्ति के लिए।',
+                    tags: ['विष्णु', 'नारायण', 'अष्टाक्षर', 'वैष्णव', 'मोक्ष']
+                }, {
+                    id: 5,
+                    icon: '🏹',
+                    title: 'राम तारक मंत्र',
+                    deity: 'भगवान राम',
+                    shortMantra: 'ॐ श्री राम जय राम जय जय राम',
+                    fullMantra: 'ॐ श्री राम जय राम\nजय जय राम।\nश्री राम राम राम ॥',
+                    meaning: 'श्री राम की विजय हो। हे राम, हे राम — इस पुकार में ही तारणहार की शरण है। "राम" नाम ही ब्रह्म नाम है।',
+                    benefit: 'रामनाम जप से चित्त शुद्ध होता है, भय दूर होता है, मृत्यु के समय मुक्ति मिलती है। तुलसीदास के अनुसार यह तारक मंत्र है।',
+                    tags: ['राम', 'तारक', 'अयोध्या', 'भक्ति', 'रक्षा']
+                }, {
+                    id: 6,
+                    icon: '💰',
+                    title: 'महालक्ष्मी मंत्र',
+                    deity: 'देवी लक्ष्मी',
+                    shortMantra: 'ॐ श्रीं महालक्ष्म्यै नमः',
+                    fullMantra: 'ॐ श्रीं ह्रीं श्रीं\nकमले कमलालये\nप्रसीद प्रसीद\nश्रीं ह्रीं श्रीं\nमहालक्ष्म्यै नमः ॥',
+                    meaning: 'हे कमल पर विराजमान कमला! हे महालक्ष्मी! श्रीं बीज आपकी शक्ति का प्रतीक है। कृपा करें, कृपा करें। आपको नमस्कार।',
+                    benefit: 'धन, समृद्धि, सौभाग्य, गृह-सुख और आत्मिक ऐश्वर्य के लिए। दीपावली पर विशेष फलदायी।',
+                    tags: ['लक्ष्मी', 'धन', 'श्रीं', 'बीज', 'दीपावली', 'समृद्धि']
+                }, {
+                    id: 7,
+                    icon: '🎶',
+                    title: 'सरस्वती मंत्र',
+                    deity: 'देवी सरस्वती',
+                    shortMantra: 'ॐ ऐं सरस्वत्यै नमः',
+                    fullMantra: 'ॐ ऐं ह्रीं क्लीं\nमहासरस्वत्यै नमः।\nया कुन्देन्दुतुषारहारधवला\nया शुभ्रवस्त्रावृता ॥',
+                    meaning: 'जो शुक्ल वर्ण की हैं, कुन्द पुष्प, चन्द्रमा और हिम की भाँति धवल हैं, श्वेत वस्त्र धारण करती हैं, ऐसी सरस्वती को नमन।',
+                    benefit: 'विद्या, कला, वाणी, स्मृति, बुद्धि और सृजनशीलता के लिए। परीक्षा और अध्ययन में विशेष सहायक।',
+                    tags: ['सरस्वती', 'ऐं', 'विद्या', 'कला', 'बीज', 'शिक्षा']
+                }, {
+                    id: 8,
+                    icon: '🦁',
+                    title: 'दुर्गा मंत्र',
+                    deity: 'देवी दुर्गा',
+                    shortMantra: 'ॐ दुं दुर्गायै नमः',
+                    fullMantra: 'ॐ दुं दुर्गायै नमः।\nसर्वमङ्गलमाङ्गल्ये\nशिवे सर्वार्थसाधिके।\nशरण्ये त्र्यम्बके गौरि\nनारायणि नमोऽस्तु ते ॥',
+                    meaning: 'हे सर्वमंगलकारिणी, सर्व कार्यसिद्धि देने वाली, त्रिनयनी गौरी माँ नारायणी! आप सभी की शरण हैं। आपको नमन।',
+                    benefit: 'शत्रु नाश, भयमुक्ति, रक्षा और शक्ति प्राप्ति के लिए। नवरात्रि में नित्य जप अत्यन्त फलदायी।',
+                    tags: ['दुर्गा', 'दुं', 'शक्ति', 'रक्षा', 'नवरात्रि', 'माँ']
+                }, {
+                    id: 9,
+                    icon: '🐘',
+                    title: 'गणेश मंत्र',
+                    deity: 'गणपति',
+                    shortMantra: 'ॐ गं गणपतये नमः',
+                    fullMantra: 'ॐ गं गणपतये नमः।\nवक्रतुण्ड महाकाय\nसूर्यकोटि समप्रभ।\nनिर्विघ्नं कुरु मे देव\nसर्वकार्येषु सर्वदा ॥',
+                    meaning: 'हे टेढ़ी सूँड वाले, विशाल देह, करोड़ सूर्यों के समान प्रभावाले! हे देव, सदा मेरे सभी कार्यों में विघ्न दूर करो।',
+                    benefit: 'सभी शुभ कार्यों के आरम्भ में जपें। विघ्न नाशक, बुद्धि प्रदाता, सफलता और सिद्धि के लिए।',
+                    tags: ['गणेश', 'गं', 'विघ्नहर्ता', 'बीज', 'सफलता']
+                }, {
+                    id: 10,
+                    icon: '☮️',
+                    title: 'शान्ति पाठ',
+                    deity: 'सार्वभौमिक',
+                    shortMantra: 'ॐ सह नाववतु',
+                    fullMantra: 'ॐ सह नाववतु।\nसह नौ भुनक्तु।\nसह वीर्यं करवावहै।\nतेजस्वि नावधीतमस्तु\nमा विद्विषावहै।\nॐ शान्तिः शान्तिः शान्तिः ॥',
+                    meaning: 'ईश्वर हम दोनों (गुरु-शिष्य) की रक्षा करे, हम दोनों का पोषण करे। हम दोनों साथ मिलकर पराक्रम करें। हमारी पढ़ी हुई विद्या तेजस्वी हो। हम परस्पर द्वेष न करें।',
+                    benefit: 'गुरु-शिष्य सम्बन्ध की शुद्धि, सामूहिक उन्नति, तीन प्रकार के तापों (आध्यात्मिक, आधिभौतिक, आधिदैविक) से शान्ति।',
+                    tags: ['शान्ति', 'वैदिक', 'उपनिषद', 'गुरु', 'शिष्य']
+                }, {
+                    id: 11,
+                    icon: '🪈',
+                    title: 'हरे कृष्ण महामंत्र',
+                    deity: 'कृष्ण, राम',
+                    shortMantra: 'हरे कृष्ण हरे कृष्ण',
+                    fullMantra: 'हरे कृष्ण हरे कृष्ण\nकृष्ण कृष्ण हरे हरे।\nहरे राम हरे राम\nराम राम हरे हरे ॥',
+                    meaning: 'हरे — राधा/हरि की शक्ति। कृष्ण — आनन्द का भण्डार। राम — दिव्य आनन्द से परिपूर्ण। यह नाम-जप भक्त को ईश्वर की सत्-चित्-आनन्द शक्ति से जोड़ता है।',
+                    benefit: 'कलियुग का धर्म। मन की शुद्धि, भवबन्धन से मुक्ति, प्रेम-भक्ति की जागृति। नित्य संकीर्तन से मोक्ष।',
+                    tags: ['कृष्ण', 'महामंत्र', 'हरे', 'भक्ति', 'कीर्तन', 'युग']
+                }, {
+                    id: 12,
+                    icon: '🌸',
+                    title: 'ॐ मणि पद्मे हूँ',
+                    deity: 'अवलोकितेश्वर',
+                    shortMantra: 'ॐ मणि पद्मे हूँ',
+                    fullMantra: 'ॐ मणि पद्मे हूँ ॥\nकरुणामय अवलोकितेश्वर\nनमो बुद्धाय\nनमो धर्माय\nनमो सङ्घाय ॥',
+                    meaning: 'ॐ — प्रणव। मणि — रत्न (बोधिचित्त)। पद्मे — कमल में। हूँ — अभेद्य चेतना। कमल में स्थित रत्न — ज्ञान और करुणा का अभेद।',
+                    benefit: 'छः अक्षर छः दोषों को शुद्ध करते हैं। करुणा, प्रज्ञा, दुःखमुक्ति और चित्त की शान्ति के लिए बौद्ध परम्परा का महामंत्र।',
+                    tags: ['बौद्ध', 'मणिपद्मे', 'करुणा', 'तिब्बती', 'ध्यान']
+                }, {
+                    id: 13,
+                    icon: '🧘',
+                    title: 'दक्षिणामूर्ति मंत्र',
+                    deity: 'दक्षिणामूर्ति शिव',
+                    shortMantra: 'ॐ दक्षिणामूर्तये नमः',
+                    fullMantra: 'ॐ नमः प्रणवार्थाय\nशुद्धज्ञानैकमूर्तये।\nnित्याय नित्यबोधाय\nदक्षिणामूर्तये नमः ॥',
+                    meaning: 'प्रणव (ॐ) के अर्थस्वरूप, शुद्ध ज्ञान की एकमात्र मूर्ति, नित्य और नित्यबोध से परिपूर्ण दक्षिणामूर्ति को नमन।',
+                    benefit: 'गुरुतत्त्व की प्राप्ति, मौन से ज्ञान, आत्मज्ञान और जीवन्मुक्ति। ध्यान साधकों के लिए अत्यन्त उपयोगी।',
+                    tags: ['शिव', 'गुरु', 'मेधा', 'ज्ञान', 'मौन', 'ध्यान']
+                }, {
+                    id: 14,
+                    icon: '🍛',
+                    title: 'अन्नपूर्णा मंत्र',
+                    deity: 'देवी अन्नपूर्णा',
+                    shortMantra: 'ॐ अन्नपूर्णायै नमः',
+                    fullMantra: 'ॐ अन्नपूर्णे सदापूर्णे\nशङ्करप्राणवल्लभे।\nज्ञानवैराग्यसिद्ध्यर्थं\nभिक्षां देहि च पार्वति ॥',
+                    meaning: 'हे सदा पूर्ण अन्नपूर्णे, शङ्कर की प्राणप्रिये! हे पार्वती, ज्ञान और वैराग्य की सिद्धि के लिए मुझे भिक्षा (भोजन) दो।',
+                    benefit: 'भूख-अभाव दूर होना, भोजन की पवित्रता, गृहस्थ में अन्न-सम्पदा और आध्यात्मिक वैराग्य के लिए।',
+                    tags: ['अन्नपूर्णा', 'पार्वती', 'भोजन', 'पोषण', 'काशी']
+                }, {
+                    id: 15,
+                    icon: '🌟',
+                    title: 'सूर्य मंत्र',
+                    deity: 'सूर्यदेव',
+                    shortMantra: 'ॐ ह्रां ह्रीं ह्रौं सः सूर्याय नमः',
+                    fullMantra: 'ॐ ह्रां ह्रीं ह्रौं सः\nसूर्याय नमः।\nआदित्यस्य नमस्कारान्\nये कुर्वन्ति दिने दिने।\nआयुः प्रज्ञा बलं वीर्यं\nतेजस् तेषां च जायते ॥',
+                    meaning: 'जो प्रतिदिन सूर्य को नमस्कार करते हैं, उन्हें आयु, प्रज्ञा, बल, वीर्य और तेज प्राप्त होते हैं।',
+                    benefit: 'स्वास्थ्य, नेत्र ज्योति, ऊर्जा, आत्मविश्वास और सकारात्मकता। सूर्योपासना से जीवनशक्ति जागती है।',
+                    tags: ['सूर्य', 'आदित्य', 'स्वास्थ्य', 'ग्रह', 'तेज']
+                }, {
+                    id: 16,
+                    icon: '🌙',
+                    title: 'चन्द्र मंत्र',
+                    deity: 'चन्द्रदेव',
+                    shortMantra: 'ॐ श्रां श्रीं श्रौं सः चन्द्राय नमः',
+                    fullMantra: 'ॐ श्रां श्रीं श्रौं सः\nचन्द्रमसे नमः।\nदधिशङ्खतुषाराभं\nक्षीरोदार्णवसम्भवम्।\nनमामि शशिनं सोमं\nशम्भोर्मुकुटभूषणम् ॥',
+                    meaning: 'दही, शङ्ख और हिम के समान कान्तिवाले, क्षीर-सागर से उत्पन्न, शशि-सोम को नमन जो शिवजी के मुकुट के भूषण हैं।',
+                    benefit: 'मन की चञ्चलता दूर होती है, भावनात्मक सन्तुलन, नींद, स्मृति और मानसिक शान्ति के लिए।',
+                    tags: ['चन्द्र', 'मन', 'भावना', 'शान्ति', 'सोम', 'ग्रह']
+                }, {
+                    id: 17,
+                    icon: '🐕',
+                    title: 'भैरव मंत्र',
+                    deity: 'भैरवनाथ',
+                    shortMantra: 'ॐ भैरवाय नमः',
+                    fullMantra: 'ॐ ह्रीं बटुकाय\nआपदुद्धारणाय\nकुरु कुरु बटुकाय\nह्रीं ॐ नमः ॥',
+                    meaning: 'हे बटुक भैरव! आपदाओं का उद्धार करो, करो। ह्रीं बीज-शक्ति से आपको नमस्कार।',
+                    benefit: 'आपत्तियों से रक्षा, भय-नाश, शत्रु से सुरक्षा और अष्टभैरव की कृपा। काशी में विशेष फलदायी।',
+                    tags: ['भैरव', 'शिव', 'तन्त्र', 'काशी', 'रक्षा']
+                }, {
+                    id: 18,
+                    icon: '🏡',
+                    title: 'वास्तु मंत्र',
+                    deity: 'वास्तुपुरुष',
+                    shortMantra: 'ॐ वास्तोष्पते नमः',
+                    fullMantra: 'ॐ वास्तोष्पते प्रतिजानीह्यस्मान्\nत्स्वावेशो अनमीवो भवानः।\nयत्त्वेमहे प्रति तन्नो जुषस्व\nशं नो भव द्विपदे शं चतुष्पदे ॥',
+                    meaning: 'हे वास्तु के स्वामी! हमें स्वीकार करो। हमारा निवास रोगरहित हो। हमारी प्रार्थना स्वीकार करो। दो पैर वाले (मनुष्य) और चार पैर वाले (पशु) सबका कल्याण हो।',
+                    benefit: 'गृह-प्रवेश, भूमि-पूजन और गृह-शुद्धि के समय। घर में शान्ति, सुख और सकारात्मक ऊर्जा के लिए।',
+                    tags: ['वास्तु', 'गृह', 'भूमि', 'शान्ति', 'परिवार']
+                }, {
+                    id: 19,
+                    icon: '🛡️',
+                    title: 'राम रक्षा स्तोत्र',
+                    deity: 'भगवान राम',
+                    shortMantra: 'श्री राम रं रक्षां',
+                    fullMantra: 'श्री रामचन्द्र चरणौ मनसा स्मरामि\nश्री रामचन्द्र चरणौ वचसा गृणामि।\nश्री रामचन्द्र चरणौ शिरसा नमामि\nश्री रामचन्द्र चरणौ शरणं प्रपद्ये ॥',
+                    meaning: 'श्री रामचन्द्र के चरणों को मन से स्मरण करता हूँ, वाणी से गुणगान करता हूँ, शिर से नमन करता हूँ, और उनके चरणों की शरण लेता हूँ।',
+                    benefit: 'सर्वांगीण रक्षा, आत्मशरण, भय-नाश। रामरक्षा स्तोत्र का पाठ कवच (सुरक्षा) देता है।',
+                    tags: ['राम', 'रक्षा', 'कवच', 'शरण', 'भक्ति']
+                }, {
+                    id: 20,
+                    icon: '🔴',
+                    title: 'मङ्गल मंत्र',
+                    deity: 'मङ्गल देव',
+                    shortMantra: 'ॐ क्रां क्रीं क्रौं सः भौमाय नमः',
+                    fullMantra: 'ॐ क्रां क्रीं क्रौं सः\nभौमाय नमः।\nधरणीगर्भसम्भूतं\nविद्युत्कान्तिसमप्रभम्।\nकुमारं शक्तिहस्तं च\nमङ्गलं प्रणमाम्यहम् ॥',
+                    meaning: 'पृथ्वी के गर्भ से उत्पन्न, विद्युत की भाँति कान्तिवाले, हाथ में शक्ति धारण करने वाले कुमार (मङ्गल) को मैं प्रणाम करता हूँ।',
+                    benefit: 'साहस, शौर्य, ऊर्जा, भूमि सम्बन्धी विषयों में सफलता। मङ्गल दोष शान्ति के लिए मंगलवार को जपें।',
+                    tags: ['मङ्गल', 'मंगल', 'ग्रह', 'साहस', 'शक्ति']
+                }, {
+                    id: 21,
+                    icon: '🌺',
+                    title: 'देवी सूक्त',
+                    deity: 'देवी भगवती',
+                    shortMantra: 'ॐ या देवी सर्वभूतेषु',
+                    fullMantra: 'या देवी सर्वभूतेषु\nशक्तिरूपेण संस्थिता।\nनमस्तस्यै नमस्तस्यै\nनमस्तस्यै नमो नमः ॥',
+                    meaning: 'जो देवी सभी प्राणियों में शक्ति के रूप में स्थित हैं, उन्हें बार-बार नमस्कार। (इसी प्रकार बुद्धि, निद्रा, क्षुधा, छाया, शक्ति, तृष्णा, क्षान्ति, जाति, लज्जा, शान्ति, श्रद्धा, कान्ति, लक्ष्मी, वृत्ति, स्मृति, दया, तुष्टि, मातृरूप आदि में स्थित देवी को।)',
+                    benefit: 'दुर्गासप्तशती का मूल मंत्र। नवरात्रि में पाठ से सर्वकार्यसिद्धि, शत्रुनाश और देवी कृपा।',
+                    tags: ['देवी', 'शक्ति', 'दुर्गा', 'सप्तशती', 'नवरात्रि']
+                }, {
+                    id: 22,
+                    icon: '🌊',
+                    title: 'गङ्गा स्तुति',
+                    deity: 'माँ गङ्गा',
+                    shortMantra: 'ॐ नमो गङ्गे',
+                    fullMantra: 'ॐ नमो गङ्गे\nविष्णुपादि त्रिपथगे\nदेवि स्वर्गापवर्गदे।\nपापहारिणि पुण्यदे\nपावनि नमस्ते ॥',
+                    meaning: 'विष्णुचरणों से उत्पन्न, तीन मार्गों (स्वर्ग, पृथ्वी, पाताल) में प्रवाहित होने वाली, स्वर्ग और मोक्ष देने वाली, पाप नाशिनी, पवित्र गङ्गा को नमस्कार।',
+                    benefit: 'पाप-क्षालन, शुद्धि, मोक्ष-मार्ग, तीर्थ-फल। गङ्गाजल स्नान और इस मंत्र के जप से जन्मों के पाप दूर होते हैं।',
+                    tags: ['गङ्गा', 'नदी', 'शुद्धि', 'तीर्थ', 'मोक्ष']
+                }, {
+                    id: 23,
+                    icon: '✨',
+                    title: 'नवग्रह मंत्र',
+                    deity: 'नवग्रह',
+                    shortMantra: 'ॐ ब्रह्मा मुरारि स्त्रिपुरान्तकारी',
+                    fullMantra: 'ॐ ब्रह्मा मुरारि\nस्त्रिपुरान्तकारी\nभानुः शशी भूमिसुतो\nबुधश्च।\nगुरुश्च शुक्रः शनि\nराहुकेतवः\nसर्वे ग्रहाः शान्तिकरा\nभवन्तु ॥',
+                    meaning: 'ब्रह्मा, विष्णु, महेश; सूर्य, चन्द्र, मङ्गल, बुध, गुरु, शुक्र, शनि, राहु और केतु — ये सभी नव ग्रह शान्ति प्रदान करें।',
+                    benefit: 'ग्रहदोष शान्ति, कुण्डली में पीड़ित ग्रहों की शान्ति, सर्वग्रहकृत पीड़ाओं से मुक्ति।',
+                    tags: ['नवग्रह', 'ग्रह', 'ज्योतिष', 'शान्ति', 'कुण्डली']
+                }, {
+                    id: 24,
+                    icon: '🙏',
+                    title: 'गुरु मंत्र',
+                    deity: 'गुरुतत्त्व',
+                    shortMantra: 'ॐ गुरवे नमः',
+                    fullMantra: 'ॐ गुरुर्ब्रह्मा गुरुर्विष्णु\nगुरुर्देवो महेश्वरः।\nगुरुः साक्षात् परब्रह्म\nतस्मै श्री गुरवे नमः ॥',
+                    meaning: 'गुरु ही ब्रह्मा हैं, गुरु ही विष्णु हैं, गुरु ही देव महेश्वर हैं। गुरु साक्षात् परब्रह्म हैं, उन श्री गुरु को नमस्कार।',
+                    benefit: 'गुरुकृपा प्राप्ति, ज्ञानोदय, मोक्ष-मार्ग पर अग्रसर होना। गुरु-पूर्णिमा पर विशेष महत्त्व।',
+                    tags: ['गुरु', 'ब्रह्म', 'ज्ञान', 'शिष्य', 'गुरुपूर्णिमा']
+                }, {
+                    id: 25,
+                    icon: '🕯️',
+                    title: 'दीपज्योति मंत्र',
+                    deity: 'अग्निदेव',
+                    shortMantra: 'शुभं करोति कल्याणम्',
+                    fullMantra: 'शुभं करोति कल्याणम्\nआरोग्यं धनसम्पदाम्।\nशत्रुबुद्धिविनाशाय\nदीपज्योतिर्नमोऽस्तु ते ॥',
+                    meaning: 'दीप की ज्योति शुभ, कल्याण, आरोग्य और धन-सम्पदा देती है। शत्रु-बुद्धि का नाश करती है। हे दीपज्योति, तुम्हें नमस्कार।',
+                    benefit: 'सन्ध्या दीप जलाते समय नित्य पाठ करें। घर में प्रकाश, सकारात्मकता, रोग-निवारण और समृद्धि।',
+                    tags: ['दीप', 'अग्नि', 'आरोग्य', 'कल्याण', 'सन्ध्या']
+                }, {
+                    id: 26,
+                    icon: '🌿',
+                    title: 'तुलसी मंत्र',
+                    deity: 'तुलसी माता',
+                    shortMantra: 'ॐ तुलसीदेव्यै नमः',
+                    fullMantra: 'तुलसी श्री सखि शुभे\nपापहारिणि पुण्यदे।\nनमस्ते नारदनुते\nनारायणमनःप्रिये ॥',
+                    meaning: 'हे लक्ष्मीजी की सखी, शुभकारिणी, पाप हरने वाली, पुण्य देने वाली, नारद से स्तुत, नारायण की मनःप्रिया तुलसी! तुम्हें नमस्कार।',
+                    benefit: 'घर में तुलसी-पूजन से पवित्रता, विष्णु-प्रसन्नता, रोगनाश और मोक्ष। एकादशी और कार्तिक मास में विशेष।',
+                    tags: ['तुलसी', 'विष्णु', 'पवित्रता', 'एकादशी', 'वैष्णव']
+                }, {
+                    id: 27,
+                    icon: '💎',
+                    title: 'नवरात्रि मंत्र',
+                    deity: 'नवदुर्गा',
+                    shortMantra: 'ॐ ऐं ह्रीं क्लीं चामुण्डायै विच्चे',
+                    fullMantra: 'ॐ ऐं ह्रीं क्लीं\nचामुण्डायै विच्चे।\nनमो देव्यै महादेव्यै\nशिवायै सततं नमः।\nनमः प्रकृत्यै भद्रायै\nनियताः प्रणताः स्म ताम् ॥',
+                    meaning: 'ऐं-ह्रीं-क्लीं — त्रिशक्ति बीज। चामुण्डा (चण्ड-मुण्ड का नाश करने वाली) को नमस्कार। महादेवी, शिवा, प्रकृति और भद्रा को सदा नमन।',
+                    benefit: 'नवरात्रि में नित्य जप। तीनों लोकों पर विजय, शत्रुनाश, सिद्धि और नवदुर्गा की अखण्ड कृपा।',
+                    tags: ['चामुण्डा', 'नवरात्रि', 'दुर्गा', 'बीज', 'शक्ति', 'नवदुर्गा']
+                }, {
+                    id: 28,
+                    icon: '🪔',
+                    title: 'कार्तिकेय मंत्र',
+                    deity: 'स्कन्द / कार्तिकेय',
+                    shortMantra: 'ॐ षण्मुखाय नमः',
+                    fullMantra: 'ॐ षडाननं कुङ्कुम\nरक्तवर्णं\nमहामतिं दिव्यमयूरवाहनम्।\nरुद्रस्य सूनुं\nसुरलोकनाथं\nब्रह्मण्यदेवं\nशरणं प्रपद्ये ॥',
+                    meaning: 'षड्मुख, कुङ्कुम के समान रक्तवर्ण, महामेधावी, दिव्य मयूर पर सवार, रुद्र के पुत्र, देवलोक के नाथ, ब्रह्मण्यदेव — आपकी शरण लेता हूँ।',
+                    benefit: 'वेद-अध्ययन, युद्ध-विजय, बुद्धि की तीक्ष्णता और आत्म-साक्षात्कार। दक्षिण भारत में षण्मुखाय मंत्र अत्यन्त लोकप्रिय।',
+                    tags: ['कार्तिकेय', 'स्कन्द', 'मुरुगन', 'शिव', 'षड्मुख']
+                }, {
+                    id: 29,
+                    icon: '🌈',
+                    title: 'विश्वशान्ति मंत्र',
+                    deity: 'विश्वात्मा',
+                    shortMantra: 'ॐ द्यौः शान्तिरन्तरिक्षम् शान्तिः',
+                    fullMantra: 'ॐ द्यौः शान्तिः\nरन्तरिक्षं शान्तिः\nपृथिवी शान्तिः\nआपः शान्तिः\nओषधयः शान्तिः\nवनस्पतयः शान्तिः\nविश्वेदेवाः शान्तिः\nब्रह्म शान्तिः\nसर्वं शान्तिः\nशान्तिरेव शान्तिः\nसा मा शान्तिरेधि ॥\nॐ शान्तिः शान्तिः शान्तिः ॥',
+                    meaning: 'द्युलोक, अन्तरिक्ष, पृथ्वी, जल, ओषधि, वनस्पति, विश्वदेव, ब्रह्म — सर्वत्र शान्ति हो। वह शान्ति मुझे प्राप्त हो।',
+                    benefit: 'सम्पूर्ण विश्व और प्रकृति की शान्ति की प्रार्थना। पञ्चतत्त्वों को शान्त करता है। योग और ध्यान के अन्त में जपें।',
+                    tags: ['शान्ति', 'विश्व', 'वैदिक', 'प्रकृति', 'पञ्चतत्त्व']
+                }, {
+                    id: 30,
+                    icon: '🐄',
+                    title: 'गोमाता मंत्र',
+                    deity: 'गोमाता',
+                    shortMantra: 'ॐ सुरभ्यै नमः',
+                    fullMantra: 'ॐ सुरभ्यै नमः।\nनमो गोभ्यः श्रीमतीभ्यः\nसौरभेयीभ्य एव च।\nनमो ब्रह्मसुताभ्यश्च\nपवित्राभ्यो नमो नमः ॥',
+                    meaning: 'गायों को नमन। श्रीमती, सौरभी और ब्रह्मपुत्री गायों को नमन। पवित्र गोमाता को बार-बार नमस्कार।',
+                    benefit: 'गोसेवा का फल, गृह में पवित्रता, ऐश्वर्य और पितृतर्पण। गोग्रास देने से पूर्व पाठ करें।',
+                    tags: ['गाय', 'गोमाता', 'पवित्रता', 'कृषि', 'वैदिक']
+                }];
+
+                // DOM
+                const grid = document.getElementById('mantraGrid');
+                const searchInput = document.getElementById('searchInput');
+                const searchBtn = document.getElementById('searchBtn');
+                const resetBtn = document.getElementById('resetBtn');
+                const resultMsg = document.getElementById('resultMsg');
+                const countBadge = document.getElementById('countBadge');
+
+                countBadge.textContent = mantras.length + ' पवित्र मंत्र';
+
+                function renderCards(list) {
+                    if (!list.length) {
+                        grid.innerHTML = `<div class="no-result">
+                <i class="fas fa-cloud-moon"></i>
+                <p>कोई मंत्र नहीं मिला। 'शिव', 'लक्ष्मी', 'शान्ति' आज़माएँ…</p>
+            </div>`;
+                        return;
+                    }
+                    grid.innerHTML = list.map((m, i) => `
+            <div class="card" data-id="${m.id}" style="animation-delay:${i * 0.04}s">
+                <div class="card-header">
+                    <div class="card-icon">${m.icon}</div>
+                    <div class="card-title-wrap">
+                        <div class="card-title">${m.title}</div>
+                        <span class="deity-pill">${m.deity}</span>
+                    </div>
+                </div>
+                <div class="card-mantra">
+                    <div class="card-mantra-text">${m.shortMantra}</div>
+                </div>
+                <button class="card-expand-btn" aria-expanded="false">
+                    <i class="fas fa-chevron-down chevron"></i>
+                    पूर्ण मंत्र एवं अर्थ
+                </button>
+                <div class="card-body">
+                    <div class="card-body-inner">
+                        <div class="divider-om">ॐ</div>
+                        <div class="full-mantra-label">पूर्ण मंत्र</div>
+                        <div class="full-mantra-text">${m.fullMantra.replace(/\n/g,'<br>')}</div>
+                        <div class="meaning-label">अर्थ</div>
+                        <div class="meaning-text">${m.meaning}</div>
+                        <div class="meaning-label">लाभ</div>
+                        <div class="benefit-text">${m.benefit}</div>
+                        <div class="tags-row">${m.tags.map(t => `<span class="tag">${t}</span>`).join('')}</div>
+                    </div>
+                </div>
+            </div>
+        `).join('');
+
+        // Expand/collapse
+        grid.querySelectorAll('.card').forEach(card => {
+            const btn = card.querySelector('.card-expand-btn');
+            btn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                const isExpanded = card.classList.toggle('expanded');
+                btn.setAttribute('aria-expanded', isExpanded);
+            });
+            card.addEventListener('click', () => {
+                const isExpanded = card.classList.toggle('expanded');
+                btn.setAttribute('aria-expanded', isExpanded);
+            });
+        });
+    }
+
+    function doSearch() {
+        const q = searchInput.value.trim().toLowerCase();
+        if (!q) { showAll(); return; }
+        const filtered = mantras.filter(m =>
+            m.title.toLowerCase().includes(q) ||
+            m.shortMantra.toLowerCase().includes(q) ||
+            m.fullMantra.toLowerCase().includes(q) ||
+            m.meaning.toLowerCase().includes(q) ||
+            m.deity.toLowerCase().includes(q) ||
+            m.tags.some(t => t.toLowerCase().includes(q))
+        );
+        resultMsg.textContent = `🔍 "${searchInput.value.trim()}" — ${filtered.length} मंत्र मिले`;
+        renderCards(filtered);
+    }
+
+    function showAll() {
+        searchInput.value = '';
+        resultMsg.textContent = `🕉 सभी मंत्र दिखाए जा रहे हैं (${mantras.length})`;
+        renderCards(mantras);
+    }
+
+    searchBtn.addEventListener('click', doSearch);
+    resetBtn.addEventListener('click', showAll);
+    searchInput.addEventListener('keydown', e => { if (e.key === 'Enter') doSearch(); });
+
+    showAll();
+})();
+    </script>
+</body>
+
+</html>
